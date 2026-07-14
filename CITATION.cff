@@ -1,9 +1,9 @@
 cff-version: 1.2.0
-message: Cite the accompanying manuscript and dataset objects when this package is released.
+message: Please cite this archived software package and the accompanying manuscript.
 title: Selective Outcome Observation Across Development, Recalibration, and Evaluation of a Transported Perioperative Acute Kidney Injury Model
 type: software
 version: 3.2.0
-date-released: 2026-07-14
+date-released: 2026-07-15
 authors:
   - family-names: Teng
     given-names: Qingyu
@@ -17,5 +17,7 @@ authors:
     given-names: Ziyan
   - family-names: Li
     given-names: Qi
+    orcid: "https://orcid.org/0009-0003-3140-5887"
   - family-names: Xu
     given-names: Tao
+    orcid: "https://orcid.org/0000-0001-5868-4079"

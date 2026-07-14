@@ -1,13 +1,18 @@
 # Selective outcome observation study v3.2
 
-Local release candidate for aggregate results, analysis code, and model metadata. It is not a clinical model release and is not approved for patient care, triage, treatment selection, or deployment.
+Public reproducibility package containing aggregate results, analysis code, and model metadata. It is not a clinical model release and is not approved for patient care, triage, treatment selection, or deployment.
 
 ## Status
 
 - Scientific analysis: complete.
 - Submission: NO-GO pending author, ethics, disclosure, independent review, and release-approval gates.
-- Publication: no GitHub URL, Zenodo archive, or DOI is claimed.
+- Repository: https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation
+- Archive: Zenodo DOI pending completion of the archival release.
 - Study design: post-exploration methodological audit, not an independent confirmation study.
+
+## Reuse status
+
+No open-source or content-reuse licence is granted in this version. The public repository permits inspection and reproducibility review; all other rights are reserved unless a file states otherwise.
 
 ## Reproduce the analysis
 
