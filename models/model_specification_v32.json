@@ -1,0 +1,157 @@
+{
+  "study_id": "AKI_SELECTIVE_OUTCOME_CHAIN_V32",
+  "analysis_version": "3.2.0-jamia-candidate",
+  "clinical_use": "not for clinical use",
+  "source_estimand": "1/99 truncated-weight approximation to AKI risk among all baseline-eligible INSPIRE patients under MAR conditional on measured pre-prediction variables",
+  "update_estimand": "1/99 truncated-weight approximation to logistic recalibration parameters among all baseline-eligible MOVER 2021 patients under MAR conditional on measured pre-prediction variables",
+  "target_estimand": "hybrid AIPW/IPW performance among all baseline-eligible MOVER 2022 patients under MAR conditional on measured pre-prediction variables",
+  "features_in_order": [
+    "age",
+    "sex_male",
+    "duration_h",
+    "baseline_cr"
+  ],
+  "transformed_feature_names": [
+    "continuous__age_sp_0",
+    "continuous__age_sp_1",
+    "continuous__age_sp_2",
+    "continuous__age_sp_3",
+    "continuous__age_sp_4",
+    "continuous__duration_h_sp_0",
+    "continuous__duration_h_sp_1",
+    "continuous__duration_h_sp_2",
+    "continuous__duration_h_sp_3",
+    "continuous__duration_h_sp_4",
+    "continuous__baseline_cr_sp_0",
+    "continuous__baseline_cr_sp_1",
+    "continuous__baseline_cr_sp_2",
+    "continuous__baseline_cr_sp_3",
+    "continuous__baseline_cr_sp_4",
+    "binary__sex_male"
+  ],
+  "source_intercept": -1.6689550103544855,
+  "source_coefficients": [
+    -0.743305112378538,
+    -0.7257930567877996,
+    0.5997452718037378,
+    -0.26957661428554097,
+    0.23349563763178616,
+    -3.255139930364632,
+    0.24928483740455765,
+    2.0560574189173795,
+    0.6047120136527121,
+    -0.28478915140320715,
+    5.026590258302852,
+    -3.453117370207682,
+    -1.8562634297520908,
+    1.2198655184817717,
+    -1.3400305366641194,
+    0.4023459449459885
+  ],
+  "continuous_preprocessing": [
+    {
+      "feature": "age",
+      "imputation_value": 60.0,
+      "standardization_mean": 55.9766139657444,
+      "standardization_scale": 15.835301050426073,
+      "spline_knot_vector_standardized": [
+        -6.692428115403144,
+        -5.218927026978589,
+        -3.7454259385540327,
+        -2.2719248501294764,
+        -0.7984237617049204,
+        0.6750773267196357,
+        2.1485784151441916,
+        3.6220795035687474,
+        5.095580591993303,
+        6.56908168041786
+      ]
+    },
+    {
+      "feature": "duration_h",
+      "imputation_value": 2.5,
+      "standardization_mean": 3.011740427995369,
+      "standardization_scale": 1.944207846368437,
+      "spline_knot_vector_standardized": [
+        -12.478984936365517,
+        -8.749959763700883,
+        -5.020934591036246,
+        -1.2919094183716107,
+        2.4371157542930253,
+        6.166140926957661,
+        9.895166099622296,
+        13.62419127228693,
+        17.353216444951563,
+        21.082241617616198
+      ]
+    },
+    {
+      "feature": "baseline_cr",
+      "imputation_value": 0.8,
+      "standardization_mean": 0.8486333692657804,
+      "standardization_scale": 0.34962339760278377,
+      "spline_knot_vector_standardized": [
+        -8.748365785120516,
+        -6.250439904526135,
+        -3.7525140239317536,
+        -1.2545881433373722,
+        1.2433377372570091,
+        3.7412636178513905,
+        6.239189498445772,
+        8.737115379040155,
+        11.235041259634537,
+        13.732967140228919
+      ]
+    }
+  ],
+  "binary_preprocessing": {
+    "feature": "sex_male",
+    "encoding": "1=male; 0=female as released",
+    "imputation": "most_frequent",
+    "imputation_value": 1.0
+  },
+  "estimator_parameters": {
+    "C": 1.0,
+    "penalty": "l2",
+    "solver": "lbfgs",
+    "max_iter": 5000,
+    "spline_n_knots": 4,
+    "spline_degree": 3,
+    "spline_include_bias": false,
+    "spline_extrapolation": "constant"
+  },
+  "recalibration": {
+    "method": "expanded cross-fitted IPW logistic recalibration",
+    "alpha": 0.08846609349078528,
+    "beta": 0.8963305835406209,
+    "equation": "expit(alpha + beta * logit(source_probability))"
+  },
+  "cohort_denominators": {
+    "INSPIRE": {
+      "eligible": 33396,
+      "observed": 24874
+    },
+    "MOVER_2021": {
+      "eligible": 2802,
+      "observed": 2212
+    },
+    "MOVER_2022": {
+      "eligible": 2587,
+      "observed": 2033
+    }
+  },
+  "software": {
+    "python": "3.9.6",
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.6.1",
+    "joblib": "1.5.3"
+  },
+  "preprocessor_training_population": "all eligible INSPIRE patients",
+  "preprocessor_training_n": 33396,
+  "classifier_training_population": "outcome-observed INSPIRE patients",
+  "classifier_training_n": 24874,
+  "classifier_weighting": "normalized inverse observation probability truncated at the 1st and 99th percentiles",
+  "fractional_logistic_implementation": "Each fractional row is represented by event and non-event copies weighted y and 1-y; the same L2 logistic classifier is then fitted.",
+  "not_for_clinical_use": true
+}

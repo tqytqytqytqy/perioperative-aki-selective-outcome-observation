@@ -1,0 +1,23 @@
+# Selective outcome observation study v3.2
+
+Local release candidate for aggregate results, analysis code, and model metadata. It is not a clinical model release and is not approved for patient care, triage, treatment selection, or deployment.
+
+## Status
+
+- Scientific analysis: complete.
+- Submission: NO-GO pending author, ethics, disclosure, independent review, and release-approval gates.
+- Publication: no GitHub URL, Zenodo archive, or DOI is claimed.
+- Study design: post-exploration methodological audit, not an independent confirmation study.
+
+## Reproduce the analysis
+
+1. Create Python 3.9.6 environment and install `config/requirements-analysis-v32.txt`.
+2. Obtain INSPIRE 1.4.2, MOVER, and VitalDB from their official providers under current access terms.
+3. Run `scripts/configure_runtime_v32.py` with local paths. The generated `runtime_config_v32.local.json` is private and ignored.
+4. From a clean clone with empty `data/processed`, run `scripts/run_analysis_v32.sh`.
+
+The full 1,000-replicate chain refits observation models, auxiliary outcome models, the source preprocessor and classifier, local recalibration, target metrics, and 18 stage-specific MNAR cells. Aggregate CSVs and the workbook are included for inspection. Patient-level raw and derived data, serialized model objects, and private runtime configuration are excluded.
+
+## Claim boundary
+
+The four-variable model is an auditable methodological probe. Clinical utility, fairness, prospective workflow effects, and patient benefit were not evaluated. MOVER 2022 is a post-exploration temporally held-out evaluation.

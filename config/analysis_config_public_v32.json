@@ -1,0 +1,193 @@
+{
+  "study_id": "AKI_SELECTIVE_OUTCOME_CHAIN_V32",
+  "analysis_version": "3.2.0-jamia-candidate",
+  "analysis_status": "scientific_analysis_complete_submission_no_go_pending_author_gates",
+  "revision_context": "post-exploration methodological study; not a prospectively prespecified external validation",
+  "analysis_date": "2026-07-14",
+  "primary_journal_route": "JAMIA Research and Applications",
+  "random_seed": 20260714,
+  "bootstrap_replicates": 1000,
+  "crossfit_folds": 5,
+  "prediction_time": "end_of_anesthesia",
+  "primary_endpoint": "creatinine-defined AKI through discharge or postoperative day 7",
+  "cohort": {
+    "adult_age_min": 18,
+    "minimum_anesthesia_minutes": 30,
+    "maximum_anesthesia_hours": 24,
+    "baseline_lookback_days": 7,
+    "baseline_creatinine_max_mg_dl": 4.0,
+    "first_clinically_eligible_surgery_per_patient": true,
+    "exclude_cardiac": true,
+    "exclude_obstetric": true
+  },
+  "outcome": {
+    "name": "KDIGO_creatinine_AKI_7d",
+    "absolute_increase_mg_dl_within_48h": 0.3,
+    "relative_increase_within_7d": 1.5,
+    "truncate_at_discharge": true,
+    "urine_output_component": false,
+    "valid_creatinine_range_mg_dl": [
+      0.05,
+      30.0
+    ]
+  },
+  "features": [
+    "age",
+    "sex_male",
+    "duration_h",
+    "baseline_cr"
+  ],
+  "model_parameters": {
+    "continuous_imputation": "median",
+    "binary_imputation": "most_frequent",
+    "continuous_standardization": true,
+    "spline_degree": 3,
+    "spline_n_knots": 4,
+    "spline_include_bias": false,
+    "spline_extrapolation": "constant",
+    "logistic_penalty": "L2",
+    "C": 1.0,
+    "solver": "lbfgs",
+    "max_iter": 5000
+  },
+  "estimands": {
+    "source_development": "1/99 truncated-weight approximation to AKI risk among all baseline-eligible INSPIRE patients under MAR conditional on measured pre-prediction variables",
+    "local_update": "1/99 truncated-weight approximation to logistic recalibration parameters among all baseline-eligible MOVER 2021 patients under MAR conditional on measured pre-prediction variables",
+    "target_evaluation": "hybrid AIPW/IPW performance among all baseline-eligible MOVER 2022 patients under MAR conditional on measured pre-prediction variables",
+    "complete_case_comparator": "performance conditional on routine postoperative creatinine observation",
+    "mnar_sensitivity": "stage-specific pattern-mixture outcome-regression completion sensitivity propagated through the source-update-target chain"
+  },
+  "data_roles": {
+    "source_model_development": "INSPIRE released cohort",
+    "local_recalibration": "MOVER 2021",
+    "post_exploration_temporal_evaluation": "MOVER 2022",
+    "supportive_observed_cohort": "VitalDB available analysis-ready observed cohort"
+  },
+  "observation_models": {
+    "basic_features": [
+      "age",
+      "sex_male",
+      "duration_h",
+      "baseline_cr"
+    ],
+    "expanded_source_features": [
+      "age",
+      "sex_male",
+      "duration_h",
+      "baseline_cr",
+      "asa"
+    ],
+    "expanded_mover_features": [
+      "age",
+      "sex_male",
+      "duration_h",
+      "baseline_cr",
+      "asa",
+      "surgery_category"
+    ],
+    "cross_fitted": true,
+    "canonical_ipw_truncation_percentiles": [
+      1,
+      99
+    ],
+    "truncation_sensitivity": [
+      "none",
+      "0.5/99.5",
+      "1/99",
+      "2.5/97.5"
+    ],
+    "aipw_correction": "untruncated cross-fitted 1/g correction; calibration slope and discrimination use the selected truncated IPW rule"
+  },
+  "mnar_odds_multipliers": [
+    0.5,
+    0.6666666667,
+    1.0,
+    1.5,
+    2.0,
+    3.0
+  ],
+  "decision_thresholds": [
+    0.05,
+    0.1,
+    0.2
+  ],
+  "event_nodes": [
+    10,
+    20,
+    50,
+    100,
+    200,
+    "all"
+  ],
+  "readiness": {
+    "bootstrap_stability_threshold": 0.9,
+    "primary_oe_bounds": [
+      0.8,
+      1.25
+    ],
+    "primary_slope_bounds": [
+      0.8,
+      1.2
+    ],
+    "strict_oe_bounds": [
+      0.9,
+      1.1
+    ],
+    "strict_slope_bounds": [
+      0.9,
+      1.1
+    ],
+    "minimum_subgroup_events": 50,
+    "persistence_required": true,
+    "strict_ci_containment_sensitivity": true
+  },
+  "canonical_analysis": {
+    "model": "expanded-IPW source development plus expanded-IPW MOVER 2021 logistic recalibration",
+    "source_preprocessor_training_population": "all eligible INSPIRE patients within each point or bootstrap sample",
+    "source_classifier_training_population": "outcome-observed INSPIRE patients with normalized 1/99 truncated inverse-observation weights",
+    "target_linear_metrics": "cross-fitted augmented inverse-probability estimator",
+    "target_nonlinear_metrics": "cross-fitted expanded inverse-probability estimator",
+    "bootstrap_unit": "retained patient/operation",
+    "resampled_components": [
+      "INSPIRE",
+      "MOVER 2021",
+      "MOVER 2022"
+    ],
+    "refitted_components": [
+      "observation models",
+      "auxiliary outcome models",
+      "source preprocessor",
+      "source classifier",
+      "local recalibration",
+      "target metrics"
+    ],
+    "valid_replicate": "all models converge and every prespecified canonical and stage-specific MNAR metric is finite",
+    "parallel_workers": 6,
+    "maximum_attempts_per_replicate": 5
+  },
+  "claim_boundaries": {
+    "independent_confirmation": false,
+    "clinical_deployment_evaluated": false,
+    "clinical_utility_evaluated": false,
+    "universal_event_threshold": false,
+    "mnar_scenarios_are_clinically_plausible": false,
+    "submission_ready": false
+  },
+  "author_verification": {
+    "author_change_approved": false,
+    "affiliations_confirmed": false,
+    "funding_confirmed": false,
+    "conflicts_confirmed": false,
+    "prior_presentation_confirmed": false,
+    "responsible_corresponding_author_confirmed": false,
+    "telephone_confirmed": false,
+    "credit_confirmed": false,
+    "ai_disclosure_confirmed": false,
+    "local_ethics_determination_confirmed": false,
+    "independent_statistical_signoff": false
+  },
+  "data_access": {
+    "note": "Raw and patient-level derived data are excluded. Obtain INSPIRE, MOVER, and VitalDB under their originating repository terms.",
+    "inputs": "Configure local paths from environment variables or a private runtime configuration; do not commit local absolute paths."
+  }
+}

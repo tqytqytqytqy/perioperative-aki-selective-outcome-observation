@@ -1,0 +1,11 @@
+content,main_location,supplement_location,unique_numeric_source
+Update alpha and beta,Table 2,Table S8,31_canonical_primary_bootstrap_v32.csv
+Canonical target performance,Table 3,Table S10,31_canonical_primary_bootstrap_v32.csv
+Operational workload,Table 4,Table S10,31_canonical_primary_bootstrap_v32.csv
+Source-stage MNAR,Results,Table S11 / Figure S3,43_source_mnar_propagation_v32.csv
+Update-stage MNAR,Results,Table S12,38_update_mnar_propagation_v32.csv
+Target-stage MNAR,Results,Table S13,40_target_mnar_sensitivity_v32.csv
+MNAR sampling intervals,Results,Table S14,47_mnar_chain_bootstrap_intervals_v32.csv
+Auxiliary outcome-model diagnostics,Methods/Results,Table S4,44_auxiliary_outcome_model_diagnostics_v32.csv
+Weight truncation sensitivity,Results,Table S15,46_weight_truncation_sensitivity_v32.csv
+10-quantile grouped absolute calibration error,Methods / Table 3,Tables S4 and S10,31_canonical_primary_bootstrap_v32.csv

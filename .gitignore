@@ -1,0 +1,13 @@
+.DS_Store
+.mpl/
+__pycache__/
+*.pyc
+data/
+*.joblib
+*.pickle
+*.pkl
+config/runtime_config_v32.local.json
+config/analysis_config_v32.json
+config/input_data_manifest_v32.csv
+manuscript/
+supplement/

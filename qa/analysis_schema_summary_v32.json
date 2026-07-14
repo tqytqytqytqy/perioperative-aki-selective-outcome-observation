@@ -1,0 +1,24 @@
+{
+  "status": "pass",
+  "checks": 13,
+  "actual_counts": {
+    "INSPIRE": {
+      "eligible": 33396,
+      "observed": 24874,
+      "unobserved": 8522,
+      "observed_events": 1671
+    },
+    "MOVER 2021": {
+      "eligible": 2802,
+      "observed": 2212,
+      "unobserved": 590,
+      "observed_events": 245
+    },
+    "MOVER 2022": {
+      "eligible": 2587,
+      "observed": 2033,
+      "unobserved": 554,
+      "observed_events": 224
+    }
+  }
+}

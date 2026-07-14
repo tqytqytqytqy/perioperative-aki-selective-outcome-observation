@@ -1,0 +1,9 @@
+{
+  "test": "fractional logistic equals ordinary logistic for binary outcomes",
+  "n": 33396,
+  "observed_outcome_n_in_binary_fixture": 24874,
+  "max_absolute_coefficient_difference": 2.2175095093501795e-10,
+  "max_absolute_prediction_difference": 2.804800836031518e-11,
+  "tolerance": 1e-07,
+  "status": "PASS"
+}

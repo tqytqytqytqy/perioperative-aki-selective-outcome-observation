@@ -1,0 +1,14 @@
+check,passed,detail
+INSPIRE_required_columns,True,
+INSPIRE_unique_case_key,True,82859
+INSPIRE_finite_duration,True,82859
+MOVER_required_columns,True,
+MOVER_unique_case_key,True,47252
+MOVER_finite_duration,True,47252
+VitalDB_required_columns,True,
+VitalDB_unique_case_key,True,6388
+VitalDB_finite_duration,True,6388
+INSPIRE_locked_counts,True,"{""eligible"": 33396, ""observed"": 24874, ""unobserved"": 8522, ""observed_events"": 1671}"
+MOVER 2021_locked_counts,True,"{""eligible"": 2802, ""observed"": 2212, ""unobserved"": 590, ""observed_events"": 245}"
+MOVER 2022_locked_counts,True,"{""eligible"": 2587, ""observed"": 2033, ""unobserved"": 554, ""observed_events"": 224}"
+MOVER_2021_2022_patient_overlap_zero,True,0

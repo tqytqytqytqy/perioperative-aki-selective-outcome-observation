@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "checks": 44,
+  "passed": 44,
+  "failed": 0,
+  "failed_checks": [],
+  "scientific_analysis_status": "COMPLETE",
+  "submission_status": "NO-GO pending human and administrative gates"
+}

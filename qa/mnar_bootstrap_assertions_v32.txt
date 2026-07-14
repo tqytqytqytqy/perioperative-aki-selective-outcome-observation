@@ -1,0 +1,29 @@
+analysis_version=3.2.0-jamia-candidate
+requested_replicates=1000
+recorded_failed_attempts=0
+resampled=INSPIRE,MOVER_2021,MOVER_2022
+refitted=observation_models,auxiliary_outcome_models,source_preprocessor,source_classifier,local_recalibration,target_metrics
+seed=20260714
+canonical_valid_replicates=PASS; detail=1000
+source_k_0.5_valid_replicates=PASS; detail=1000
+source_k_0.666667_valid_replicates=PASS; detail=1000
+source_k_1_valid_replicates=PASS; detail=1000
+source_k_1.5_valid_replicates=PASS; detail=1000
+source_k_2_valid_replicates=PASS; detail=1000
+source_k_3_valid_replicates=PASS; detail=1000
+update_k_0.5_valid_replicates=PASS; detail=1000
+update_k_0.666667_valid_replicates=PASS; detail=1000
+update_k_1_valid_replicates=PASS; detail=1000
+update_k_1.5_valid_replicates=PASS; detail=1000
+update_k_2_valid_replicates=PASS; detail=1000
+update_k_3_valid_replicates=PASS; detail=1000
+target_k_0.5_valid_replicates=PASS; detail=1000
+target_k_0.666667_valid_replicates=PASS; detail=1000
+target_k_1_valid_replicates=PASS; detail=1000
+target_k_1.5_valid_replicates=PASS; detail=1000
+target_k_2_valid_replicates=PASS; detail=1000
+target_k_3_valid_replicates=PASS; detail=1000
+interval_point_estimates_match_point_tables=PASS; detail=mismatches=0; max_difference=0.000e+00
+interval_point_estimates_finite=PASS; detail=rows=216
+all_bootstrap_values_finite=PASS; detail=rows=18000
+status=PASS

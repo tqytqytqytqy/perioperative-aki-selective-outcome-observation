@@ -1,0 +1,401 @@
+#!/usr/bin/env python3
+"""Independent statistical acceptance checks for the frozen v3.2 analysis."""
+
+from __future__ import annotations
+
+import json
+import os
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+
+
+ROOT = Path(__file__).resolve().parents[1]
+CONFIG_PATH = Path(
+    os.environ.get("V32_CONFIG_PATH", ROOT / "config" / "analysis_config_v32.json")
+).expanduser().resolve()
+TABLES = ROOT / "tables"
+DATA = ROOT / "data" / "processed"
+MODELS = ROOT / "models"
+QA = ROOT / "qa"
+EXPECTED_MULTIPLIERS = np.array([0.5, 2 / 3, 1.0, 1.5, 2.0, 3.0])
+POINT_TABLES = {
+    "source": "43_source_mnar_propagation_v32.csv",
+    "update": "38_update_mnar_propagation_v32.csv",
+    "target": "40_target_mnar_sensitivity_v32.csv",
+}
+
+
+def add(rows: list[dict[str, str]], check: str, passed: bool, detail: object) -> None:
+    rows.append(
+        {
+            "check": check,
+            "status": "pass" if bool(passed) else "fail",
+            "detail": str(detail),
+        }
+    )
+
+
+def close(left: float, right: float, tolerance: float = 1e-10) -> bool:
+    return bool(np.isclose(float(left), float(right), rtol=0, atol=tolerance))
+
+
+def numeric_finite(frame: pd.DataFrame) -> bool:
+    values = frame.select_dtypes(include=[np.number]).to_numpy(dtype=float)
+    return bool(np.isfinite(values).all())
+
+
+def main() -> int:
+    rows: list[dict[str, str]] = []
+    config = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
+
+    flow = pd.read_csv(TABLES / "01_cohort_flow_and_roles_v32.csv")
+    expected_flow = {
+        "INSPIRE": (33396, 24874, 8522, 1671),
+        "MOVER 2021": (2802, 2212, 590, 245),
+        "MOVER 2022": (2587, 2033, 554, 224),
+    }
+    for cohort, expected in expected_flow.items():
+        item = flow.loc[flow["cohort"].eq(cohort)].iloc[0]
+        actual = tuple(
+            int(item[column])
+            for column in [
+                "eligible_n",
+                "observed_outcome_n",
+                "unobserved_outcome_n",
+                "observed_events",
+            ]
+        )
+        add(rows, f"flow_{cohort}", actual == expected, f"actual={actual}; expected={expected}")
+
+    rebuild = pd.read_csv(QA / "raw_rebuild_equivalence_v32.csv")
+    add(
+        rows,
+        "raw_rebuild_cell_equivalence",
+        rebuild["passed"].astype(bool).all() and int(rebuild["differing_cells"].sum()) == 0,
+        rebuild[["dataset", "differing_cells", "passed"]].to_dict(orient="records"),
+    )
+    schema = pd.read_csv(QA / "analysis_schema_checks_v32.csv")
+    add(rows, "analysis_schema", schema["passed"].astype(bool).all(), f"checks={len(schema)}")
+
+    preprocessing = pd.read_csv(TABLES / "45_source_preprocessing_audit_v32.csv")
+    add(
+        rows,
+        "source_preprocessor_full_eligible",
+        len(preprocessing) == 4
+        and preprocessing["preprocessor_training_n"].eq(33396).all()
+        and preprocessing["preprocessor_training_population"].eq("all eligible INSPIRE").all(),
+        preprocessing[["feature", "preprocessor_training_n"]].to_dict(orient="records"),
+    )
+    specification = json.loads((MODELS / "model_specification_v32.json").read_text(encoding="utf-8"))
+    spec_text = json.dumps(specification, ensure_ascii=False)
+    add(rows, "model_specification_records_33396", "33396" in spec_text, "full-eligible count present")
+    add(
+        rows,
+        "model_coefficients_complete",
+        len(specification["transformed_feature_names"]) == len(specification["source_coefficients"]) == 16,
+        f"features={len(specification['transformed_feature_names'])}; coefficients={len(specification['source_coefficients'])}",
+    )
+
+    fractional = json.loads((QA / "fractional_logistic_equivalence_v32.json").read_text(encoding="utf-8"))
+    add(
+        rows,
+        "fractional_logistic_binary_equivalence",
+        fractional.get("status") == "PASS"
+        and float(fractional["max_absolute_coefficient_difference"]) < 1e-8
+        and float(fractional["max_absolute_prediction_difference"]) < 1e-8,
+        fractional,
+    )
+
+    diagnostics = pd.read_csv(TABLES / "44_auxiliary_outcome_model_diagnostics_v32.csv")
+    expected_populations = {"observed-unweighted", "observed-IPW-weighted"}
+    add(
+        rows,
+        "auxiliary_diagnostics_six_rows",
+        len(diagnostics) == 6
+        and set(diagnostics["phase"]) == {"INSPIRE", "MOVER 2021", "MOVER 2022"}
+        and set(diagnostics["evaluation_population"]) == expected_populations,
+        f"rows={len(diagnostics)}",
+    )
+    probability_columns = [column for column in diagnostics if "probability_" in column]
+    probability_values = diagnostics[probability_columns].to_numpy(dtype=float)
+    add(
+        rows,
+        "auxiliary_probabilities_valid",
+        np.isfinite(probability_values).all()
+        and (probability_values >= 0).all()
+        and (probability_values <= 1).all(),
+        f"min={np.nanmin(probability_values):.6f}; max={np.nanmax(probability_values):.6f}",
+    )
+    folds = pd.read_csv(QA / "auxiliary_outcome_fold_checks_v32.csv")
+    add(
+        rows,
+        "auxiliary_crossfit_fold_classes",
+        len(folds) == 15
+        and folds["training_events"].gt(0).all()
+        and folds["training_non_events"].gt(0).all()
+        and folds["prediction_min"].ge(0).all()
+        and folds["prediction_max"].le(1).all(),
+        f"folds={len(folds)}",
+    )
+
+    point_tables: dict[str, pd.DataFrame] = {}
+    for stage, filename in POINT_TABLES.items():
+        frame = pd.read_csv(TABLES / filename)
+        point_tables[stage] = frame
+        sensitivity = frame.loc[~frame["is_canonical"].astype(bool)].sort_values("odds_multiplier")
+        canonical = frame.loc[frame["is_canonical"].astype(bool)]
+        add(
+            rows,
+            f"{stage}_mnar_scenarios",
+            len(frame) == 7
+            and len(canonical) == 1
+            and len(sensitivity) == 6
+            and np.allclose(sensitivity["odds_multiplier"], EXPECTED_MULTIPLIERS),
+            f"rows={len(frame)}; multipliers={sensitivity['odds_multiplier'].tolist()}",
+        )
+        add(
+            rows,
+            f"{stage}_mnar_denominators",
+            frame["source_eligible_n"].eq(33396).all()
+            and frame["update_eligible_n"].eq(2802).all()
+            and frame["target_eligible_n"].eq(2587).all(),
+            frame[["source_eligible_n", "update_eligible_n", "target_eligible_n"]]
+            .drop_duplicates()
+            .to_dict(orient="records"),
+        )
+        add(rows, f"{stage}_mnar_finite", numeric_finite(sensitivity), f"rows={len(sensitivity)}")
+        k1 = sensitivity.loc[np.isclose(sensitivity["odds_multiplier"], 1.0)].iloc[0]
+        add(
+            rows,
+            f"{stage}_k1_or_completion_anchor",
+            k1["reference_type"] == "OR-completion reference, k=1"
+            and not bool(k1["is_canonical"]),
+            k1["reference_type"],
+        )
+
+    source = point_tables["source"].loc[~point_tables["source"]["is_canonical"].astype(bool)].sort_values("odds_multiplier")
+    add(
+        rows,
+        "source_expected_events_monotonic",
+        source["source_expected_events"].is_monotonic_increasing,
+        source[["odds_multiplier", "source_expected_events"]].to_dict(orient="records"),
+    )
+    anchors = pd.read_csv(TABLES / "42_mnar_anchor_comparison_v32.csv")
+    add(
+        rows,
+        "mnar_anchor_table_complete",
+        len(anchors) == 6
+        and anchors.groupby("stage_varied")["reference_type"].nunique().eq(2).all(),
+        f"rows={len(anchors)}",
+    )
+    k1_anchor = anchors.loc[anchors["reference_type"].eq("OR-completion reference, k=1")]
+    add(
+        rows,
+        "k1_not_numerically_forced_to_canonical",
+        len(k1_anchor) == 3
+        and not close(
+            anchors.loc[
+                anchors["stage_varied"].eq("update") & anchors["is_canonical"].astype(bool),
+                "update_alpha",
+            ].iloc[0],
+            anchors.loc[
+                anchors["stage_varied"].eq("update") & ~anchors["is_canonical"].astype(bool),
+                "update_alpha",
+            ].iloc[0],
+            1e-6,
+        ),
+        "canonical and OR-completion anchors remain distinct",
+    )
+
+    canonical = pd.read_csv(TABLES / "31_canonical_primary_bootstrap_v32.csv")
+    canonical_dist = pd.read_parquet(DATA / "canonical_bootstrap_distribution_v32.parquet")
+    add(
+        rows,
+        "canonical_bootstrap_1000_unique",
+        len(canonical_dist) == 1000 and canonical_dist["replicate"].nunique() == 1000,
+        f"rows={len(canonical_dist)}; unique={canonical_dist['replicate'].nunique()}",
+    )
+    add(rows, "canonical_bootstrap_finite", numeric_finite(canonical_dist), f"columns={len(canonical_dist.columns)}")
+    canonical_mismatches: list[str] = []
+    for item in canonical.itertuples(index=False):
+        metric = str(item.metric)
+        distribution_column = metric
+        if str(item.estimand).startswith("threshold workload"):
+            threshold = str(item.estimand).rsplit(" ", 1)[-1].rstrip("%")
+            distribution_column = f"threshold_{threshold}_{metric}"
+        if distribution_column not in canonical_dist:
+            canonical_mismatches.append(f"{distribution_column}:missing")
+            continue
+        values = canonical_dist[distribution_column].to_numpy(dtype=float)
+        lower, upper = np.quantile(values, [0.025, 0.975])
+        if not close(item.ci_lower, lower) or not close(item.ci_upper, upper):
+            canonical_mismatches.append(metric)
+    add(
+        rows,
+        "canonical_intervals_from_single_distribution",
+        not canonical_mismatches,
+        f"mismatches={canonical_mismatches}",
+    )
+
+    mnar_dist = pd.read_parquet(DATA / "mnar_chain_bootstrap_v32.parquet")
+    cell_counts = mnar_dist.groupby(["stage_varied", "odds_multiplier"])["replicate"].nunique()
+    add(
+        rows,
+        "mnar_bootstrap_18_cells_by_1000",
+        len(mnar_dist) == 18000 and len(cell_counts) == 18 and cell_counts.eq(1000).all(),
+        f"rows={len(mnar_dist)}; cells={len(cell_counts)}; range={cell_counts.min()}-{cell_counts.max()}",
+    )
+    add(rows, "mnar_bootstrap_finite", numeric_finite(mnar_dist), f"rows={len(mnar_dist)}")
+    failures = pd.read_csv(QA / "mnar_bootstrap_failures_v32.csv")
+    add(
+        rows,
+        "bootstrap_failures_explicitly_recorded",
+        list(failures.columns) == ["replicate", "attempt", "error_type", "error_message"]
+        and len(failures) == 0,
+        f"columns={list(failures.columns)}; rows={len(failures)}",
+    )
+
+    intervals = pd.read_csv(TABLES / "47_mnar_chain_bootstrap_intervals_v32.csv")
+    interval_counts = intervals.groupby(["stage_varied", "odds_multiplier"])["metric"].nunique()
+    add(
+        rows,
+        "mnar_interval_table_complete",
+        len(intervals) == 216 and len(interval_counts) == 18 and interval_counts.eq(12).all(),
+        f"rows={len(intervals)}; cells={len(interval_counts)}; metrics={interval_counts.min()}-{interval_counts.max()}",
+    )
+    point_mismatches: list[str] = []
+    quantile_mismatches: list[str] = []
+    for item in intervals.itertuples(index=False):
+        stage = str(item.stage_varied)
+        multiplier = float(item.odds_multiplier)
+        metric = str(item.metric)
+        point = point_tables[stage].loc[
+            ~point_tables[stage]["is_canonical"].astype(bool)
+            & np.isclose(point_tables[stage]["odds_multiplier"], multiplier)
+        ]
+        if len(point) != 1 or metric not in point:
+            point_mismatches.append(f"{stage}|{multiplier:g}|{metric}:missing")
+        elif not close(item.estimate, point.iloc[0][metric]):
+            point_mismatches.append(f"{stage}|{multiplier:g}|{metric}")
+        values = mnar_dist.loc[
+            mnar_dist["stage_varied"].eq(stage)
+            & np.isclose(mnar_dist["odds_multiplier"], multiplier),
+            metric,
+        ].to_numpy(dtype=float)
+        lower, upper = np.quantile(values, [0.025, 0.975])
+        if not close(item.ci_lower, lower) or not close(item.ci_upper, upper):
+            quantile_mismatches.append(f"{stage}|{multiplier:g}|{metric}")
+    add(rows, "mnar_point_estimates_match", not point_mismatches, f"mismatches={point_mismatches[:10]}")
+    add(rows, "mnar_intervals_from_single_distribution", not quantile_mismatches, f"mismatches={quantile_mismatches[:10]}")
+
+    truncation = pd.read_csv(TABLES / "46_weight_truncation_sensitivity_v32.csv")
+    add(
+        rows,
+        "weight_truncation_rules_complete",
+        set(truncation["weight_rule"]) == {"none", "0.5/99.5", "1/99", "2.5/97.5"}
+        and len(truncation) == 4,
+        truncation["weight_rule"].tolist(),
+    )
+    canonical_truncation = truncation.loc[truncation["weight_rule"].eq("1/99")].iloc[0]
+    canonical_lookup = canonical.set_index("metric")["estimate"]
+    truncation_checks = {
+        "update_alpha": canonical_truncation["update_alpha"],
+        "update_beta": canonical_truncation["update_beta"],
+        "oe_ratio": canonical_truncation["target_oe_ratio"],
+        "calibration_slope": canonical_truncation["target_calibration_slope"],
+        "auroc": canonical_truncation["target_auroc"],
+        "brier": canonical_truncation["target_brier"],
+    }
+    truncation_mismatches = [
+        metric
+        for metric, value in truncation_checks.items()
+        if not close(value, canonical_lookup.loc[metric])
+    ]
+    add(rows, "canonical_1_99_exact_reproduction", not truncation_mismatches, truncation_mismatches)
+    ess_columns = [column for column in truncation if column.endswith("effective_sample_size")]
+    add(
+        rows,
+        "truncation_weights_and_ess_finite",
+        np.isfinite(truncation.select_dtypes(include=[np.number]).to_numpy(dtype=float)).all()
+        and truncation[ess_columns].gt(0).all().all(),
+        truncation[["weight_rule", *ess_columns]].to_dict(orient="records"),
+    )
+
+    primary_workload = pd.read_csv(TABLES / "34_update_strategy_workload_v32.csv")
+    primary_workload = primary_workload.loc[
+        primary_workload["strategy"].eq(
+            "1/99 truncated-IPW source model + 1/99 truncated-IPW recalibration"
+        )
+    ].sort_values("threshold")
+    add(
+        rows,
+        "full_target_alert_denominator",
+        primary_workload["alerts"].astype(int).tolist() == [2087, 768, 191]
+        and np.allclose(
+            primary_workload["alerts_per_1000"],
+            primary_workload["alerts"] / 2587 * 1000,
+        ),
+        primary_workload[["threshold", "alerts", "alerts_per_1000"]].to_dict(orient="records"),
+    )
+    add(
+        rows,
+        "net_benefit_estimands_separate",
+        {"absolute_net_benefit", "incremental_net_benefit_vs_better_default"}.issubset(
+            primary_workload.columns
+        ),
+        "absolute and incremental fields both present",
+    )
+
+    metric_map = pd.read_csv(TABLES / "39_metric_reporting_map_v32.csv")
+    map_text = " ".join(metric_map.astype(str).to_numpy().ravel()).lower()
+    add(
+        rows,
+        "grouped_calibration_metric_named_correctly",
+        "grouped ici" not in map_text
+        and "10-quantile grouped absolute calibration error" in map_text,
+        "metric map terminology",
+    )
+
+    run_record = json.loads((ROOT / "reports" / "23_v32_analysis_run_record.json").read_text(encoding="utf-8"))
+    add(
+        rows,
+        "run_record_complete",
+        int(run_record["bootstrap_replicates"]) == 1000
+        and int(run_record["mnar_rows"]) == 18000
+        and int(run_record["recorded_failed_attempts"]) == 0,
+        run_record,
+    )
+    add(
+        rows,
+        "submission_status_remains_no_go",
+        (
+            "not_ready_for_submission" in config["analysis_status"]
+            or "submission_no_go" in config["analysis_status"]
+        )
+        and not bool(config["claim_boundaries"]["submission_ready"]),
+        config["analysis_status"],
+    )
+
+    QA.mkdir(parents=True, exist_ok=True)
+    result = pd.DataFrame(rows)
+    result.to_csv(QA / "v32_statistical_qa_checks.csv", index=False)
+    summary = {
+        "status": "pass" if result["status"].eq("pass").all() else "fail",
+        "checks": len(result),
+        "passed": int(result["status"].eq("pass").sum()),
+        "failed": int(result["status"].eq("fail").sum()),
+        "failed_checks": result.loc[result["status"].eq("fail"), "check"].tolist(),
+        "scientific_analysis_status": "COMPLETE" if result["status"].eq("pass").all() else "INCOMPLETE",
+        "submission_status": "NO-GO pending human and administrative gates",
+    }
+    (QA / "v32_statistical_qa_summary.json").write_text(
+        json.dumps(summary, indent=2) + "\n", encoding="utf-8"
+    )
+    print(json.dumps(summary, indent=2))
+    return 0 if summary["status"] == "pass" else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

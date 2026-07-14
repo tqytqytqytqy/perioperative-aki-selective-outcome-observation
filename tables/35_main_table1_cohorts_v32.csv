@@ -1,0 +1,5 @@
+cohort,role,eligible_n,observed_outcome_n,unobserved_outcome_n,outcome_observation_rate,observed_events,retained_patient_overlap_with_other_MOVER_year,denominator_definition
+INSPIRE,MAR source development,33396.0,24874,8522.0,0.7448197388908852,1671,,all baseline-eligible first retained operations
+MOVER 2021,MAR local recalibration,2802.0,2212,590.0,0.7894361170592434,245,0.0,all baseline-eligible first retained operations
+MOVER 2022,post-exploration temporal evaluation,2587.0,2033,554.0,0.7858523386161577,224,0.0,all baseline-eligible first retained operations
+VitalDB available analysis-ready observed cohort,supportive observed-cohort stress test,,4095,,,269,,"official API tables reproduce all 6,388 released cases; no source-compatible all-eligible denominator was used for this supportive observed-cohort analysis"

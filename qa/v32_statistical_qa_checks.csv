@@ -1,0 +1,45 @@
+check,status,detail
+flow_INSPIRE,pass,"actual=(33396, 24874, 8522, 1671); expected=(33396, 24874, 8522, 1671)"
+flow_MOVER 2021,pass,"actual=(2802, 2212, 590, 245); expected=(2802, 2212, 590, 245)"
+flow_MOVER 2022,pass,"actual=(2587, 2033, 554, 224); expected=(2587, 2033, 554, 224)"
+raw_rebuild_cell_equivalence,pass,"[{'dataset': 'INSPIRE', 'differing_cells': 0, 'passed': True}, {'dataset': 'MOVER', 'differing_cells': 0, 'passed': True}, {'dataset': 'VitalDB', 'differing_cells': 0, 'passed': True}]"
+analysis_schema,pass,checks=13
+source_preprocessor_full_eligible,pass,"[{'feature': 'age', 'preprocessor_training_n': 33396}, {'feature': 'duration_h', 'preprocessor_training_n': 33396}, {'feature': 'baseline_cr', 'preprocessor_training_n': 33396}, {'feature': 'sex_male', 'preprocessor_training_n': 33396}]"
+model_specification_records_33396,pass,full-eligible count present
+model_coefficients_complete,pass,features=16; coefficients=16
+fractional_logistic_binary_equivalence,pass,"{'test': 'fractional logistic equals ordinary logistic for binary outcomes', 'n': 33396, 'observed_outcome_n_in_binary_fixture': 24874, 'max_absolute_coefficient_difference': 2.2175095093501795e-10, 'max_absolute_prediction_difference': 2.804800836031518e-11, 'tolerance': 1e-07, 'status': 'PASS'}"
+auxiliary_diagnostics_six_rows,pass,rows=6
+auxiliary_probabilities_valid,pass,min=0.005219; max=0.822614
+auxiliary_crossfit_fold_classes,pass,folds=15
+source_mnar_scenarios,pass,"rows=7; multipliers=[0.5, 0.6666666667, 1.0, 1.5, 2.0, 3.0]"
+source_mnar_denominators,pass,"[{'source_eligible_n': 33396, 'update_eligible_n': 2802, 'target_eligible_n': 2587}]"
+source_mnar_finite,pass,rows=6
+source_k1_or_completion_anchor,pass,"OR-completion reference, k=1"
+update_mnar_scenarios,pass,"rows=7; multipliers=[0.5, 0.6666666667, 1.0, 1.5, 2.0, 3.0]"
+update_mnar_denominators,pass,"[{'source_eligible_n': 33396, 'update_eligible_n': 2802, 'target_eligible_n': 2587}]"
+update_mnar_finite,pass,rows=6
+update_k1_or_completion_anchor,pass,"OR-completion reference, k=1"
+target_mnar_scenarios,pass,"rows=7; multipliers=[0.5, 0.6666666667, 1.0, 1.5, 2.0, 3.0]"
+target_mnar_denominators,pass,"[{'source_eligible_n': 33396, 'update_eligible_n': 2802, 'target_eligible_n': 2587}]"
+target_mnar_finite,pass,rows=6
+target_k1_or_completion_anchor,pass,"OR-completion reference, k=1"
+source_expected_events_monotonic,pass,"[{'odds_multiplier': 0.5, 'source_expected_events': 1855.821095000729}, {'odds_multiplier': 0.6666666667, 'source_expected_events': 1914.8386638844788}, {'odds_multiplier': 1.0, 'source_expected_events': 2029.416868583067}, {'odds_multiplier': 1.5, 'source_expected_events': 2193.446040329457}, {'odds_multiplier': 2.0, 'source_expected_events': 2349.093199863907}, {'odds_multiplier': 3.0, 'source_expected_events': 2638.6838051017044}]"
+mnar_anchor_table_complete,pass,rows=6
+k1_not_numerically_forced_to_canonical,pass,canonical and OR-completion anchors remain distinct
+canonical_bootstrap_1000_unique,pass,rows=1000; unique=1000
+canonical_bootstrap_finite,pass,columns=46
+canonical_intervals_from_single_distribution,pass,mismatches=[]
+mnar_bootstrap_18_cells_by_1000,pass,rows=18000; cells=18; range=1000-1000
+mnar_bootstrap_finite,pass,rows=18000
+bootstrap_failures_explicitly_recorded,pass,"columns=['replicate', 'attempt', 'error_type', 'error_message']; rows=0"
+mnar_interval_table_complete,pass,rows=216; cells=18; metrics=12-12
+mnar_point_estimates_match,pass,mismatches=[]
+mnar_intervals_from_single_distribution,pass,mismatches=[]
+weight_truncation_rules_complete,pass,"['none', '0.5/99.5', '1/99', '2.5/97.5']"
+canonical_1_99_exact_reproduction,pass,[]
+truncation_weights_and_ess_finite,pass,"[{'weight_rule': 'none', 'source_effective_sample_size': 21306.77971870453, 'update_effective_sample_size': 2067.9446094825707, 'target_effective_sample_size': 1865.230460465929}, {'weight_rule': '0.5/99.5', 'source_effective_sample_size': 21577.62013763955, 'update_effective_sample_size': 2072.4658040941067, 'target_effective_sample_size': 1870.788501639498}, {'weight_rule': '1/99', 'source_effective_sample_size': 21745.66799974008, 'update_effective_sample_size': 2080.5340469267244, 'target_effective_sample_size': 1879.023546284448}, {'weight_rule': '2.5/97.5', 'source_effective_sample_size': 22227.782650691413, 'update_effective_sample_size': 2092.6000000007775, 'target_effective_sample_size': 1896.395529028596}]"
+full_target_alert_denominator,pass,"[{'threshold': 0.05, 'alerts': 2087.0, 'alerts_per_1000': 806.7259373792037}, {'threshold': 0.1, 'alerts': 768.0, 'alerts_per_1000': 296.8689601855431}, {'threshold': 0.2, 'alerts': 191.0, 'alerts_per_1000': 73.83069192114418}]"
+net_benefit_estimands_separate,pass,absolute and incremental fields both present
+grouped_calibration_metric_named_correctly,pass,metric map terminology
+run_record_complete,pass,"{'analysis_version': '3.2.0-jamia-candidate', 'status': 'scientific_analysis_complete_submission_no_go_pending_author_gates', 'started_at_utc': '2026-07-14T05:38:43.944604+00:00', 'finished_at_utc': '2026-07-14T05:56:40.187234+00:00', 'runtime_seconds': 1076.2420258522034, 'bootstrap_replicates': 1000, 'mnar_scenarios_per_replicate': 18, 'mnar_rows': 18000, 'recorded_failed_attempts': 0, 'random_seed': 20260714, 'parallel_workers': 6, 'python': '3.9.6', 'platform': 'macOS-15.1-arm64-arm-64bit', 'canonical_table_sha256': '148e1e7161131e0a774602f8a96b1499892dcfe758f95e6c5e16b122dc82fab8', 'canonical_distribution_sha256': '58e51c5f56227b2a3f183dbd231ba9120e8ff2a1438d7aeef7b9e9f4a1165025', 'mnar_distribution_sha256': 'a079a31b5d01393a6a4fd852869ff75e0a76b97ef4b2681516232deecb70316a', 'mnar_interval_table_sha256': '7ec6789384844d2a045288d932099d97d4862575de6218126649db22e37454a2'}"
+submission_status_remains_no_go,pass,scientific_analysis_complete_submission_no_go_pending_author_gates

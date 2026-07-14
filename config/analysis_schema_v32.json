@@ -1,0 +1,70 @@
+{
+  "schema_version": "v32",
+  "prediction_time": "end of anesthesia",
+  "endpoint": {
+    "name": "creatinine-defined postoperative AKI",
+    "observation_window": "through discharge or postoperative day 7 for INSPIRE/MOVER",
+    "absolute_rule": "increase >=0.3 mg/dL within 48 hours",
+    "relative_rule": "postoperative creatinine >=1.5 times baseline within 7 days",
+    "urine_output_used": false
+  },
+  "required_analysis_columns": {
+    "dataset": "string",
+    "patient_key": "deidentified string",
+    "case_key": "unique deidentified string",
+    "age": "numeric",
+    "sex_male": "0/1 numeric",
+    "asa": "numeric, nullable",
+    "duration_h": "numeric >0",
+    "baseline_cr": "numeric, nullable",
+    "tested_7d": "boolean",
+    "outcome_operational": "0/1, nullable when unobserved"
+  },
+  "eligibility": {
+    "age_minimum": 18,
+    "general_anesthesia": true,
+    "duration_hours_inclusive": [
+      0.5,
+      24.0
+    ],
+    "exclude_cardiac": true,
+    "exclude_obstetric": true,
+    "first_eligible_operation_per_patient": true,
+    "baseline_creatinine_lookback_days": 7,
+    "baseline_creatinine_below_mg_dl": 4.0
+  },
+  "locked_counts": {
+    "INSPIRE": {
+      "eligible": 33396,
+      "observed": 24874,
+      "unobserved": 8522,
+      "events": 1671
+    },
+    "MOVER_2021": {
+      "eligible": 2802,
+      "observed": 2212,
+      "unobserved": 590,
+      "events": 245
+    },
+    "MOVER_2022": {
+      "eligible": 2587,
+      "observed": 2033,
+      "unobserved": 554,
+      "events": 224
+    },
+    "VitalDB_supportive_observed": {
+      "released_cases": 6388,
+      "observed": 4095,
+      "events": 269
+    }
+  },
+  "cross_stage_constraint": {
+    "MOVER_2021_2022_patient_overlap": 0
+  },
+  "analysis_ready_outputs": [
+    "data/processed/inspire_rebuilt_v32.parquet",
+    "data/processed/mover_rebuilt_v32.parquet",
+    "data/processed/vitaldb_supportive_v32.parquet"
+  ],
+  "redistribution": "No raw or patient-level analysis-ready data may be included in the public release."
+}

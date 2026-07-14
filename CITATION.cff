@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: Cite the accompanying manuscript and dataset objects when this package is released.
+title: Selective Outcome Observation Across Development, Recalibration, and Evaluation of a Transported Perioperative Acute Kidney Injury Model
+type: software
+version: 3.2.0
+date-released: 2026-07-14
+authors:
+  - family-names: Teng
+    given-names: Qingyu
+  - family-names: Zhang
+    given-names: Hui
+  - family-names: Yang
+    given-names: Yuping
+  - family-names: Qian
+    given-names: Chen
+  - family-names: Gu
+    given-names: Ziyan
+  - family-names: Li
+    given-names: Qi
+  - family-names: Xu
+    given-names: Tao

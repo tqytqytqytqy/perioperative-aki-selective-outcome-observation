@@ -1,0 +1,16 @@
+{
+  "status": "pass_release_boundary_defined",
+  "verified_on": "2026-07-14",
+  "datasets_reviewed": 3,
+  "datasets_with_raw_redistribution_excluded": 3,
+  "raw_or_row_level_data_in_public_candidate": false,
+  "eligible_release_content": [
+    "analysis code",
+    "aggregate result tables",
+    "figures",
+    "JSON model specification and non-sensitive metadata"
+  ],
+  "author_and_institutional_release_approval": "open",
+  "publication_status": "LOCAL_REVIEW_ONLY_not_published",
+  "legal_advice": false
+}

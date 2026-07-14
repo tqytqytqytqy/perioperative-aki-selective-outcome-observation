@@ -1,0 +1,4 @@
+dataset,locked_rows,rebuilt_rows,locked_only_case_keys,rebuilt_only_case_keys,locked_only_columns,rebuilt_only_columns,differing_columns,differing_cells,passed
+INSPIRE,82859,82859,0,0,,,0,0,True
+MOVER,47252,47252,0,0,,,0,0,True
+VitalDB,6388,6388,0,0,,,0,0,True
