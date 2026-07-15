@@ -48,9 +48,9 @@ def main() -> int:
         raise FileNotFoundError("Missing authorized input files: " + "; ".join(missing))
 
     config = json.loads(args.public_config.read_text(encoding="utf-8"))
-    config["analysis_status"] = (
-        "scientific_analysis_complete_submission_no_go_pending_author_gates"
-    )
+    config["analysis_status"] = "scientific_analysis_complete"
+    config["deployment_status"] = "not_evaluated_for_clinical_use"
+    config["peer_review_status"] = "not_peer_reviewed"
     config["raw_data"] = {
         key: str(path.expanduser().resolve()) for key, path in paths.items()
     }

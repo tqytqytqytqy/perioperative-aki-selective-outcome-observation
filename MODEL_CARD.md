@@ -1,4 +1,4 @@
-# Model card v3.2
+# Model card v3.2.2
 
 ## Purpose
 
@@ -15,7 +15,7 @@ Age, released binary sex, anesthesia duration, and baseline creatinine; predicti
 - Classifier weighting: normalized inverse observation probability truncated at the 1st and 99th percentiles.
 - Source intercept: -1.6689550104.
 - Recalibration: `expit(0.0884660935 + 0.8963305835 * logit(source_probability))`.
-- Full ordered coefficients and preprocessing: `models/model_specification_v32.json` and Supplement Tables S6-S7.
+- Full ordered coefficients and preprocessing: `models/model_specification_v32.json`.
 
 ## Claim boundaries
 
@@ -27,4 +27,4 @@ Canonical estimates rely on measured-variable MAR with truncated IPW/AIPW. Sourc
 
 ## Release status
 
-Public reproducibility package: https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation. Current archived v3.2.1 DOI: 10.5281/zenodo.21366751. Release-family concept DOI: 10.5281/zenodo.21366088. Previous immutable v3.2.0 DOI: 10.5281/zenodo.21366089.
+This non-peer-reviewed reproducibility package contains no manuscript file and is not itself a journal submission or a clinical model release. Public repository: https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation. Version-specific DOI: 10.5281/zenodo.21378367. All-versions concept DOI: 10.5281/zenodo.21366088.

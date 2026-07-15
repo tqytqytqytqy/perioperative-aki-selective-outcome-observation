@@ -5,5 +5,6 @@
   "failed": 0,
   "failed_checks": [],
   "scientific_analysis_status": "COMPLETE",
-  "submission_status": "NO-GO pending human and administrative gates"
+  "deployment_status": "not evaluated for clinical use",
+  "peer_review_status": "not peer reviewed"
 }

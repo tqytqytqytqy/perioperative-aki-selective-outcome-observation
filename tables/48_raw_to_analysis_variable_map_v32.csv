@@ -1,6 +1,6 @@
 dataset,analysis_variable,raw_field_or_table,derivation,analysis_use_or_note
 INSPIRE,patient_key,operations.subject_id,SHA-256 namespace key,deidentified grouping key; never release raw identifier
-INSPIRE,case_key,operations.op_id,SHA-256 namespace key,retained operation key
+INSPIRE,case_key,operations.op_id,SHA-256 namespace key,internal deidentified operation grouping key; raw values are not released
 INSPIRE,age,operations.age,numeric,age >=18
 INSPIRE,sex_male,operations.sex,starts with M,binary predictor
 INSPIRE,asa,operations.asa,numeric,observation-model covariate
@@ -11,7 +11,7 @@ INSPIRE,baseline_cr,"labs: creatinine, chart_time, value",latest valid value in 
 INSPIRE,tested_7d,labs: postoperative creatinine,>=1 valid value after anesthesia through discharge/death/day 7,outcome-observation indicator
 INSPIRE,aki,"baseline_cr, cr_max_48h, cr_max_7d",>=0.3 mg/dL by 48 h or >=1.5x by day 7,creatinine KDIGO; urine output unavailable
 MOVER,patient_key,patient_information.MRN,SHA-256 namespace key,patient grouping and 2021/2022 overlap check
-MOVER,case_key,patient_information.LOG_ID,SHA-256 namespace key,retained operation key
+MOVER,case_key,patient_information.LOG_ID,SHA-256 namespace key,internal deidentified operation grouping key; raw values are not released
 MOVER,age,patient_information.BIRTH_DATE,released numeric age,field name is provider-specific
 MOVER,sex_male,patient_information.SEX,"equals male, case-insensitive",binary predictor
 MOVER,asa,patient_information.ASA_RATING_C,numeric,observation-model covariate

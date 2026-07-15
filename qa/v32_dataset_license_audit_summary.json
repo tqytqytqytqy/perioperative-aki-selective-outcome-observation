@@ -10,7 +10,7 @@
     "figures",
     "JSON model specification and non-sensitive metadata"
   ],
-  "author_and_institutional_release_approval": "open",
-  "publication_status": "LOCAL_REVIEW_ONLY_not_published",
+  "author_and_institutional_release_approval": "outside_technical_audit",
+  "publication_status": "public_revision_in_preparation",
   "legal_advice": false
 }

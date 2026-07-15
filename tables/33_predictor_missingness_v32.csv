@@ -10,7 +10,7 @@ MOVER 2021,age,2802,0,0.0,median imputation
 MOVER 2021,sex_male,2802,0,0.0,most-frequent imputation
 MOVER 2021,duration_h,2802,0,0.0,median imputation
 MOVER 2021,baseline_cr,2802,0,0.0,eligibility requires observed baseline creatinine
-MOVER 2021,asa,2802,1,0.03568879371877231,most-frequent category in expanded nuisance models; not used by audit risk model
+MOVER 2021,asa,2802,<5,<0.18,most-frequent category in expanded nuisance models; not used by audit risk model
 MOVER 2021,surgery_category,2802,0,0.0,most-frequent category in MOVER nuisance models; unavailable in INSPIRE
 MOVER 2021,outcome_operational,2802,590,21.05638829407566,not imputed as observed truth; addressed with IPW/AIPW and MNAR scenarios
 MOVER 2022,age,2587,0,0.0,median imputation

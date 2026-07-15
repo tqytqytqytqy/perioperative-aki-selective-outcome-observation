@@ -1973,6 +1973,8 @@ Clinical utility was not evaluated. The results do not establish readiness for c
         {
             "analysis_version": config["analysis_version"],
             "status": config["analysis_status"],
+            "deployment_status": "not_evaluated_for_clinical_use",
+            "peer_review_status": "not_peer_reviewed",
             "started_at_utc": started.isoformat(),
             "finished_at_utc": datetime.now(timezone.utc).isoformat(),
             "runtime_seconds": elapsed,

@@ -32,4 +32,6 @@ Required input hashes:
 
 ## Release boundary
 
-Raw archives, source tables, patient-level Parquet files, bootstrap patient-level derivatives, and serialized joblib/pickle objects are excluded from the public repository. The verified release contains scripts, configuration templates without local paths, aggregate CSV tables, figures, a JSON model specification, and documentation. Repository: https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation. Current archived v3.2.1 DOI: 10.5281/zenodo.21366751. Release-family concept DOI: 10.5281/zenodo.21366088. Previous immutable v3.2.0 DOI: 10.5281/zenodo.21366089.
+Raw archives, source tables, patient-level Parquet files, bootstrap patient-level derivatives, and serialized joblib/pickle objects are excluded from the public repository. The verified release contains scripts, configuration templates without local paths, aggregate CSV tables, figures, a JSON model specification, and documentation. Repository: https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation. The current version-specific DOI is recorded in `CITATION.cff`; the all-versions concept DOI is 10.5281/zenodo.21366088.
+
+Positive aggregate cells below 5 are suppressed only in public displays. The underlying analysis source tables remain unchanged so that scientific calculations and audit checks retain their exact values.

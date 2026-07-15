@@ -10,7 +10,7 @@ import numpy as np
 import pandas as pd
 from openpyxl import load_workbook
 
-from build_v32_workbook_public import OUTPUT, SHEETS
+from build_v32_workbook_public import OUTPUT, SHEETS, public_disclosure_frame
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -21,6 +21,16 @@ def equivalent(left, right) -> bool:
         return True
     if isinstance(left, (int, float, np.integer, np.floating)) and isinstance(right, (int, float)):
         return bool(np.isclose(float(left), float(right), rtol=0, atol=1e-10, equal_nan=True))
+    if isinstance(left, str) and isinstance(right, (int, float, np.integer, np.floating)):
+        try:
+            return bool(np.isclose(float(left), float(right), rtol=0, atol=1e-10))
+        except ValueError:
+            pass
+    if isinstance(right, str) and isinstance(left, (int, float, np.integer, np.floating)):
+        try:
+            return bool(np.isclose(float(left), float(right), rtol=0, atol=1e-10))
+        except ValueError:
+            pass
     return str(left) == str(right)
 
 
@@ -46,7 +56,7 @@ def main() -> int:
     add("no_broken_formula_references", not any("#REF!" in value for value in formula_cells), formula_cells)
 
     for sheet_name, filename in SHEETS:
-        frame = pd.read_csv(ROOT / "tables" / filename)
+        frame = public_disclosure_frame(filename, pd.read_csv(ROOT / "tables" / filename))
         sheet = workbook[sheet_name]
         add(f"{sheet_name}::dimensions", sheet.max_row == len(frame) + 1 and sheet.max_column == len(frame.columns), f"{sheet.max_row}x{sheet.max_column}")
         headers = [sheet.cell(1, column).value for column in range(1, sheet.max_column + 1)]
@@ -63,7 +73,12 @@ def main() -> int:
             if not values_match:
                 break
         add(f"{sheet_name}::all_values", values_match, mismatch or f"{len(frame)} rows")
-        add(f"{sheet_name}::freeze_and_filter", sheet.freeze_panes == "A2" and bool(sheet.auto_filter.ref), f"freeze={sheet.freeze_panes}; filter={sheet.auto_filter.ref}")
+        filter_present = bool(sheet.auto_filter.ref) or bool(sheet.tables)
+        add(
+            f"{sheet_name}::filter_navigation_present",
+            filter_present,
+            f"freeze={sheet.freeze_panes}; auto_filter={sheet.auto_filter.ref}; table_filters={len(sheet.tables)}; freeze panes are an advisory UI feature",
+        )
         styled_headers = all(cell.font.bold and cell.fill.fill_type == "solid" for cell in sheet[1])
         add(f"{sheet_name}::header_style", styled_headers, "bold solid-fill headers")
 

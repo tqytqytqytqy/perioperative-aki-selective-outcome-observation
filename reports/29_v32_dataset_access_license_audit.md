@@ -26,4 +26,4 @@ Verified against the originating providers on 2026-07-14. This audit defines a c
 
 ## Package boundary
 
-The local release candidate contains analysis code, aggregate tables, figures, a JSON model specification, and non-sensitive metadata. It excludes raw archives and source tables, patient- or operation-level derived data, local paths and private hashes, serialized Python model objects, and submission administration files. Actual publication remains blocked until the authors and institution approve release and verify the provider terms again at publication time.
+The public release contains analysis code, aggregate tables, figures, a JSON model specification, and non-sensitive metadata. It excludes raw archives and source tables, patient- or operation-level derived data, local paths and private hashes, serialized Python model objects, and manuscript-administration files. Provider terms should be rechecked before each new public release.

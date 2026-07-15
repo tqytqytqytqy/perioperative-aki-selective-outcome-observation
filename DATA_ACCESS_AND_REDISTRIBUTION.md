@@ -18,11 +18,10 @@ The provider identifies CC BY-NC-SA 4.0 and also imposes a DUA that restricts di
 
 This package does not redistribute raw data, row-level derived data, patient identifiers, local file hashes tied to private copies, or serialized model objects. It contains only analysis code, aggregate results, figures, a JSON model specification, and non-sensitive metadata. The public input manifest records versions, official locations, terms, and expected filenames without local paths.
 
-The public package boundary was reviewed to exclude provider-controlled raw data, row-level derived data, and private local metadata. This file documents that boundary; it is not legal advice and does not grant redistribution rights.
+The included `qa/raw_rebuild_equivalence_v32.csv` is frozen internal audit evidence. Its prior locked patient-level comparators are not redistributed, so that historical comparison cannot be regenerated from the public package. Public replay remains available for rebuilding the current cohorts and aggregate analysis outputs from separately obtained source datasets.
 
-## Published package
+Provider terms should be rechecked before each new public release. This file documents the package boundary; it is not legal advice and does not grant redistribution rights for the source datasets.
 
-- GitHub repository: https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation
-- Current archived v3.2.1 DOI: https://doi.org/10.5281/zenodo.21366751
-- Release-family concept DOI: https://doi.org/10.5281/zenodo.21366088
-- Previous immutable v3.2.0 DOI: https://doi.org/10.5281/zenodo.21366089
+## Repository licenses
+
+Source code under `scripts/` is licensed under MIT. Original documentation, aggregate tables, figures, model metadata, and workbook content are licensed under CC BY 4.0 except where otherwise noted. These licenses apply only to rights held by the authors; they do not override third-party dataset terms or grant access to provider-controlled data. See `LICENSE`, `LICENSE-CODE`, and `LICENSE-CONTENT`.

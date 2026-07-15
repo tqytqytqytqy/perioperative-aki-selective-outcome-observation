@@ -1,7 +1,9 @@
 {
   "study_id": "AKI_SELECTIVE_OUTCOME_CHAIN_V32",
-  "analysis_version": "3.2.0-scientific-release",
-  "analysis_status": "scientific_analysis_complete_submission_no_go_pending_author_gates",
+  "analysis_version": "3.2-scientific-analysis",
+  "analysis_status": "scientific_analysis_complete",
+  "deployment_status": "not_evaluated_for_clinical_use",
+  "peer_review_status": "not_peer_reviewed",
   "revision_context": "post-exploration methodological study; not a prospectively prespecified external validation",
   "analysis_date": "2026-07-14",
   "random_seed": 20260714,
@@ -169,22 +171,9 @@
     "clinical_deployment_evaluated": false,
     "clinical_utility_evaluated": false,
     "universal_event_threshold": false,
-    "mnar_scenarios_are_clinically_plausible": false,
-    "submission_ready": false
+    "mnar_scenarios_are_clinically_plausible": false
   },
-  "author_verification": {
-    "author_change_approved": false,
-    "affiliations_confirmed": false,
-    "funding_confirmed": false,
-    "conflicts_confirmed": false,
-    "prior_presentation_confirmed": false,
-    "responsible_corresponding_author_confirmed": false,
-    "telephone_confirmed": false,
-    "credit_confirmed": false,
-    "ai_disclosure_confirmed": false,
-    "local_ethics_determination_confirmed": false,
-    "independent_statistical_signoff": false
-  },
+  "public_package_version": "3.2.2",
   "data_access": {
     "note": "Raw and patient-level derived data are excluded. Obtain INSPIRE, MOVER, and VitalDB under their originating repository terms.",
     "inputs": "Configure local paths from environment variables or a private runtime configuration; do not commit local absolute paths."

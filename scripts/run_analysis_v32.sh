@@ -25,8 +25,18 @@ fi
 "$PYTHON" "$ROOT/scripts/build_v32_reproducibility_assets.py"
 "$PYTHON" "$ROOT/scripts/run_v32_analysis.py" --jobs "$V32_JOBS"
 "$PYTHON" "$ROOT/scripts/build_v32_figures.py"
+
+RAW_REBUILD_EVIDENCE="$ROOT/qa/raw_rebuild_equivalence_v32.csv"
+if [[ ! -f "$RAW_REBUILD_EVIDENCE" ]]; then
+  printf '%s\n' \
+    'Statistical QA requires the released frozen internal raw-rebuild equivalence evidence.' \
+    'The public replay cannot regenerate that comparison because prior locked patient-level inputs are excluded.' \
+    "Expected release evidence: $RAW_REBUILD_EVIDENCE" >&2
+  exit 4
+fi
+
 "$PYTHON" "$ROOT/scripts/run_v32_statistical_qa.py"
 "$PYTHON" "$ROOT/scripts/build_v32_workbook_public.py"
 "$PYTHON" "$ROOT/scripts/run_v32_workbook_qa.py"
 
-printf 'V3.2 analysis replay complete; submission and deployment status remain NO-GO.\n'
+printf 'V3.2 analysis replay complete; clinical deployment was not evaluated and no clinical use is supported.\n'

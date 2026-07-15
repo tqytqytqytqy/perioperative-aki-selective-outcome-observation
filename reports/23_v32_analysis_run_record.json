@@ -1,6 +1,8 @@
 {
   "analysis_version": "3.2.0-scientific-release",
-  "status": "scientific_analysis_complete_submission_no_go_pending_author_gates",
+  "status": "scientific_analysis_complete",
+  "deployment_status": "not_evaluated_for_clinical_use",
+  "peer_review_status": "not_peer_reviewed",
   "started_at_utc": "2026-07-14T05:38:43.944604+00:00",
   "finished_at_utc": "2026-07-14T05:56:40.187234+00:00",
   "runtime_seconds": 1076.2420258522034,

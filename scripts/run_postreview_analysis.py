@@ -81,7 +81,7 @@ def sha256_file(path: Path, chunk_size: int = 16 * 1024 * 1024) -> str:
 
 
 def stable_key(namespace: str, value: Any) -> str:
-    # Preserve the v2 cohort-key namespace so raw timing records join the locked cohort.
+    # Preserve the v2 cohort-key namespace so raw timing records join the analysis cohort.
     text = f"{namespace}|AKI_LOCAL_EVIDENCE_REDO_2_0|{value}".encode("utf-8")
     return hashlib.sha256(text).hexdigest()[:20]
 
@@ -1790,7 +1790,7 @@ def main() -> int:
     target, timing_audit = derive_testing_timing(target, labs, info)
     write_csv(timing_audit, "14_testing_timing_derivation_audit.csv")
     if int(timing_audit["discordant_cases"].sum()) != 0:
-        raise RuntimeError("Derived postoperative creatinine counts do not match the locked cohort")
+        raise RuntimeError("Derived postoperative creatinine counts do not match the analysis cohort")
 
     print("Fitting source model and MOVER 2021 recalibration", flush=True)
     model = make_risk_model(int(config["random_seed"])).fit(source[FEATURES], source["analysis_outcome"])

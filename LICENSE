@@ -1,0 +1,12 @@
+# Repository licensing
+
+Source code under `scripts/` is licensed under the MIT License. See
+`LICENSE-CODE`.
+
+Original documentation, aggregate tables, figures, model metadata, and workbook
+content are licensed under the Creative Commons Attribution 4.0 International
+License (CC BY 4.0), except where otherwise noted. See `LICENSE-CONTENT`.
+
+Neither license applies to third-party datasets, provider-controlled materials,
+or materials for which the authors do not hold the necessary rights. See
+`THIRD_PARTY_NOTICES.md` and `DATA_ACCESS_AND_REDISTRIBUTION.md`.

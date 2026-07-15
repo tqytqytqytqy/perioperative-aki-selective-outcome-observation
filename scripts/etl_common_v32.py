@@ -1621,7 +1621,7 @@ def make_figures(
         {
             "INSPIRE": "INSPIRE\nSource model",
             "MOVER_2021": "MOVER 2021\nLocal update",
-            "MOVER_2022": "MOVER 2022\nLocked future test",
+            "MOVER_2022": "MOVER 2022\nPost-exploration temporal evaluation",
         }
     )
     fig, ax = plt.subplots(figsize=(8.2, 4.8))
@@ -1656,7 +1656,7 @@ def make_figures(
         ax.grid(axis="y", color="#E5E7EB", lw=0.8)
     axes[0].set_ylabel("Bootstrap probability within tolerance")
     axes[1].legend(frameon=False, loc="lower right")
-    fig.suptitle("Local evidence accumulation evaluated on the locked MOVER 2022 cohort", fontweight="bold")
+    fig.suptitle("Local evidence accumulation in the temporally held-out MOVER 2022 cohort", fontweight="bold")
     fig.tight_layout()
     fig.savefig(FIGURE_DIR / "Figure_2_readiness_curves.png", dpi=300, bbox_inches="tight")
     fig.savefig(FIGURE_DIR / "Figure_2_readiness_curves.pdf", bbox_inches="tight")
@@ -1690,7 +1690,7 @@ def make_figures(
     ax.set_ylim(0, limit)
     ax.set_xlabel("Mean predicted risk")
     ax.set_ylabel("Observed AKI proportion")
-    ax.set_title("Calibration in the locked MOVER 2022 cohort")
+    ax.set_title("Calibration in the temporally held-out MOVER 2022 cohort")
     ax.legend(frameon=False, fontsize=8)
     ax.grid(color="#E5E7EB", lw=0.8)
     fig.tight_layout()
@@ -1712,7 +1712,7 @@ def make_figures(
         ax.plot(part["actual_events"], part["alerts_per_1000"], marker="o", lw=2, color=colors[method], label=method)
     ax.set_xlabel("Cumulative local AKI events in MOVER 2021")
     ax.set_ylabel("Alerts per 1000 patients at 10% threshold")
-    ax.set_title("Operational workload on the locked MOVER 2022 cohort")
+    ax.set_title("Operational workload in the temporally held-out MOVER 2022 cohort")
     ax.grid(axis="y", color="#E5E7EB", lw=0.8)
     ax.legend(frameon=False)
     fig.tight_layout()
@@ -1729,8 +1729,8 @@ def build_metadata_tables(config: dict[str, Any], external_not_mounted: bool) ->
             {"order": 3, "name": "Yuping Yang", "affiliation": "1", "role_note": "", "corresponding": False, "email": "", "orcid": ""},
             {"order": 4, "name": "Chen Qian", "affiliation": "1", "role_note": "", "corresponding": False, "email": "", "orcid": ""},
             {"order": 5, "name": "Ziyan Gu", "affiliation": "1", "role_note": "", "corresponding": False, "email": "", "orcid": ""},
-            {"order": 6, "name": "Qi Li", "affiliation": "1", "role_note": "", "corresponding": True, "email": "niki77@sjtu.edu.cn", "orcid": "0009-0003-3140-5887"},
-            {"order": 7, "name": "Tao Xu", "affiliation": "1", "role_note": "", "corresponding": True, "email": "balor@sjtu.edu.cn", "orcid": "0000-0001-5868-4079"},
+            {"order": 6, "name": "Qi Li", "affiliation": "1", "role_note": "", "corresponding": True, "email": "", "orcid": "0009-0003-3140-5887"},
+            {"order": 7, "name": "Tao Xu", "affiliation": "1", "role_note": "", "corresponding": True, "email": "", "orcid": "0000-0001-5868-4079"},
         ]
     )
     write_table(authors, "24_author_metadata.csv")
@@ -1842,14 +1842,14 @@ def main_result_table(
         {"result": "INSPIRE source AKI events", "value": int(source["aki"].sum()), "unit": "events"},
         {"result": "MOVER 2021 update sample", "value": len(update), "unit": "patients"},
         {"result": "MOVER 2021 update AKI events", "value": int(update["aki"].sum()), "unit": "events"},
-        {"result": "MOVER 2022 locked test sample", "value": len(test), "unit": "patients"},
-        {"result": "MOVER 2022 locked test AKI events", "value": int(test["aki"].sum()), "unit": "events"},
+        {"result": "MOVER 2022 temporal evaluation sample", "value": len(test), "unit": "patients"},
+        {"result": "MOVER 2022 temporal evaluation AKI events", "value": int(test["aki"].sum()), "unit": "events"},
     ]
     for _, row in all_rows.iterrows():
         for metric in ["oe_ratio", "calibration_slope", "calibration_intercept", "auroc", "auprc", "brier", "grouped_ici"]:
             rows.append(
                 {
-                    "result": f"Locked test {row['method']} at all update events: {metric}",
+                    "result": f"Temporal evaluation {row['method']} at all update events: {metric}",
                     "value": row[metric],
                     "unit": "estimate",
                 }
@@ -1985,11 +1985,11 @@ def generate_reports(
 
 ## Methods summary
 
-We performed a retrospective, multi-database model transport and temporal updating study using deidentified INSPIRE, MOVER, and VitalDB data products. A prespecified logistic spline model using age, sex, anaesthesia duration, and baseline creatinine was developed in INSPIRE. MOVER cases from 2021 were ordered chronologically and used only for intercept updating or logistic recalibration at prespecified cumulative AKI-event nodes. MOVER cases from 2022 formed a locked future test cohort and were not used for model fitting, tuning, method selection, or threshold selection. The primary outcome was creatinine-defined KDIGO AKI within 7 days, with observation truncated at discharge. Calibration sufficiency required a bootstrap probability of at least 0.90 that O/E was 0.80-1.25 and the calibration slope was 0.80-1.20, with persistence at all subsequent event nodes.
+We performed a retrospective, multi-database model transport and temporal updating study using deidentified INSPIRE, MOVER, and VitalDB data products. A prespecified logistic spline model using age, sex, anaesthesia duration, and baseline creatinine was developed in INSPIRE. MOVER cases from 2021 were ordered chronologically and used only for intercept updating or logistic recalibration at prespecified cumulative AKI-event nodes. MOVER cases from 2022 were used for post-exploration temporally held-out evaluation and were not used for model fitting, tuning, method selection, or threshold selection; this was not an independent confirmation cohort. The primary outcome was creatinine-defined KDIGO AKI within 7 days, with observation truncated at discharge. Calibration sufficiency required a bootstrap probability of at least 0.90 that O/E was 0.80-1.25 and the calibration slope was 0.80-1.20, with persistence at all subsequent event nodes.
 
 ## Results
 
-The source cohort included {len(source):,} patients with {int(source['aki'].sum()):,} AKI events ({source['aki'].mean():.1%}). The chronological MOVER 2021 update cohort included {len(update):,} patients with {int(update['aki'].sum()):,} events ({update['aki'].mean():.1%}), and the locked MOVER 2022 test cohort included {len(test):,} patients with {int(test['aki'].sum()):,} events ({test['aki'].mean():.1%}). Without local updating, the logistic spline model had an O/E ratio of {no_update['oe_ratio']:.3f}, calibration slope of {no_update['calibration_slope']:.3f}, AUROC of {no_update['auroc']:.3f}, and Brier score of {no_update['brier']:.3f} in the locked test cohort. After logistic recalibration using all available 2021 observations, the corresponding O/E ratio was {logistic['oe_ratio']:.3f}, calibration slope was {logistic['calibration_slope']:.3f}, and Brier score was {logistic['brier']:.3f}. {global_sentence_en} {readiness_sentence_en}
+The source cohort included {len(source):,} patients with {int(source['aki'].sum()):,} AKI events ({source['aki'].mean():.1%}). The chronological MOVER 2021 update cohort included {len(update):,} patients with {int(update['aki'].sum()):,} events ({update['aki'].mean():.1%}), and the post-exploration MOVER 2022 temporal evaluation cohort included {len(test):,} patients with {int(test['aki'].sum()):,} events ({test['aki'].mean():.1%}). Without local updating, the logistic spline model had an O/E ratio of {no_update['oe_ratio']:.3f}, calibration slope of {no_update['calibration_slope']:.3f}, AUROC of {no_update['auroc']:.3f}, and Brier score of {no_update['brier']:.3f} in the temporal evaluation cohort. After logistic recalibration using all available 2021 observations, the corresponding O/E ratio was {logistic['oe_ratio']:.3f}, calibration slope was {logistic['calibration_slope']:.3f}, and Brier score was {logistic['brier']:.3f}. {global_sentence_en} {readiness_sentence_en}
 
 ## Interpretation
 
@@ -2036,7 +2036,7 @@ def table_index() -> pd.DataFrame:
         "01_source_file_audit.csv": "Raw/analysis-ready input locations, sizes, timestamps, and SHA-256 hashes",
         "02_mover_creatinine_code_counts.csv": "Strict blood creatinine LOINC counts after fresh raw-file extraction",
         "03_cohort_flow.csv": "Sequential cohort construction counts",
-        "04_cohort_characteristics.csv": "Source, update, locked test, and supportive cohort characteristics",
+        "04_cohort_characteristics.csv": "Source, update, temporal evaluation, and supportive cohort characteristics",
         "05_source_internal_validation.csv": "Five-fold source internal validation",
         "06_unupdated_transport_performance.csv": "Unupdated model performance across data roles",
         "07_event_node_composition.csv": "Chronological local evidence composition by event node",

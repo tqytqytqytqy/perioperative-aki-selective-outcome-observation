@@ -1705,7 +1705,7 @@ def build_multidomain_audit(
         "operational_vs_interval_and_coarsened_labels",
         "fail" if representation_changes else "pass",
         f"representations_changing_full_rule_conclusion={int(outcome_robustness['conclusion_differs_from_operational'].sum())}",
-        "No outcome representation changes the full readiness conclusion",
+        "No outcome representation changes the retrospective audit interpretation",
         "A changed conclusion identifies outcome encoding as a transportability failure mechanism.",
     )
 
@@ -1717,7 +1717,7 @@ def build_multidomain_audit(
         "unresolved",
         f"maximum alerts={worst_alerts:.1f}/1000; maximum false positives={worst_fp:.1f}/1000",
         "A clinical action, acceptable alert capacity, and harm monitoring plan must be prespecified",
-        "Unresolved workload blocks clinical activation regardless of statistical performance.",
+        "Without a prespecified action, capacity, and harm-monitoring plan, clinical activation cannot be assessed.",
     )
 
     audit = pd.DataFrame(audit_rows)
@@ -1725,26 +1725,23 @@ def build_multidomain_audit(
     required = audit["domain"].isin(
         ["overall_calibration", "temporal", "subgroup", "outcome_observation", "outcome_representation", "clinical_workload"]
     )
-    deployment_ready = bool((audit.loc[required, "status"] == "pass").all())
+    retrospective_domains_resolved = bool((audit.loc[required, "status"] == "pass").all())
     unresolved = int(audit.loc[required, "status"].isin(["uncertain", "unresolved"]).sum())
     failed = int(audit.loc[required, "status"].eq("fail").sum())
     decision = pd.DataFrame(
         [
             {
-                "decision": "GO" if deployment_ready else "NO_GO",
-                "clinical_activation": deployment_ready,
-                "maximum_supported_next_step": "clinical_activation_with_monitoring"
-                if deployment_ready
-                else config["reporting"]["maximum_conclusion"],
+                "deployment_assessability": "not_evaluated_due_to_undefined_use_case",
+                "clinical_activation_evaluated": False,
+                "retrospective_domains_resolved": retrospective_domains_resolved,
+                "maximum_supported_next_step": config["reporting"]["maximum_conclusion"],
                 "failed_required_checks": failed,
                 "uncertain_or_unresolved_required_checks": unresolved,
-                "reason": "All prespecified domains passed"
-                if deployment_ready
-                else "One or more required domains failed or remain unresolved",
+                "reason": "No specific hospital use case, linked clinical action, alert capacity, harm boundary, or prospective workflow was defined",
             }
         ]
     )
-    write_table(decision, "22_go_no_go_decision.csv")
+    write_table(decision, "22_deployment_assessability.csv")
     return audit, decision, primary_strategies
 
 
@@ -1830,7 +1827,7 @@ def make_figures(
     timeline = [
         (1.2, "INSPIRE\nmodel development", "2011-2020 data product", colors["INSPIRE"]),
         (4.0, "MOVER 2021\nlocal update", "chronological evidence", colors["MOVER_2021"]),
-        (6.8, "MOVER 2022\nlocked future test", "no update fitting", colors["MOVER_2022"]),
+        (6.8, "MOVER 2022\ntemporal evaluation", "post-exploration holdout", colors["MOVER_2022"]),
         (9.0, "SAP amendment\nv2.0", "post-exploration audit", colors["amendment"]),
     ]
     for x, title, subtitle, color in timeline:
@@ -2041,7 +2038,7 @@ This directory is an independent rerun from the original data sources. No result
 
 ## Primary conclusion
 
-Decision: **{final_decision['decision']}**. Maximum supported next step: **{final_decision['maximum_supported_next_step']}**.
+Deployment assessability: **{final_decision['deployment_assessability']}**. Maximum supported next step: **{final_decision['maximum_supported_next_step']}**. This is not a clinical activation decision.
 
 The event-node curve is a retrospective description of evidence accumulation. It is not an independently validated universal minimum event threshold.
 """
@@ -2061,14 +2058,14 @@ The event-node curve is a retrospective description of evidence accumulation. It
 
 How does local evidence accumulate when an externally developed perioperative AKI model is considered for deployment, and which transport failure mechanisms remain after updating?
 
-This version does not seek a universal safe event count. It estimates a retrospective learning curve in one chronological local update cohort and tests each update on a later locked cohort.
+This version does not seek a universal safe event count. It estimates a retrospective learning curve in one chronological local update cohort and evaluates each update in a later post-exploration temporally held-out cohort.
 
 ## Information isolation
 
 1. INSPIRE: source model development.
 2. MOVER 2021: chronological local updating only.
-3. MOVER 2022: locked future testing only.
-4. VitalDB: supportive stress test without a calendar split; it cannot replace the locked test.
+3. MOVER 2022: post-exploration temporally held-out evaluation only.
+4. VitalDB: supportive stress test without a calendar split; it does not constitute independent confirmation.
 
 ## Two estimands
 
@@ -2102,9 +2099,9 @@ At each event node, MOVER 2021 and MOVER 2022 are resampled independently at pat
 - Strict sensitivity: the entire 95% nested-bootstrap interval must lie inside both tolerance bands.
 - Subgroup stable-reporting minimum: {config['readiness']['minimum_subgroup_events']} events.
 
-## Stop rule
+## Clinical-use boundary
 
-Clinical activation is `NO-GO` if any required domain fails or remains unresolved. Statistical performance alone cannot override unresolved clinical action, alert capacity, or harm-monitoring requirements.
+Clinical activation was not evaluated because no specific hospital use case, linked clinical action, acceptable alert capacity, harm boundary, or prospective workflow was defined. Statistical findings and unresolved domains are reported separately from this use-case limitation.
 """
     (REPORT_DIR / "01_analysis_protocol_and_sap_amendment.md").write_text(protocol, encoding="utf-8")
 
@@ -2154,7 +2151,7 @@ The structure follows the concise data-source-plus-approval style used in the at
 
 {markdown_table(strategy_table, strategy_columns, 3)}
 
-For the primary logistic recalibration at the full MOVER 2021 update sample ({int(primary['actual_events'])} observed AKI events), locked MOVER 2022 performance was O/E {primary['oe_ratio_estimate']:.3f} (95% nested-bootstrap interval {primary['oe_ratio_ci_lower']:.3f} to {primary['oe_ratio_ci_upper']:.3f}) and calibration slope {primary['calibration_slope_estimate']:.3f} ({primary['calibration_slope_ci_lower']:.3f} to {primary['calibration_slope_ci_upper']:.3f}). The full-rule bootstrap stability proportion was {primary['bootstrap_stability_full']:.3f}; strict interval containment was {bool(primary['strict_ci_containment_full'])}.
+For the primary logistic recalibration at the full MOVER 2021 update sample ({int(primary['actual_events'])} observed AKI events), post-exploration temporally held-out MOVER 2022 performance was O/E {primary['oe_ratio_estimate']:.3f} (95% nested-bootstrap interval {primary['oe_ratio_ci_lower']:.3f} to {primary['oe_ratio_ci_upper']:.3f}) and calibration slope {primary['calibration_slope_estimate']:.3f} ({primary['calibration_slope_ci_lower']:.3f} to {primary['calibration_slope_ci_upper']:.3f}). The full-rule bootstrap stability proportion was {primary['bootstrap_stability_full']:.3f}; strict interval containment was {bool(primary['strict_ci_containment_full'])}.
 
 ## Outcome observation
 
@@ -2164,14 +2161,9 @@ The conditional observed-outcome estimand gave O/E {conditional['oe_ratio_estima
 
 {markdown_table(outcome_robustness, ['outcome_representation', 'actual_events', 'oe_ratio_estimate', 'calibration_slope_estimate', 'bootstrap_stability_full', 'full_stability_rule_met', 'conclusion_differs_from_operational'], 3)}
 
-## Final deployment decision
+## Deployment assessability
 
-**{final_decision['decision']} for clinical activation.** Maximum supported next step: **{final_decision['maximum_supported_next_step']}**. There were {int(final_decision['failed_required_checks'])} failed required checks and {int(final_decision['uncertain_or_unresolved_required_checks'])} uncertain or unresolved checks.
-
-## Journal positioning
-
-- First-choice path: BJA. Frame the paper as a perioperative deployment-readiness audit and failure-mechanism analysis. Lead with chronological information isolation, outcome observation, outcome representation, and why local evidence did or did not satisfy the full rule.
-- JAMA Network Open upgrade path: require a broader policy contribution, independent replication of the evidence-accumulation rule beyond this single MOVER update/test split, and a clinically justified action/capacity framework. With only the current three public datasets, do not market the event count as a universal threshold.
+Clinical deployment was **not evaluated because the use case was undefined**. Maximum supported next step: **{final_decision['maximum_supported_next_step']}**. Separately, the retrospective audit contained {int(final_decision['failed_required_checks'])} failed required checks and {int(final_decision['uncertain_or_unresolved_required_checks'])} uncertain or unresolved checks.
 
 Runtime for the full statistical pipeline was {runtime_seconds / 60:.1f} minutes.
 """
@@ -2191,10 +2183,10 @@ The manuscript should show how much uncertainty remains after local recalibratio
 
 1. Importance: externally developed perioperative models may fail after geographic transport, and local updating alone does not guarantee deployment readiness.
 2. Objective: quantify retrospective local evidence accumulation and identify remaining failure mechanisms.
-3. Design: INSPIRE development, MOVER 2021 update, MOVER 2022 locked test, VitalDB supportive stress test.
+3. Design: INSPIRE development, MOVER 2021 update, MOVER 2022 post-exploration temporal evaluation, VitalDB supportive stress test.
 4. Exposures/methods: five update strategies, nested patient bootstrap, two estimands, four outcome representations, multi-domain audit.
 5. Main outcomes: O/E, calibration slope, Brier score and skill, bootstrap stability proportion, strict interval containment, operational alert burden.
-6. Conclusion: state the actual GO/NO-GO result and the maximum supported next step.
+6. Conclusion: separate statistical findings from the undefined clinical use case and state the maximum supported next step.
 
 ## Main text structure
 
@@ -2223,7 +2215,7 @@ The manuscript should show how much uncertainty remains after local recalibratio
 - Temporal/subgroup forest.
 - Observation weighting and MNAR sensitivity.
 - Outcome-representation robustness and clinical workload.
-- Final multi-domain GO/NO-GO decision.
+- Multi-domain retrospective findings and separate deployment-assessability statement.
 
 ### Discussion
 
@@ -2231,7 +2223,7 @@ The manuscript should show how much uncertainty remains after local recalibratio
 - Explain transport failure mechanisms and why local redevelopment is only an upper-bound benchmark.
 - Discuss selective outcome observation and released-value uncertainty as deployment problems.
 - State that retrospective event-node curves require independent replication.
-- End with silent monitoring or clinical activation according to the prespecified decision table.
+- End with the maximum supported next step; clinical activation requires a prospectively defined use case and workflow evaluation.
 
 ## Main display items
 
@@ -2240,7 +2232,7 @@ The manuscript should show how much uncertainty remains after local recalibratio
 - Figure 3: quarterly and subgroup forest.
 - Table 1: cohort and testing observation.
 - Table 2: all-event update-strategy performance with nested intervals.
-- Table 3: multi-domain deployment audit and final decision.
+- Table 3: multi-domain retrospective audit and deployment-assessability boundary.
 
 All other diagnostics belong in the supplement and the combined workbook.
 """
@@ -2282,7 +2274,7 @@ A final clean run should omit this flag. Raw patient-level source files and the 
         ("Quarterly and subgroup audit", "completed"),
         ("Testing propensity diagnostics and MNAR sensitivity", "completed"),
         ("Threshold workload with bootstrap intervals", "completed"),
-        ("Multi-domain GO/NO-GO decision", "completed"),
+        ("Multi-domain retrospective audit with separate deployment-assessability boundary", "completed"),
         ("Combined multi-sheet workbook", "pending until workbook build and visual QA"),
     ]
     checklist = "# Executed revision checklist\n\n" + "\n".join(
@@ -2427,10 +2419,13 @@ def statistical_qa(
     prohibited = []
     for directory in public_dirs:
         for path in directory.rglob("*"):
-            if path.is_file() and "bja" in path.name.casefold():
+            if path.is_file() and any(
+                token in path.name.casefold()
+                for token in ("submission", "response_to_reviewers", "cover_letter")
+            ):
                 prohibited.append(str(path))
     add(
-        "public_artifact_filenames_do_not_contain_journal_abbreviation",
+        "public_artifact_filenames_are_repository_scoped",
         not prohibited,
         "none" if not prohibited else "; ".join(prohibited),
     )
@@ -2540,7 +2535,7 @@ def main() -> int:
         outcome_robustness = analyze_outcome_robustness(learning)
         progress("Running algorithm and supportive-dataset sensitivities")
         analyze_algorithm_and_supportive_dataset(learning, cohorts["vitaldb"], config)
-        progress("Building multidomain audit and GO/NO-GO decision")
+        progress("Building multidomain retrospective audit and deployment-assessability summary")
         audit, decision, _ = build_multidomain_audit(
             learning,
             observation,

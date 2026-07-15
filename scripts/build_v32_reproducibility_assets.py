@@ -17,6 +17,9 @@ CONFIG_PATH = Path(
     os.environ.get("V32_CONFIG_PATH", ROOT / "config" / "analysis_config_v32.json")
 ).expanduser().resolve()
 ACCESS_DATE = "2026-07-14"
+PUBLIC_RELEASE_VERSION = os.environ.get("PUBLIC_RELEASE_VERSION", "3.2.2")
+ZENODO_VERSION_DOI = os.environ.get("ZENODO_VERSION_DOI", "see CITATION.cff")
+ZENODO_CONCEPT_DOI = "10.5281/zenodo.21366088"
 
 
 def sha256(path: Path) -> str:
@@ -115,7 +118,7 @@ def build_manifest(config: dict[str, object]) -> pd.DataFrame:
 def build_variable_map() -> pd.DataFrame:
     rows = [
         ("INSPIRE", "patient_key", "operations.subject_id", "SHA-256 namespace key", "deidentified grouping key; never release raw identifier"),
-        ("INSPIRE", "case_key", "operations.op_id", "SHA-256 namespace key", "retained operation key"),
+        ("INSPIRE", "case_key", "operations.op_id", "SHA-256 namespace key", "internal deidentified operation grouping key; raw values are not released"),
         ("INSPIRE", "age", "operations.age", "numeric", "age >=18"),
         ("INSPIRE", "sex_male", "operations.sex", "starts with M", "binary predictor"),
         ("INSPIRE", "asa", "operations.asa", "numeric", "observation-model covariate"),
@@ -126,7 +129,7 @@ def build_variable_map() -> pd.DataFrame:
         ("INSPIRE", "tested_7d", "labs: postoperative creatinine", ">=1 valid value after anesthesia through discharge/death/day 7", "outcome-observation indicator"),
         ("INSPIRE", "aki", "baseline_cr, cr_max_48h, cr_max_7d", ">=0.3 mg/dL by 48 h or >=1.5x by day 7", "creatinine KDIGO; urine output unavailable"),
         ("MOVER", "patient_key", "patient_information.MRN", "SHA-256 namespace key", "patient grouping and 2021/2022 overlap check"),
-        ("MOVER", "case_key", "patient_information.LOG_ID", "SHA-256 namespace key", "retained operation key"),
+        ("MOVER", "case_key", "patient_information.LOG_ID", "SHA-256 namespace key", "internal deidentified operation grouping key; raw values are not released"),
         ("MOVER", "age", "patient_information.BIRTH_DATE", "released numeric age", "field name is provider-specific"),
         ("MOVER", "sex_male", "patient_information.SEX", "equals male, case-insensitive", "binary predictor"),
         ("MOVER", "asa", "patient_information.ASA_RATING_C", "numeric", "observation-model covariate"),
@@ -236,7 +239,9 @@ Required input hashes:
 
 ## Release boundary
 
-Raw archives, source tables, patient-level Parquet files, bootstrap patient-level derivatives, and serialized joblib/pickle objects are excluded from any public repository. A public release may contain scripts, configuration templates without local paths, aggregate CSV tables, figures, a JSON model specification, and documentation only after author and license approval. No GitHub URL or Zenodo DOI has been created or asserted in v3.2.
+Raw archives, source tables, patient-level Parquet files, bootstrap patient-level derivatives, and serialized joblib/pickle objects are excluded from the public repository. The verified release contains scripts, configuration templates without local paths, aggregate CSV tables, figures, a JSON model specification, and documentation. Repository: https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation. Version-specific DOI: {ZENODO_VERSION_DOI}. All-versions concept DOI: {ZENODO_CONCEPT_DOI}.
+
+Positive aggregate cells below 5 are suppressed only in public displays. The underlying analysis source tables remain unchanged so that scientific calculations and audit checks retain their exact values.
 """
     (ROOT / "reports" / "data_acquisition_and_derivation_v32.md").write_text(
         report, encoding="utf-8"
