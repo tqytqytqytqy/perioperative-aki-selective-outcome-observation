@@ -27,4 +27,4 @@ Canonical estimates rely on measured-variable MAR with truncated IPW/AIPW. Sourc
 
 ## Release status
 
-Public reproducibility package: https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation. Release-family concept DOI: 10.5281/zenodo.21366088. Previous immutable v3.2.0 DOI: 10.5281/zenodo.21366089.
+Public reproducibility package: https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation. Current archived v3.2.1 DOI: 10.5281/zenodo.21366751. Release-family concept DOI: 10.5281/zenodo.21366088. Previous immutable v3.2.0 DOI: 10.5281/zenodo.21366089.

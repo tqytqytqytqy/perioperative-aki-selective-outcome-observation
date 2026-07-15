@@ -4,8 +4,9 @@ title: Selective Outcome Observation Across Development, Recalibration, and Eval
 type: software
 version: 3.2.1
 date-released: 2026-07-15
+doi: 10.5281/zenodo.21366751
 repository-code: https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation
-url: https://doi.org/10.5281/zenodo.21366088
+url: https://doi.org/10.5281/zenodo.21366751
 identifiers:
   - type: doi
     value: 10.5281/zenodo.21366088

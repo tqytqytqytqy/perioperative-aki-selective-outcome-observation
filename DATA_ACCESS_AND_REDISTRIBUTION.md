@@ -23,5 +23,6 @@ The public package boundary was reviewed to exclude provider-controlled raw data
 ## Published package
 
 - GitHub repository: https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation
+- Current archived v3.2.1 DOI: https://doi.org/10.5281/zenodo.21366751
 - Release-family concept DOI: https://doi.org/10.5281/zenodo.21366088
 - Previous immutable v3.2.0 DOI: https://doi.org/10.5281/zenodo.21366089
