@@ -15,17 +15,25 @@ identifiers:
 authors:
   - family-names: Teng
     given-names: Qingyu
-  - family-names: Zhang
-    given-names: Hui
-  - family-names: Yang
-    given-names: Yuping
-  - family-names: Qian
-    given-names: Chen
-  - family-names: Gu
-    given-names: Ziyan
+    affiliation: "Department of Anesthesiology, Shanghai Sixth People's Hospital, Shanghai Jiao Tong University School of Medicine, Shanghai, China"
+  - family-names: Zhao
+    given-names: Yingya
+    affiliation: "School of Public Health, Fudan University, Shanghai, China"
+  - family-names: Han
+    given-names: Junde
+    affiliation: "Department of Anesthesiology, Shanghai Sixth People's Hospital, Shanghai Jiao Tong University School of Medicine, Shanghai, China"
+  - family-names: Tao
+    given-names: Min
+    affiliation: "Department of Anesthesiology, Shanghai Sixth People's Hospital, Shanghai Jiao Tong University School of Medicine, Shanghai, China"
   - family-names: Li
     given-names: Qi
+    affiliation: "Department of Anesthesiology, Shanghai Sixth People's Hospital, Shanghai Jiao Tong University School of Medicine, Shanghai, China"
     orcid: "https://orcid.org/0009-0003-3140-5887"
   - family-names: Xu
     given-names: Tao
+    affiliation: "Department of Anesthesiology, Shanghai Sixth People's Hospital, Shanghai Jiao Tong University School of Medicine, Shanghai, China"
     orcid: "https://orcid.org/0000-0001-5868-4079"
+  - family-names: Zhang
+    given-names: Hui
+    affiliation: "Department of Anesthesiology, Shanghai Sixth People's Hospital, Shanghai Jiao Tong University School of Medicine, Shanghai, China"
+    orcid: "https://orcid.org/0009-0006-5460-3845"

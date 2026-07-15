@@ -39,6 +39,8 @@ from sklearn.model_selection import StratifiedKFold
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import SplineTransformer, StandardScaler
 
+from author_metadata_v32 import AFFILIATIONS, AUTHOR_METADATA
+
 warnings.filterwarnings("ignore", category=RuntimeWarning)
 warnings.filterwarnings("ignore", message=".*feature names.*")
 
@@ -1724,23 +1726,27 @@ def make_figures(
 def build_metadata_tables(config: dict[str, Any], external_not_mounted: bool) -> None:
     authors = pd.DataFrame(
         [
-            {"order": 1, "name": "Qingyu Teng", "affiliation": "1", "role_note": "equal contribution", "corresponding": False, "email": "", "orcid": ""},
-            {"order": 2, "name": "Hui Zhang", "affiliation": "1", "role_note": "equal contribution", "corresponding": False, "email": "", "orcid": ""},
-            {"order": 3, "name": "Yuping Yang", "affiliation": "1", "role_note": "", "corresponding": False, "email": "", "orcid": ""},
-            {"order": 4, "name": "Chen Qian", "affiliation": "1", "role_note": "", "corresponding": False, "email": "", "orcid": ""},
-            {"order": 5, "name": "Ziyan Gu", "affiliation": "1", "role_note": "", "corresponding": False, "email": "", "orcid": ""},
-            {"order": 6, "name": "Qi Li", "affiliation": "1", "role_note": "", "corresponding": True, "email": "", "orcid": "0009-0003-3140-5887"},
-            {"order": 7, "name": "Tao Xu", "affiliation": "1", "role_note": "", "corresponding": True, "email": "", "orcid": "0000-0001-5868-4079"},
+            {
+                "order": author["order"],
+                "name": author["name"],
+                "affiliation": author["affiliation"],
+                "role_note": "equal contribution" if author["equal_contribution"] else "",
+                "corresponding": author["corresponding"],
+                "email": author["email"],
+                "orcid": author["orcid"],
+            }
+            for author in AUTHOR_METADATA
         ]
     )
     write_table(authors, "24_author_metadata.csv")
     affiliation = pd.DataFrame(
         [
             {
-                "affiliation_id": 1,
-                "affiliation": "Shanghai Jiao Tong University, Shanghai 200240, China",
-                "corresponding_department": "Department of Anesthesiology, Shanghai Sixth People's Hospital, Shanghai Jiao Tong University School of Medicine, Shanghai 200233, China",
+                "affiliation_id": int(affiliation_id),
+                "affiliation": affiliation_text,
+                "corresponding_department": affiliation_text if affiliation_id == "1" else "",
             }
+            for affiliation_id, affiliation_text in AFFILIATIONS.items()
         ]
     )
     write_table(affiliation, "25_affiliation_metadata.csv")
