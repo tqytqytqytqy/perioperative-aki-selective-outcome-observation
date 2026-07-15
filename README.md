@@ -2,12 +2,15 @@
 
 Public reproducibility package containing aggregate results, analysis code, and model metadata. It is not a clinical model release and is not approved for patient care, triage, treatment selection, or deployment.
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21366088.svg)](https://doi.org/10.5281/zenodo.21366088)
+
 ## Status
 
 - Scientific analysis: complete.
-- Submission: NO-GO pending author, ethics, disclosure, independent review, and release-approval gates.
+- Submission: NO-GO pending author, ethics, disclosure, and independent-review gates.
 - Repository: https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation
-- Archive: Zenodo DOI pending completion of the archival release.
+- Release family and latest archived version: https://doi.org/10.5281/zenodo.21366088
+- Previous immutable v3.2.0 archive: https://doi.org/10.5281/zenodo.21366089
 - Study design: post-exploration methodological audit, not an independent confirmation study.
 
 ## Reuse status

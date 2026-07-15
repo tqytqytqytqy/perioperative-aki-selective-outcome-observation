@@ -19,3 +19,9 @@ The provider identifies CC BY-NC-SA 4.0 and also imposes a DUA that restricts di
 This package does not redistribute raw data, row-level derived data, patient identifiers, local file hashes tied to private copies, or serialized model objects. It contains only analysis code, aggregate results, figures, a JSON model specification, and non-sensitive metadata. The public input manifest records versions, official locations, terms, and expected filenames without local paths.
 
 The public package boundary was reviewed to exclude provider-controlled raw data, row-level derived data, and private local metadata. This file documents that boundary; it is not legal advice and does not grant redistribution rights.
+
+## Published package
+
+- GitHub repository: https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation
+- Release-family concept DOI: https://doi.org/10.5281/zenodo.21366088
+- Previous immutable v3.2.0 DOI: https://doi.org/10.5281/zenodo.21366089

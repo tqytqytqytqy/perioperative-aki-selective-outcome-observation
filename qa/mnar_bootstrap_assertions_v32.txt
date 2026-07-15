@@ -1,4 +1,4 @@
-analysis_version=3.2.0-jamia-candidate
+analysis_version=3.2.0-scientific-release
 requested_replicates=1000
 recorded_failed_attempts=0
 resampled=INSPIRE,MOVER_2021,MOVER_2022

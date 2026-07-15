@@ -2,8 +2,14 @@ cff-version: 1.2.0
 message: Please cite this archived software package and the accompanying manuscript.
 title: Selective Outcome Observation Across Development, Recalibration, and Evaluation of a Transported Perioperative Acute Kidney Injury Model
 type: software
-version: 3.2.0
+version: 3.2.1
 date-released: 2026-07-15
+repository-code: https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation
+url: https://doi.org/10.5281/zenodo.21366088
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.21366088
+    description: Zenodo concept DOI for all versions
 authors:
   - family-names: Teng
     given-names: Qingyu

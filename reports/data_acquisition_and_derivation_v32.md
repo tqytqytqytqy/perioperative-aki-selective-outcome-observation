@@ -32,4 +32,4 @@ Required input hashes:
 
 ## Release boundary
 
-Raw archives, source tables, patient-level Parquet files, bootstrap patient-level derivatives, and serialized joblib/pickle objects are excluded from any public repository. A public release may contain scripts, configuration templates without local paths, aggregate CSV tables, figures, a JSON model specification, and documentation only after author and license approval. No GitHub URL or Zenodo DOI has been created or asserted in v3.2.
+Raw archives, source tables, patient-level Parquet files, bootstrap patient-level derivatives, and serialized joblib/pickle objects are excluded from the public repository. The verified release contains scripts, configuration templates without local paths, aggregate CSV tables, figures, a JSON model specification, and documentation. Repository: https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation. Release-family concept DOI: 10.5281/zenodo.21366088. Previous immutable v3.2.0 DOI: 10.5281/zenodo.21366089.

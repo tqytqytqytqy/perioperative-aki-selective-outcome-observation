@@ -1,10 +1,9 @@
 {
   "study_id": "AKI_SELECTIVE_OUTCOME_CHAIN_V32",
-  "analysis_version": "3.2.0-jamia-candidate",
+  "analysis_version": "3.2.0-scientific-release",
   "analysis_status": "scientific_analysis_complete_submission_no_go_pending_author_gates",
   "revision_context": "post-exploration methodological study; not a prospectively prespecified external validation",
   "analysis_date": "2026-07-14",
-  "primary_journal_route": "JAMIA Research and Applications",
   "random_seed": 20260714,
   "bootstrap_replicates": 1000,
   "crossfit_folds": 5,
