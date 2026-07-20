@@ -41,7 +41,8 @@ def main() -> int:
         rows.append({"check": check, "status": "pass" if passed else "fail", "detail": str(detail)})
 
     workbook = load_workbook(OUTPUT, read_only=False, data_only=False)
-    add("workbook_opens", True, OUTPUT)
+    relative_output = str(OUTPUT.relative_to(ROOT))
+    add("workbook_opens", True, relative_output)
     add("sheet_count_30", len(workbook.sheetnames) == 30, len(workbook.sheetnames))
     expected_names = ["README", "QA_Summary"] + [name for name, _ in SHEETS]
     add("sheet_order", workbook.sheetnames == expected_names, workbook.sheetnames)
@@ -87,7 +88,7 @@ def main() -> int:
     failed = result.loc[result["status"].eq("fail")]
     summary = {
         "status": "pass" if failed.empty else "fail",
-        "workbook": str(OUTPUT),
+        "workbook": relative_output,
         "checks": len(result),
         "passed": int(result["status"].eq("pass").sum()),
         "failed": int(len(failed)),

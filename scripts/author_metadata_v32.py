@@ -29,9 +29,9 @@ AUTHOR_METADATA = [
     },
     {
         "order": 3,
-        "name": "Junde Han",
-        "given_names": "Junde",
-        "family_names": "Han",
+        "name": "Jin Zhao",
+        "given_names": "Jin",
+        "family_names": "Zhao",
         "affiliation": "1",
         "equal_contribution": False,
         "corresponding": False,
@@ -40,6 +40,17 @@ AUTHOR_METADATA = [
     },
     {
         "order": 4,
+        "name": "Qian Chen",
+        "given_names": "Qian",
+        "family_names": "Chen",
+        "affiliation": "1",
+        "equal_contribution": False,
+        "corresponding": False,
+        "email": "",
+        "orcid": "",
+    },
+    {
+        "order": 5,
         "name": "Min Tao",
         "given_names": "Min",
         "family_names": "Tao",
@@ -50,7 +61,7 @@ AUTHOR_METADATA = [
         "orcid": "",
     },
     {
-        "order": 5,
+        "order": 6,
         "name": "Qi Li",
         "given_names": "Qi",
         "family_names": "Li",
@@ -61,7 +72,7 @@ AUTHOR_METADATA = [
         "orcid": "0009-0003-3140-5887",
     },
     {
-        "order": 6,
+        "order": 7,
         "name": "Tao Xu",
         "given_names": "Tao",
         "family_names": "Xu",
@@ -72,7 +83,7 @@ AUTHOR_METADATA = [
         "orcid": "0000-0001-5868-4079",
     },
     {
-        "order": 7,
+        "order": 8,
         "name": "Hui Zhang",
         "given_names": "Hui",
         "family_names": "Zhang",

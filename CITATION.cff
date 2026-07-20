@@ -1,13 +1,13 @@
 cff-version: 1.2.0
 message: Please cite this versioned reproducibility package.
-title: Selective Outcome Observation Across Development, Recalibration, and Evaluation of a Transported Perioperative Acute Kidney Injury Model
+title: Missing Postoperative Creatinine Outcomes Across the Development, Recalibration, and Evaluation of a Perioperative Acute Kidney Injury Model
 type: software
 license: MIT
-version: 3.2.2
-date-released: 2026-07-16
-doi: 10.5281/zenodo.21378367
+version: 3.2.3
+date-released: 2026-07-20
+doi: 10.5281/zenodo.21447516
 repository-code: https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation
-url: https://doi.org/10.5281/zenodo.21378367
+url: https://doi.org/10.5281/zenodo.21447516
 identifiers:
   - type: doi
     value: 10.5281/zenodo.21366088
@@ -19,8 +19,11 @@ authors:
   - family-names: Zhao
     given-names: Yingya
     affiliation: "School of Public Health, Fudan University, Shanghai, China"
-  - family-names: Han
-    given-names: Junde
+  - family-names: Zhao
+    given-names: Jin
+    affiliation: "Department of Anesthesiology, Shanghai Sixth People's Hospital, Shanghai Jiao Tong University School of Medicine, Shanghai, China"
+  - family-names: Chen
+    given-names: Qian
     affiliation: "Department of Anesthesiology, Shanghai Sixth People's Hospital, Shanghai Jiao Tong University School of Medicine, Shanghai, China"
   - family-names: Tao
     given-names: Min

@@ -1,0 +1,146 @@
+check,status,detail
+workbook_opens,pass,workbook/AKI_selective_outcome_v32_all_tables_reproducible.xlsx
+sheet_count_30,pass,30
+sheet_order,pass,"['README', 'QA_Summary', '01_CohortFlow', '27_Characteristics', '28_ObsDiagnostics', '29_UpdateEstimands', '30_TargetStrategies', '31_Canonical', '32_Balance', '33_Missingness', '34_WorkloadStrategies', '35_MainCohorts', '36_MainPropagation', '37_MainPerformance', '37_SelectionChain', '38_MainWorkload', '38_UpdateMNAR', '39_MetricMap', '40_TargetMNAR', '41_TargetBounds', '42_MNARAnchors', '43_SourceMNAR', '44_AuxOutcome', '45_SourcePreprocess', '46_Truncation', '47_MNARIntervals', '48_VariableMap', '49_VitalDB', '50_INSPIRECrLevels', '51_MOVERCoarsening']"
+readme_formula_links_present,pass,8
+no_broken_formula_references,pass,"['README!B9:=QA_Summary!B2', ""README!B10:='01_CohortFlow'!C4"", ""README!B11:='31_Canonical'!E5"", ""README!B12:='31_Canonical'!E8"", ""README!B13:='31_Canonical'!E9"", ""README!B14:='38_MainWorkload'!B2"", ""README!B15:='38_MainWorkload'!B3"", ""README!B16:='38_MainWorkload'!B4""]"
+01_CohortFlow::dimensions,pass,5x9
+01_CohortFlow::headers,pass,"['cohort', 'role', 'eligible_n', 'observed_outcome_n', 'unobserved_outcome_n', 'outcome_observation_rate', 'observed_events', 'retained_patient_overlap_with_other_MOVER_year', 'denominator_note']"
+01_CohortFlow::all_values,pass,4 rows
+01_CohortFlow::filter_navigation_present,pass,freeze=A2; auto_filter=A1:I5; table_filters=0; freeze panes are an advisory UI feature
+01_CohortFlow::header_style,pass,bold solid-fill headers
+27_Characteristics::dimensions,pass,10x12
+27_Characteristics::headers,pass,"['phase', 'group', 'n', 'age_mean', 'age_sd', 'male_percent', 'asa_mean', 'duration_h_mean', 'duration_h_sd', 'baseline_cr_mean', 'baseline_cr_sd', 'observed_events']"
+27_Characteristics::all_values,pass,9 rows
+27_Characteristics::filter_navigation_present,pass,freeze=A2; auto_filter=A1:L10; table_filters=0; freeze panes are an advisory UI feature
+27_Characteristics::header_style,pass,bold solid-fill headers
+28_ObsDiagnostics::dimensions,pass,7x27
+28_ObsDiagnostics::headers,pass,"['phase', 'model_specification', 'eligible_n', 'observed_n', 'unobserved_n', 'observation_rate', 'propensity_min', 'propensity_p01', 'propensity_median', 'propensity_p99', 'propensity_max', 'fraction_outside_common_support', 'auroc', 'brier', 'calibration_intercept', 'calibration_joint_intercept', 'calibration_slope', 'weight_rule', 'raw_weight_min', 'raw_weight_p99', 'raw_weight_max', 'truncation_low', 'truncation_high', 'weight_min', 'weight_p99', 'weight_max', 'effective_sample_size']"
+28_ObsDiagnostics::all_values,pass,6 rows
+28_ObsDiagnostics::filter_navigation_present,pass,freeze=A2; auto_filter=A1:AA7; table_filters=0; freeze panes are an advisory UI feature
+28_ObsDiagnostics::header_style,pass,bold solid-fill headers
+29_UpdateEstimands::dimensions,pass,8x58
+29_UpdateEstimands::headers,pass,"['stage_varied', 'estimator_family', 'reference_type', 'is_canonical', 'odds_multiplier', 'log_odds_shift', 'source_expected_events', 'update_expected_events', 'update_alpha', 'update_beta', 'target_expected_events', 'target_oe_ratio', 'target_calibration_slope', 'target_auroc', 'target_brier', 'threshold_10_alerts', 'anchor_note', 'interpretation', 'source_eligible_n', 'update_eligible_n', 'target_eligible_n', 'target_events', 'target_event_rate', 'target_predicted_mean', 'target_calibration_intercept', 'target_calibration_joint_intercept', 'target_auprc', 'target_brier_skill_score', 'target_grouped_absolute_calibration_error_10q', 'threshold_5_alerts', 'threshold_5_alerts_per_1000', 'threshold_5_true_positives_per_1000', 'threshold_5_false_positives_per_1000', 'threshold_5_sensitivity', 'threshold_5_positive_predictive_value', 'threshold_5_false_positives_per_true_positive', 'threshold_5_absolute_net_benefit', 'threshold_5_treat_all_net_benefit', 'threshold_5_incremental_net_benefit_vs_better_default', 'threshold_10_alerts_per_1000', 'threshold_10_true_positives_per_1000', 'threshold_10_false_positives_per_1000', 'threshold_10_sensitivity', 'threshold_10_positive_predictive_value', 'threshold_10_false_positives_per_true_positive', 'threshold_10_absolute_net_benefit', 'threshold_10_treat_all_net_benefit', 'threshold_10_incremental_net_benefit_vs_better_default', 'threshold_20_alerts', 'threshold_20_alerts_per_1000', 'threshold_20_true_positives_per_1000', 'threshold_20_false_positives_per_1000', 'threshold_20_sensitivity', 'threshold_20_positive_predictive_value', 'threshold_20_false_positives_per_true_positive', 'threshold_20_absolute_net_benefit', 'threshold_20_treat_all_net_benefit', 'threshold_20_incremental_net_benefit_vs_better_default']"
+29_UpdateEstimands::all_values,pass,7 rows
+29_UpdateEstimands::filter_navigation_present,pass,freeze=A2; auto_filter=A1:BF8; table_filters=0; freeze panes are an advisory UI feature
+29_UpdateEstimands::header_style,pass,bold solid-fill headers
+30_TargetStrategies::dimensions,pass,7x20
+30_TargetStrategies::headers,pass,"['strategy', 'source_model_estimand', 'update_estimator', 'primary_or_required_comparator', 'update_alpha', 'update_beta', 'n', 'weighted_n', 'events', 'event_rate', 'predicted_mean', 'oe_ratio', 'calibration_intercept', 'calibration_joint_intercept', 'calibration_slope', 'auroc', 'auprc', 'brier', 'brier_skill_score', 'grouped_absolute_calibration_error_10q']"
+30_TargetStrategies::all_values,pass,6 rows
+30_TargetStrategies::filter_navigation_present,pass,freeze=A2; auto_filter=A1:T7; table_filters=0; freeze panes are an advisory UI feature
+30_TargetStrategies::header_style,pass,bold solid-fill headers
+31_Canonical::dimensions,pass,45x11
+31_Canonical::headers,pass,"['endpoint', 'estimand', 'model', 'metric', 'estimate', 'ci_lower', 'ci_upper', 'estimator_component', 'bootstrap_replicates', 'bootstrap_unit', 'canonical_source']"
+31_Canonical::all_values,pass,44 rows
+31_Canonical::filter_navigation_present,pass,freeze=A2; auto_filter=A1:K45; table_filters=0; freeze panes are an advisory UI feature
+31_Canonical::header_style,pass,bold solid-fill headers
+32_Balance::dimensions,pass,53x8
+32_Balance::headers,pass,"['phase', 'variable', 'level', 'target_mean_or_proportion', 'observed_unweighted_mean_or_proportion', 'observed_weighted_mean_or_proportion', 'unweighted_smd_vs_target', 'weighted_smd_vs_target']"
+32_Balance::all_values,pass,52 rows
+32_Balance::filter_navigation_present,pass,freeze=A2; auto_filter=A1:H53; table_filters=0; freeze panes are an advisory UI feature
+32_Balance::header_style,pass,bold solid-fill headers
+33_Missingness::dimensions,pass,22x6
+33_Missingness::headers,pass,"['phase', 'variable', 'eligible_n', 'missing_n', 'missing_percent', 'handling']"
+33_Missingness::all_values,pass,21 rows
+33_Missingness::filter_navigation_present,pass,freeze=A2; auto_filter=A1:F22; table_filters=0; freeze panes are an advisory UI feature
+33_Missingness::header_style,pass,bold solid-fill headers
+34_WorkloadStrategies::dimensions,pass,19x13
+34_WorkloadStrategies::headers,pass,"['strategy', 'primary_or_required_comparator', 'threshold', 'alerts', 'alerts_per_1000', 'true_positives_per_1000', 'false_positives_per_1000', 'sensitivity', 'positive_predictive_value', 'false_positives_per_true_positive', 'treat_all_net_benefit', 'absolute_net_benefit', 'incremental_net_benefit_vs_better_default']"
+34_WorkloadStrategies::all_values,pass,18 rows
+34_WorkloadStrategies::filter_navigation_present,pass,freeze=A2; auto_filter=A1:M19; table_filters=0; freeze panes are an advisory UI feature
+34_WorkloadStrategies::header_style,pass,bold solid-fill headers
+35_MainCohorts::dimensions,pass,5x9
+35_MainCohorts::headers,pass,"['cohort', 'role', 'eligible_n', 'observed_outcome_n', 'unobserved_outcome_n', 'outcome_observation_rate', 'observed_events', 'retained_patient_overlap_with_other_MOVER_year', 'denominator_definition']"
+35_MainCohorts::all_values,pass,4 rows
+35_MainCohorts::filter_navigation_present,pass,freeze=A2; auto_filter=A1:I5; table_filters=0; freeze panes are an advisory UI feature
+35_MainCohorts::header_style,pass,bold solid-fill headers
+36_MainPropagation::dimensions,pass,3x8
+36_MainPropagation::headers,pass,"['strategy', 'update_alpha', 'update_beta', 'events', 'oe_ratio', 'calibration_slope', 'auroc', 'brier']"
+36_MainPropagation::all_values,pass,2 rows
+36_MainPropagation::filter_navigation_present,pass,freeze=A2; auto_filter=A1:H3; table_filters=0; freeze panes are an advisory UI feature
+36_MainPropagation::header_style,pass,bold solid-fill headers
+37_MainPerformance::dimensions,pass,6x11
+37_MainPerformance::headers,pass,"['endpoint', 'estimand', 'model', 'metric', 'estimate', 'ci_lower', 'ci_upper', 'estimator_component', 'bootstrap_replicates', 'bootstrap_unit', 'canonical_source']"
+37_MainPerformance::all_values,pass,5 rows
+37_MainPerformance::filter_navigation_present,pass,freeze=A2; auto_filter=A1:K6; table_filters=0; freeze panes are an advisory UI feature
+37_MainPerformance::header_style,pass,bold solid-fill headers
+37_SelectionChain::dimensions,pass,7x20
+37_SelectionChain::headers,pass,"['strategy', 'source_model_estimand', 'update_estimator', 'primary_or_required_comparator', 'update_alpha', 'update_beta', 'n', 'weighted_n', 'events', 'event_rate', 'predicted_mean', 'oe_ratio', 'calibration_intercept', 'calibration_joint_intercept', 'calibration_slope', 'auroc', 'auprc', 'brier', 'brier_skill_score', 'grouped_absolute_calibration_error_10q']"
+37_SelectionChain::all_values,pass,6 rows
+37_SelectionChain::filter_navigation_present,pass,freeze=A2; auto_filter=A1:T7; table_filters=0; freeze panes are an advisory UI feature
+37_SelectionChain::header_style,pass,bold solid-fill headers
+38_MainWorkload::dimensions,pass,4x22
+38_MainWorkload::headers,pass,"['threshold_percent', 'alerts_estimate', 'alerts_ci_lower', 'alerts_ci_upper', 'alerts_per_1000_estimate', 'alerts_per_1000_ci_lower', 'alerts_per_1000_ci_upper', 'true_positives_per_1000_estimate', 'true_positives_per_1000_ci_lower', 'true_positives_per_1000_ci_upper', 'false_positives_per_1000_estimate', 'false_positives_per_1000_ci_lower', 'false_positives_per_1000_ci_upper', 'positive_predictive_value_estimate', 'positive_predictive_value_ci_lower', 'positive_predictive_value_ci_upper', 'absolute_net_benefit_estimate', 'absolute_net_benefit_ci_lower', 'absolute_net_benefit_ci_upper', 'incremental_net_benefit_vs_better_default_estimate', 'incremental_net_benefit_vs_better_default_ci_lower', 'incremental_net_benefit_vs_better_default_ci_upper']"
+38_MainWorkload::all_values,pass,3 rows
+38_MainWorkload::filter_navigation_present,pass,freeze=A2; auto_filter=A1:V4; table_filters=0; freeze panes are an advisory UI feature
+38_MainWorkload::header_style,pass,bold solid-fill headers
+38_UpdateMNAR::dimensions,pass,8x57
+38_UpdateMNAR::headers,pass,"['stage_varied', 'estimator_family', 'reference_type', 'is_canonical', 'odds_multiplier', 'log_odds_shift', 'interpretation', 'source_eligible_n', 'update_eligible_n', 'target_eligible_n', 'source_expected_events', 'update_expected_events', 'target_expected_events', 'update_alpha', 'update_beta', 'target_events', 'target_event_rate', 'target_predicted_mean', 'target_oe_ratio', 'target_calibration_intercept', 'target_calibration_joint_intercept', 'target_calibration_slope', 'target_auroc', 'target_auprc', 'target_brier', 'target_brier_skill_score', 'target_grouped_absolute_calibration_error_10q', 'threshold_5_alerts', 'threshold_5_alerts_per_1000', 'threshold_5_true_positives_per_1000', 'threshold_5_false_positives_per_1000', 'threshold_5_sensitivity', 'threshold_5_positive_predictive_value', 'threshold_5_false_positives_per_true_positive', 'threshold_5_absolute_net_benefit', 'threshold_5_treat_all_net_benefit', 'threshold_5_incremental_net_benefit_vs_better_default', 'threshold_10_alerts', 'threshold_10_alerts_per_1000', 'threshold_10_true_positives_per_1000', 'threshold_10_false_positives_per_1000', 'threshold_10_sensitivity', 'threshold_10_positive_predictive_value', 'threshold_10_false_positives_per_true_positive', 'threshold_10_absolute_net_benefit', 'threshold_10_treat_all_net_benefit', 'threshold_10_incremental_net_benefit_vs_better_default', 'threshold_20_alerts', 'threshold_20_alerts_per_1000', 'threshold_20_true_positives_per_1000', 'threshold_20_false_positives_per_1000', 'threshold_20_sensitivity', 'threshold_20_positive_predictive_value', 'threshold_20_false_positives_per_true_positive', 'threshold_20_absolute_net_benefit', 'threshold_20_treat_all_net_benefit', 'threshold_20_incremental_net_benefit_vs_better_default']"
+38_UpdateMNAR::all_values,pass,7 rows
+38_UpdateMNAR::filter_navigation_present,pass,freeze=A2; auto_filter=A1:BE8; table_filters=0; freeze panes are an advisory UI feature
+38_UpdateMNAR::header_style,pass,bold solid-fill headers
+39_MetricMap::dimensions,pass,11x4
+39_MetricMap::headers,pass,"['content', 'main_location', 'supplement_location', 'unique_numeric_source']"
+39_MetricMap::all_values,pass,10 rows
+39_MetricMap::filter_navigation_present,pass,freeze=A2; auto_filter=A1:D11; table_filters=0; freeze panes are an advisory UI feature
+39_MetricMap::header_style,pass,bold solid-fill headers
+40_TargetMNAR::dimensions,pass,8x57
+40_TargetMNAR::headers,pass,"['stage_varied', 'estimator_family', 'reference_type', 'is_canonical', 'odds_multiplier', 'log_odds_shift', 'interpretation', 'source_eligible_n', 'update_eligible_n', 'target_eligible_n', 'source_expected_events', 'update_expected_events', 'target_expected_events', 'update_alpha', 'update_beta', 'target_events', 'target_event_rate', 'target_predicted_mean', 'target_oe_ratio', 'target_calibration_intercept', 'target_calibration_joint_intercept', 'target_calibration_slope', 'target_auroc', 'target_auprc', 'target_brier', 'target_brier_skill_score', 'target_grouped_absolute_calibration_error_10q', 'threshold_5_alerts', 'threshold_5_alerts_per_1000', 'threshold_5_true_positives_per_1000', 'threshold_5_false_positives_per_1000', 'threshold_5_sensitivity', 'threshold_5_positive_predictive_value', 'threshold_5_false_positives_per_true_positive', 'threshold_5_absolute_net_benefit', 'threshold_5_treat_all_net_benefit', 'threshold_5_incremental_net_benefit_vs_better_default', 'threshold_10_alerts', 'threshold_10_alerts_per_1000', 'threshold_10_true_positives_per_1000', 'threshold_10_false_positives_per_1000', 'threshold_10_sensitivity', 'threshold_10_positive_predictive_value', 'threshold_10_false_positives_per_true_positive', 'threshold_10_absolute_net_benefit', 'threshold_10_treat_all_net_benefit', 'threshold_10_incremental_net_benefit_vs_better_default', 'threshold_20_alerts', 'threshold_20_alerts_per_1000', 'threshold_20_true_positives_per_1000', 'threshold_20_false_positives_per_1000', 'threshold_20_sensitivity', 'threshold_20_positive_predictive_value', 'threshold_20_false_positives_per_true_positive', 'threshold_20_absolute_net_benefit', 'threshold_20_treat_all_net_benefit', 'threshold_20_incremental_net_benefit_vs_better_default']"
+40_TargetMNAR::all_values,pass,7 rows
+40_TargetMNAR::filter_navigation_present,pass,freeze=A2; auto_filter=A1:BE8; table_filters=0; freeze panes are an advisory UI feature
+40_TargetMNAR::header_style,pass,bold solid-fill headers
+41_TargetBounds::dimensions,pass,3x49
+41_TargetBounds::headers,pass,"['bound_scenario', 'unobserved_outcome_value', 'eligible_n', 'observed_n', 'unobserved_n', 'n', 'weighted_n', 'events', 'event_rate', 'predicted_mean', 'oe_ratio', 'calibration_intercept', 'calibration_joint_intercept', 'calibration_slope', 'auroc', 'auprc', 'brier', 'brier_skill_score', 'grouped_absolute_calibration_error_10q', 'threshold_5_alerts', 'threshold_5_alerts_per_1000', 'threshold_5_true_positives_per_1000', 'threshold_5_false_positives_per_1000', 'threshold_5_sensitivity', 'threshold_5_positive_predictive_value', 'threshold_5_false_positives_per_true_positive', 'threshold_5_absolute_net_benefit', 'threshold_5_treat_all_net_benefit', 'threshold_5_incremental_net_benefit_vs_better_default', 'threshold_10_alerts', 'threshold_10_alerts_per_1000', 'threshold_10_true_positives_per_1000', 'threshold_10_false_positives_per_1000', 'threshold_10_sensitivity', 'threshold_10_positive_predictive_value', 'threshold_10_false_positives_per_true_positive', 'threshold_10_absolute_net_benefit', 'threshold_10_treat_all_net_benefit', 'threshold_10_incremental_net_benefit_vs_better_default', 'threshold_20_alerts', 'threshold_20_alerts_per_1000', 'threshold_20_true_positives_per_1000', 'threshold_20_false_positives_per_1000', 'threshold_20_sensitivity', 'threshold_20_positive_predictive_value', 'threshold_20_false_positives_per_true_positive', 'threshold_20_absolute_net_benefit', 'threshold_20_treat_all_net_benefit', 'threshold_20_incremental_net_benefit_vs_better_default']"
+41_TargetBounds::all_values,pass,2 rows
+41_TargetBounds::filter_navigation_present,pass,freeze=A2; auto_filter=A1:AW3; table_filters=0; freeze panes are an advisory UI feature
+41_TargetBounds::header_style,pass,bold solid-fill headers
+42_MNARAnchors::dimensions,pass,7x17
+42_MNARAnchors::headers,pass,"['stage_varied', 'estimator_family', 'reference_type', 'is_canonical', 'odds_multiplier', 'log_odds_shift', 'source_expected_events', 'update_expected_events', 'update_alpha', 'update_beta', 'target_expected_events', 'target_oe_ratio', 'target_calibration_slope', 'target_auroc', 'target_brier', 'threshold_10_alerts', 'anchor_note']"
+42_MNARAnchors::all_values,pass,6 rows
+42_MNARAnchors::filter_navigation_present,pass,freeze=A2; auto_filter=A1:Q7; table_filters=0; freeze panes are an advisory UI feature
+42_MNARAnchors::header_style,pass,bold solid-fill headers
+43_SourceMNAR::dimensions,pass,8x57
+43_SourceMNAR::headers,pass,"['stage_varied', 'estimator_family', 'reference_type', 'is_canonical', 'odds_multiplier', 'log_odds_shift', 'interpretation', 'source_eligible_n', 'update_eligible_n', 'target_eligible_n', 'source_expected_events', 'update_expected_events', 'target_expected_events', 'update_alpha', 'update_beta', 'target_events', 'target_event_rate', 'target_predicted_mean', 'target_oe_ratio', 'target_calibration_intercept', 'target_calibration_joint_intercept', 'target_calibration_slope', 'target_auroc', 'target_auprc', 'target_brier', 'target_brier_skill_score', 'target_grouped_absolute_calibration_error_10q', 'threshold_5_alerts', 'threshold_5_alerts_per_1000', 'threshold_5_true_positives_per_1000', 'threshold_5_false_positives_per_1000', 'threshold_5_sensitivity', 'threshold_5_positive_predictive_value', 'threshold_5_false_positives_per_true_positive', 'threshold_5_absolute_net_benefit', 'threshold_5_treat_all_net_benefit', 'threshold_5_incremental_net_benefit_vs_better_default', 'threshold_10_alerts', 'threshold_10_alerts_per_1000', 'threshold_10_true_positives_per_1000', 'threshold_10_false_positives_per_1000', 'threshold_10_sensitivity', 'threshold_10_positive_predictive_value', 'threshold_10_false_positives_per_true_positive', 'threshold_10_absolute_net_benefit', 'threshold_10_treat_all_net_benefit', 'threshold_10_incremental_net_benefit_vs_better_default', 'threshold_20_alerts', 'threshold_20_alerts_per_1000', 'threshold_20_true_positives_per_1000', 'threshold_20_false_positives_per_1000', 'threshold_20_sensitivity', 'threshold_20_positive_predictive_value', 'threshold_20_false_positives_per_true_positive', 'threshold_20_absolute_net_benefit', 'threshold_20_treat_all_net_benefit', 'threshold_20_incremental_net_benefit_vs_better_default']"
+43_SourceMNAR::all_values,pass,7 rows
+43_SourceMNAR::filter_navigation_present,pass,freeze=A2; auto_filter=A1:BE8; table_filters=0; freeze panes are an advisory UI feature
+43_SourceMNAR::header_style,pass,bold solid-fill headers
+44_AuxOutcome::dimensions,pass,7x30
+44_AuxOutcome::headers,pass,"['phase', 'evaluation_population', 'n', 'eligible_n', 'observed_events_unweighted', 'predicted_probability_min', 'predicted_probability_p01', 'predicted_probability_median', 'predicted_probability_p99', 'predicted_probability_max', 'observed_probability_min', 'observed_probability_median', 'observed_probability_max', 'unobserved_probability_min', 'unobserved_probability_median', 'unobserved_probability_max', 'diagnostic_role', 'weighted_n', 'events', 'event_rate', 'predicted_mean', 'oe_ratio', 'calibration_intercept', 'calibration_joint_intercept', 'calibration_slope', 'auroc', 'auprc', 'brier', 'brier_skill_score', 'grouped_absolute_calibration_error_10q']"
+44_AuxOutcome::all_values,pass,6 rows
+44_AuxOutcome::filter_navigation_present,pass,freeze=A2; auto_filter=A1:AD7; table_filters=0; freeze panes are an advisory UI feature
+44_AuxOutcome::header_style,pass,bold solid-fill headers
+45_SourcePreprocess::dimensions,pass,5x8
+45_SourcePreprocess::headers,pass,"['feature', 'feature_type', 'preprocessor_training_population', 'preprocessor_training_n', 'imputation_value', 'standardization_mean', 'standardization_scale', 'spline_knot_vector_standardized']"
+45_SourcePreprocess::all_values,pass,4 rows
+45_SourcePreprocess::filter_navigation_present,pass,freeze=A2; auto_filter=A1:H5; table_filters=0; freeze panes are an advisory UI feature
+45_SourcePreprocess::header_style,pass,bold solid-fill headers
+46_Truncation::dimensions,pass,5x77
+46_Truncation::headers,pass,"['weight_rule', 'is_canonical', 'source_preprocessor_training_n', 'update_alpha', 'update_beta', 'target_events', 'target_event_rate', 'target_predicted_mean', 'target_oe_ratio', 'target_calibration_intercept', 'target_calibration_joint_intercept', 'target_calibration_slope', 'target_auroc', 'target_auprc', 'target_brier', 'target_brier_skill_score', 'target_grouped_absolute_calibration_error_10q', 'source_raw_weight_min', 'source_raw_weight_p99', 'source_raw_weight_max', 'source_truncation_low', 'source_truncation_high', 'source_weight_min', 'source_weight_p99', 'source_weight_max', 'source_effective_sample_size', 'source_max_absolute_weighted_smd', 'update_raw_weight_min', 'update_raw_weight_p99', 'update_raw_weight_max', 'update_truncation_low', 'update_truncation_high', 'update_weight_min', 'update_weight_p99', 'update_weight_max', 'update_effective_sample_size', 'update_max_absolute_weighted_smd', 'target_raw_weight_min', 'target_raw_weight_p99', 'target_raw_weight_max', 'target_truncation_low', 'target_truncation_high', 'target_weight_min', 'target_weight_p99', 'target_weight_max', 'target_effective_sample_size', 'target_max_absolute_weighted_smd', 'threshold_5_alerts', 'threshold_5_alerts_per_1000', 'threshold_5_true_positives_per_1000', 'threshold_5_false_positives_per_1000', 'threshold_5_sensitivity', 'threshold_5_positive_predictive_value', 'threshold_5_false_positives_per_true_positive', 'threshold_5_absolute_net_benefit', 'threshold_5_treat_all_net_benefit', 'threshold_5_incremental_net_benefit_vs_better_default', 'threshold_10_alerts', 'threshold_10_alerts_per_1000', 'threshold_10_true_positives_per_1000', 'threshold_10_false_positives_per_1000', 'threshold_10_sensitivity', 'threshold_10_positive_predictive_value', 'threshold_10_false_positives_per_true_positive', 'threshold_10_absolute_net_benefit', 'threshold_10_treat_all_net_benefit', 'threshold_10_incremental_net_benefit_vs_better_default', 'threshold_20_alerts', 'threshold_20_alerts_per_1000', 'threshold_20_true_positives_per_1000', 'threshold_20_false_positives_per_1000', 'threshold_20_sensitivity', 'threshold_20_positive_predictive_value', 'threshold_20_false_positives_per_true_positive', 'threshold_20_absolute_net_benefit', 'threshold_20_treat_all_net_benefit', 'threshold_20_incremental_net_benefit_vs_better_default']"
+46_Truncation::all_values,pass,4 rows
+46_Truncation::filter_navigation_present,pass,freeze=A2; auto_filter=A1:BY5; table_filters=0; freeze panes are an advisory UI feature
+46_Truncation::header_style,pass,bold solid-fill headers
+47_MNARIntervals::dimensions,pass,217x14
+47_MNARIntervals::headers,pass,"['stage_varied', 'estimator_family', 'reference_type', 'is_canonical', 'odds_multiplier', 'log_odds_shift', 'metric', 'estimate', 'ci_lower', 'ci_upper', 'bootstrap_replicates', 'bootstrap_unit', 'canonical_source', 'interpretation']"
+47_MNARIntervals::all_values,pass,216 rows
+47_MNARIntervals::filter_navigation_present,pass,freeze=A2; auto_filter=A1:N217; table_filters=0; freeze panes are an advisory UI feature
+47_MNARIntervals::header_style,pass,bold solid-fill headers
+48_VariableMap::dimensions,pass,32x5
+48_VariableMap::headers,pass,"['dataset', 'analysis_variable', 'raw_field_or_table', 'derivation', 'analysis_use_or_note']"
+48_VariableMap::all_values,pass,31 rows
+48_VariableMap::filter_navigation_present,pass,freeze=A2; auto_filter=A1:E32; table_filters=0; freeze panes are an advisory UI feature
+48_VariableMap::header_style,pass,bold solid-fill headers
+49_VitalDB::dimensions,pass,3x17
+49_VitalDB::headers,pass,"['cohort_label', 'model', 'n', 'events', 'interpretation', 'weighted_n', 'event_rate', 'predicted_mean', 'oe_ratio', 'calibration_intercept', 'calibration_joint_intercept', 'calibration_slope', 'auroc', 'auprc', 'brier', 'brier_skill_score', 'grouped_absolute_calibration_error_10q']"
+49_VitalDB::all_values,pass,2 rows
+49_VitalDB::filter_navigation_present,pass,freeze=A2; auto_filter=A1:Q3; table_filters=0; freeze panes are an advisory UI feature
+49_VitalDB::header_style,pass,bold solid-fill headers
+50_INSPIRECrLevels::dimensions,pass,22x5
+50_INSPIRECrLevels::headers,pass,"['level_index', 'released_value_mg_dl', 'conservative_lower_mg_dl', 'conservative_upper_mg_dl', 'laboratory_rows']"
+50_INSPIRECrLevels::all_values,pass,21 rows
+50_INSPIRECrLevels::filter_navigation_present,pass,freeze=A2; auto_filter=A1:E22; table_filters=0; freeze panes are an advisory UI feature
+50_INSPIRECrLevels::header_style,pass,bold solid-fill headers
+51_MOVERCoarsening::dimensions,pass,22x4
+51_MOVERCoarsening::headers,pass,"['bin_index', 'lower_cutpoint_mg_dl', 'upper_cutpoint_mg_dl', 'released_representative_mg_dl']"
+51_MOVERCoarsening::all_values,pass,21 rows
+51_MOVERCoarsening::filter_navigation_present,pass,freeze=A2; auto_filter=A1:D22; table_filters=0; freeze panes are an advisory UI feature
+51_MOVERCoarsening::header_style,pass,bold solid-fill headers

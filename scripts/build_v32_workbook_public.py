@@ -118,7 +118,7 @@ def main() -> int:
     ws = wb.active
     ws.title = "README"
     ws.sheet_view.showGridLines = False
-    ws["A1"] = "Selective outcome observation study v3.2.2"
+    ws["A1"] = "Missing postoperative creatinine outcomes study v3.2.3"
     ws["A1"].font = Font(size=16, bold=True, color=WHITE)
     ws["A1"].fill = PatternFill("solid", fgColor=NAVY)
     ws.merge_cells("A1:D1")

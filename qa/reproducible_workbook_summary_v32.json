@@ -1,0 +1,8 @@
+{
+  "status": "pass",
+  "workbook": "workbook/AKI_selective_outcome_v32_all_tables_reproducible.xlsx",
+  "checks": 145,
+  "passed": 145,
+  "failed": 0,
+  "failed_checks": []
+}

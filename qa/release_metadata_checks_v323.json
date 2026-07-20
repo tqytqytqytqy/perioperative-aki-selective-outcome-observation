@@ -1,0 +1,185 @@
+{
+  "status": "pass",
+  "checks": 35,
+  "passed": 35,
+  "failed": 0,
+  "require_doi": true,
+  "failures": [],
+  "details": [
+    {
+      "check": "zenodo_title",
+      "passed": true,
+      "detail": "Missing Postoperative Creatinine Outcomes Across the Development, Recalibration, and Evaluation of a Perioperative Acute Kidney Injury Model"
+    },
+    {
+      "check": "zenodo_version",
+      "passed": true,
+      "detail": "v3.2.3"
+    },
+    {
+      "check": "zenodo_release_date",
+      "passed": true,
+      "detail": "2026-07-20"
+    },
+    {
+      "check": "zenodo_creator_order",
+      "passed": true,
+      "detail": "['Teng, Qingyu', 'Zhao, Yingya', 'Zhao, Jin', 'Chen, Qian', 'Tao, Min', 'Li, Qi', 'Xu, Tao', 'Zhang, Hui']"
+    },
+    {
+      "check": "zenodo_open_access",
+      "passed": true,
+      "detail": "open"
+    },
+    {
+      "check": "zenodo_license",
+      "passed": true,
+      "detail": "MIT"
+    },
+    {
+      "check": "zenodo_related_release",
+      "passed": true,
+      "detail": "[{'identifier': 'https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation/tree/v3.2.3', 'relation': 'isSupplementTo', 'scheme': 'url'}]"
+    },
+    {
+      "check": "citation_title",
+      "passed": true,
+      "detail": "Missing Postoperative Creatinine Outcomes Across the Development, Recalibration, and Evaluation of a Perioperative Acute Kidney Injury Model"
+    },
+    {
+      "check": "citation_version",
+      "passed": true,
+      "detail": "version: 3.2.3"
+    },
+    {
+      "check": "citation_release_date",
+      "passed": true,
+      "detail": "2026-07-20"
+    },
+    {
+      "check": "citation_concept_doi",
+      "passed": true,
+      "detail": "10.5281/zenodo.21366088"
+    },
+    {
+      "check": "citation_author_Teng_Qingyu",
+      "passed": true,
+      "detail": "Qingyu Teng"
+    },
+    {
+      "check": "citation_author_Zhao_Yingya",
+      "passed": true,
+      "detail": "Yingya Zhao"
+    },
+    {
+      "check": "citation_author_Zhao_Jin",
+      "passed": true,
+      "detail": "Jin Zhao"
+    },
+    {
+      "check": "citation_author_Chen_Qian",
+      "passed": true,
+      "detail": "Qian Chen"
+    },
+    {
+      "check": "citation_author_Tao_Min",
+      "passed": true,
+      "detail": "Min Tao"
+    },
+    {
+      "check": "citation_author_Li_Qi",
+      "passed": true,
+      "detail": "Qi Li"
+    },
+    {
+      "check": "citation_author_Xu_Tao",
+      "passed": true,
+      "detail": "Tao Xu"
+    },
+    {
+      "check": "citation_author_Zhang_Hui",
+      "passed": true,
+      "detail": "Hui Zhang"
+    },
+    {
+      "check": "author_module_order",
+      "passed": true,
+      "detail": "['Qingyu Teng', 'Yingya Zhao', 'Jin Zhao', 'Qian Chen', 'Min Tao', 'Qi Li', 'Tao Xu', 'Hui Zhang']"
+    },
+    {
+      "check": "author_module_count",
+      "passed": true,
+      "detail": "8"
+    },
+    {
+      "check": "equal_contributors",
+      "passed": true,
+      "detail": "['Qingyu Teng', 'Yingya Zhao']"
+    },
+    {
+      "check": "corresponding_authors",
+      "passed": true,
+      "detail": "['Qi Li', 'Tao Xu', 'Hui Zhang']"
+    },
+    {
+      "check": "license_holders",
+      "passed": true,
+      "detail": "Copyright (c) 2026 Qingyu Teng, Yingya Zhao, Jin Zhao, Qian Chen, Min Tao, Qi Li, Tao Xu, and Hui Zhang"
+    },
+    {
+      "check": "readme_version",
+      "passed": true,
+      "detail": "# Missing postoperative creatinine outcomes study v3.2.3"
+    },
+    {
+      "check": "model_card_version",
+      "passed": true,
+      "detail": "# Model card v3.2.3"
+    },
+    {
+      "check": "public_boundary_no_restricted_files",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "journal_neutral_paths",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "no_superseded_authors",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "check": "version_doi_reserved",
+      "passed": true,
+      "detail": "10.5281/zenodo.21447516"
+    },
+    {
+      "check": "version_doi_url",
+      "passed": true,
+      "detail": "10.5281/zenodo.21447516"
+    },
+    {
+      "check": "readme_version_doi",
+      "passed": true,
+      "detail": "10.5281/zenodo.21447516"
+    },
+    {
+      "check": "model_card_version_doi",
+      "passed": true,
+      "detail": "10.5281/zenodo.21447516"
+    },
+    {
+      "check": "workbook_sheet_count",
+      "passed": true,
+      "detail": "30"
+    },
+    {
+      "check": "workbook_release_heading",
+      "passed": true,
+      "detail": "Missing postoperative creatinine outcomes study v3.2.3"
+    }
+  ]
+}

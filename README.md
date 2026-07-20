@@ -1,4 +1,4 @@
-# Selective outcome observation study v3.2.2
+# Missing postoperative creatinine outcomes study v3.2.3
 
 Public reproducibility package for aggregate results, analysis code, and model metadata. It is not a clinical model release and is not approved for patient care, triage, treatment selection, or deployment.
 
@@ -10,10 +10,10 @@ This non-peer-reviewed reproducibility package contains no manuscript file and i
 - Peer review: not peer reviewed.
 - Clinical deployment: not evaluated; this study does not support clinical use.
 - Repository: https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation
-- Version-specific DOI: 10.5281/zenodo.21378367
+- Version-specific DOI: 10.5281/zenodo.21447516
 - All-versions concept DOI: 10.5281/zenodo.21366088
 - Study design: post-exploration methodological audit, not an independent confirmation study.
-- Supersession: v3.2.2 is the current version for use and citation; v3.2.0 and v3.2.1 are retained as immutable provenance.
+- Supersession: v3.2.3 will supersede v3.2.2 for current use and citation after publication; v3.2.0-v3.2.2 remain immutable provenance.
 
 ## Reproduce the analysis
 

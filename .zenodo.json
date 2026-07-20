@@ -1,0 +1,62 @@
+{
+  "title": "Missing Postoperative Creatinine Outcomes Across the Development, Recalibration, and Evaluation of a Perioperative Acute Kidney Injury Model",
+  "upload_type": "software",
+  "description": "Journal-neutral public reproducibility package for a methodological study of selective postoperative creatinine outcome observation across model development, recalibration, and post-exploration temporal evaluation. The package contains analysis code, aggregate outputs, figures, a complete JSON model specification, a consolidated workbook, quality-assurance records, and reproducibility documentation. It excludes raw or row-level patient data, serialized model objects, private runtime configuration, and manuscript files. The four-variable model is an auditable methodological probe and is not released for clinical care, triage, treatment selection, or deployment.",
+  "creators": [
+    {
+      "name": "Teng, Qingyu",
+      "affiliation": "Department of Anesthesiology, Shanghai Sixth People's Hospital, Shanghai Jiao Tong University School of Medicine, Shanghai, China"
+    },
+    {
+      "name": "Zhao, Yingya",
+      "affiliation": "School of Public Health, Fudan University, Shanghai, China"
+    },
+    {
+      "name": "Zhao, Jin",
+      "affiliation": "Department of Anesthesiology, Shanghai Sixth People's Hospital, Shanghai Jiao Tong University School of Medicine, Shanghai, China"
+    },
+    {
+      "name": "Chen, Qian",
+      "affiliation": "Department of Anesthesiology, Shanghai Sixth People's Hospital, Shanghai Jiao Tong University School of Medicine, Shanghai, China"
+    },
+    {
+      "name": "Tao, Min",
+      "affiliation": "Department of Anesthesiology, Shanghai Sixth People's Hospital, Shanghai Jiao Tong University School of Medicine, Shanghai, China"
+    },
+    {
+      "name": "Li, Qi",
+      "affiliation": "Department of Anesthesiology, Shanghai Sixth People's Hospital, Shanghai Jiao Tong University School of Medicine, Shanghai, China",
+      "orcid": "0009-0003-3140-5887"
+    },
+    {
+      "name": "Xu, Tao",
+      "affiliation": "Department of Anesthesiology, Shanghai Sixth People's Hospital, Shanghai Jiao Tong University School of Medicine, Shanghai, China",
+      "orcid": "0000-0001-5868-4079"
+    },
+    {
+      "name": "Zhang, Hui",
+      "affiliation": "Department of Anesthesiology, Shanghai Sixth People's Hospital, Shanghai Jiao Tong University School of Medicine, Shanghai, China",
+      "orcid": "0009-0006-5460-3845"
+    }
+  ],
+  "access_right": "open",
+  "license": "MIT",
+  "version": "v3.2.3",
+  "publication_date": "2026-07-20",
+  "keywords": [
+    "acute kidney injury",
+    "selective outcome observation",
+    "model transportability",
+    "recalibration",
+    "missing outcomes",
+    "perioperative medicine"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation/tree/v3.2.3",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "notes": "Please cite this versioned reproducibility package. Version v3.2.3 supersedes v3.2.2 for current use and citation; earlier versions remain immutable provenance records."
+}

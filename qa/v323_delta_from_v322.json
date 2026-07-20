@@ -1,0 +1,32 @@
+{
+  "status": "pass",
+  "baseline": "v3.2.2 extracted release root",
+  "current": ".",
+  "baseline_files": 92,
+  "current_files": 99,
+  "unchanged_files": 83,
+  "changed_files": [
+    "CITATION.cff",
+    "LICENSE-CODE",
+    "MODEL_CARD.md",
+    "README.md",
+    "release_manifest_sha256_v32.csv",
+    "scripts/author_metadata_v32.py",
+    "scripts/build_v32_workbook_public.py",
+    "scripts/run_v32_workbook_qa.py",
+    "workbook/AKI_selective_outcome_v32_all_tables_reproducible.xlsx"
+  ],
+  "added_files": [
+    ".zenodo.json",
+    "qa/release_metadata_checks_v323.json",
+    "qa/reproducible_workbook_checks_v32.csv",
+    "qa/reproducible_workbook_summary_v32.json",
+    "scripts/audit_release_delta_v323.py",
+    "scripts/build_release_manifest_v323.py",
+    "scripts/validate_release_metadata_v323.py"
+  ],
+  "removed_files": [],
+  "unexpected_delta": [],
+  "scientific_asset_changes": [],
+  "interpretation": "Version v3.2.3 changes release and author metadata only; aggregate scientific assets, model specification, figures, and reports are byte-identical to v3.2.2."
+}
