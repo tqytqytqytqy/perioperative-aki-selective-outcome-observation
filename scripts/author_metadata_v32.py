@@ -18,9 +18,9 @@ AUTHOR_METADATA = [
     },
     {
         "order": 2,
-        "name": "Yingya Zhao",
-        "given_names": "Yingya",
-        "family_names": "Zhao",
+        "name": "Tingting Niu",
+        "given_names": "Tingting",
+        "family_names": "Niu",
         "affiliation": "2",
         "equal_contribution": True,
         "corresponding": False,
@@ -29,20 +29,20 @@ AUTHOR_METADATA = [
     },
     {
         "order": 3,
-        "name": "Jin Zhao",
-        "given_names": "Jin",
-        "family_names": "Zhao",
+        "name": "Qian Chen",
+        "given_names": "Qian",
+        "family_names": "Chen",
         "affiliation": "1",
-        "equal_contribution": False,
+        "equal_contribution": True,
         "corresponding": False,
         "email": "",
         "orcid": "",
     },
     {
         "order": 4,
-        "name": "Qian Chen",
-        "given_names": "Qian",
-        "family_names": "Chen",
+        "name": "Min Tao",
+        "given_names": "Min",
+        "family_names": "Tao",
         "affiliation": "1",
         "equal_contribution": False,
         "corresponding": False,
@@ -51,9 +51,9 @@ AUTHOR_METADATA = [
     },
     {
         "order": 5,
-        "name": "Min Tao",
-        "given_names": "Min",
-        "family_names": "Tao",
+        "name": "Ziyan Gu",
+        "given_names": "Ziyan",
+        "family_names": "Gu",
         "affiliation": "1",
         "equal_contribution": False,
         "corresponding": False,
@@ -73,14 +73,14 @@ AUTHOR_METADATA = [
     },
     {
         "order": 7,
-        "name": "Tao Xu",
-        "given_names": "Tao",
-        "family_names": "Xu",
-        "affiliation": "1",
+        "name": "Yingya Zhao",
+        "given_names": "Yingya",
+        "family_names": "Zhao",
+        "affiliation": "2",
         "equal_contribution": False,
         "corresponding": True,
         "email": "",
-        "orcid": "0000-0001-5868-4079",
+        "orcid": "0009-0005-3335-8193",
     },
     {
         "order": 8,
@@ -147,8 +147,8 @@ def validate_author_metadata() -> None:
             raise ValueError(f"Corresponding author email is malformed: {author['name']}")
         if not author["orcid"]:
             raise ValueError(f"Corresponding author ORCID missing: {author['name']}")
-    if len(equal_contributors()) != 2:
-        raise ValueError("Exactly two equal contributors are expected")
+    if len(equal_contributors()) != 3:
+        raise ValueError("Exactly three equal contributors are expected")
 
 
 validate_author_metadata()
