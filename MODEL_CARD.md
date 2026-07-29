@@ -1,4 +1,4 @@
-# Model card v3.2.3
+# Model card v3.2.4
 
 ## Purpose
 
@@ -27,4 +27,4 @@ Canonical estimates rely on measured-variable MAR with truncated IPW/AIPW. Sourc
 
 ## Release status
 
-This non-peer-reviewed reproducibility package contains no manuscript file and is not itself a journal submission or a clinical model release. Version v3.2.3 updates the public title and creator metadata to match the current author-approved manuscript source while leaving the scientific analysis unchanged. Repository: https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation. Version DOI: 10.5281/zenodo.21447516. All-versions concept DOI: 10.5281/zenodo.21366088.
+This non-peer-reviewed reproducibility package contains no manuscript file and is not itself a journal submission or a clinical model release. Version v3.2.4 updates the public title, creator metadata, and release documentation to match the current author-approved source while leaving the scientific analysis unchanged from v3.2.3. Repository: https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation. Version DOI: 10.5281/zenodo.21663368. All-versions concept DOI: 10.5281/zenodo.21366088.
