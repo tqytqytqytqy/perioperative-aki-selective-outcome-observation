@@ -1,0 +1,32 @@
+{
+  "status": "pass",
+  "baseline": "v3.2.4 Git tag archive",
+  "current": ".",
+  "baseline_files": 100,
+  "current_files": 99,
+  "unchanged_files": 89,
+  "changed_files": [
+    ".zenodo.json",
+    "CITATION.cff",
+    "MODEL_CARD.md",
+    "README.md",
+    "scripts/build_v32_workbook_public.py",
+    "workbook/AKI_selective_outcome_v32_all_tables_reproducible.xlsx"
+  ],
+  "added_files": [
+    "qa/release_metadata_checks_v325.json",
+    "scripts/audit_release_delta_v325.py",
+    "scripts/build_release_manifest_v325.py",
+    "scripts/validate_release_metadata_v325.py"
+  ],
+  "removed_files": [
+    "qa/release_metadata_checks_v324.json",
+    "qa/v324_delta_from_v323.json",
+    "scripts/audit_release_delta_v324.py",
+    "scripts/build_release_manifest_v324.py",
+    "scripts/validate_release_metadata_v324.py"
+  ],
+  "unexpected_delta": [],
+  "scientific_asset_changes": [],
+  "interpretation": "Version v3.2.5 corrects release and citation metadata only; aggregate scientific tables, model specification, figures, reports, configuration, and reference metadata are byte-identical to v3.2.4."
+}
