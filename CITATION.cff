@@ -3,11 +3,9 @@ message: Please cite this versioned reproducibility package.
 title: Selective Outcome Observation Across Development, Recalibration, and Temporal Evaluation of a Transported Perioperative AKI Model
 type: software
 license: MIT
-version: 3.2.4
+version: 3.2.5
 date-released: 2026-07-29
-doi: 10.5281/zenodo.21663368
 repository-code: https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation
-url: https://doi.org/10.5281/zenodo.21663368
 identifiers:
   - type: doi
     value: 10.5281/zenodo.21366088
