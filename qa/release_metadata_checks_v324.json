@@ -1,0 +1,206 @@
+{
+  "status": "pass",
+  "checks": 30,
+  "passed": 30,
+  "failed": 0,
+  "failures": [],
+  "details": [
+    {
+      "check": "zenodo_title",
+      "passed": true,
+      "detail": "Selective Outcome Observation Across Development, Recalibration, and Temporal Evaluation of a Transported Perioperative AKI Model"
+    },
+    {
+      "check": "zenodo_version",
+      "passed": true,
+      "detail": "v3.2.4"
+    },
+    {
+      "check": "zenodo_release_date",
+      "passed": true,
+      "detail": "2026-07-29"
+    },
+    {
+      "check": "zenodo_creator_order",
+      "passed": true,
+      "detail": [
+        "Teng, Qingyu",
+        "Niu, Tingting",
+        "Chen, Qian",
+        "Tao, Min",
+        "Gu, Ziyan",
+        "Li, Qi",
+        "Zhao, Yingya",
+        "Zhang, Hui"
+      ]
+    },
+    {
+      "check": "zenodo_open_access",
+      "passed": true,
+      "detail": "open"
+    },
+    {
+      "check": "zenodo_license",
+      "passed": true,
+      "detail": "MIT"
+    },
+    {
+      "check": "zenodo_related_release",
+      "passed": true,
+      "detail": [
+        {
+          "identifier": "https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation/tree/v3.2.4",
+          "relation": "isSupplementTo",
+          "scheme": "url"
+        }
+      ]
+    },
+    {
+      "check": "citation_title",
+      "passed": true,
+      "detail": "Selective Outcome Observation Across Development, Recalibration, and Temporal Evaluation of a Transported Perioperative AKI Model"
+    },
+    {
+      "check": "citation_version",
+      "passed": true,
+      "detail": "3.2.4"
+    },
+    {
+      "check": "citation_release_date",
+      "passed": true,
+      "detail": "2026-07-29"
+    },
+    {
+      "check": "citation_version_doi",
+      "passed": true,
+      "detail": "10.5281/zenodo.21663368"
+    },
+    {
+      "check": "citation_version_doi_url",
+      "passed": true,
+      "detail": "https://doi.org/10.5281/zenodo.21663368"
+    },
+    {
+      "check": "citation_concept_doi",
+      "passed": true,
+      "detail": [
+        "10.5281/zenodo.21366088"
+      ]
+    },
+    {
+      "check": "citation_author_order",
+      "passed": true,
+      "detail": [
+        "Qingyu Teng",
+        "Tingting Niu",
+        "Qian Chen",
+        "Min Tao",
+        "Ziyan Gu",
+        "Qi Li",
+        "Yingya Zhao",
+        "Hui Zhang"
+      ]
+    },
+    {
+      "check": "author_module_order",
+      "passed": true,
+      "detail": [
+        "Qingyu Teng",
+        "Tingting Niu",
+        "Qian Chen",
+        "Min Tao",
+        "Ziyan Gu",
+        "Qi Li",
+        "Yingya Zhao",
+        "Hui Zhang"
+      ]
+    },
+    {
+      "check": "author_module_count",
+      "passed": true,
+      "detail": 8
+    },
+    {
+      "check": "equal_contributors",
+      "passed": true,
+      "detail": [
+        "Qingyu Teng",
+        "Tingting Niu",
+        "Qian Chen"
+      ]
+    },
+    {
+      "check": "corresponding_authors",
+      "passed": true,
+      "detail": [
+        "Qi Li",
+        "Yingya Zhao",
+        "Hui Zhang"
+      ]
+    },
+    {
+      "check": "license_holders",
+      "passed": true,
+      "detail": "Copyright (c) 2026 Qingyu Teng, Tingting Niu, Qian Chen, Min Tao, Ziyan Gu, Qi Li, Yingya Zhao, and Hui Zhang"
+    },
+    {
+      "check": "readme_version",
+      "passed": true,
+      "detail": "# Selective outcome observation study v3.2.4"
+    },
+    {
+      "check": "readme_version_doi",
+      "passed": true,
+      "detail": "10.5281/zenodo.21663368"
+    },
+    {
+      "check": "model_card_version",
+      "passed": true,
+      "detail": "# Model card v3.2.4"
+    },
+    {
+      "check": "model_card_version_doi",
+      "passed": true,
+      "detail": "10.5281/zenodo.21663368"
+    },
+    {
+      "check": "public_boundary_no_restricted_files",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "journal_neutral_paths",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "no_stale_authors",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "no_stale_release_identifier",
+      "passed": true,
+      "detail": {
+        "hits": [],
+        "zenodo_version": "v3.2.4",
+        "citation_version": "3.2.4"
+      }
+    },
+    {
+      "check": "journal_neutral_metadata",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "workbook_sheet_count",
+      "passed": true,
+      "detail": 30
+    },
+    {
+      "check": "workbook_release_heading",
+      "passed": true,
+      "detail": "Selective outcome observation study v3.2.4"
+    }
+  ]
+}
