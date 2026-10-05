@@ -1,0 +1,393 @@
+{
+  "scope": "Static imports plus safe module import; no main computation invoked",
+  "python": "3.12.14",
+  "missing_dependencies": [],
+  "imported_modules": [
+    "aki_r1_audit.py",
+    "build_v32_figures.py",
+    "etl_common_v32.py",
+    "etl_outcome_representations_v32.py",
+    "finalize_r1_analysis.py",
+    "independent_raw_audit.py",
+    "prepare_inspire_v32.py",
+    "prepare_mover_v32.py",
+    "prepare_r1_corrected.py",
+    "prepare_vitaldb_v32.py",
+    "public_disclosure.py",
+    "replay.py",
+    "run_postreview_analysis.py",
+    "run_r1_supplemental.py",
+    "run_v31_analysis.py",
+    "run_v32_analysis.py",
+    "spotcheck_aki_r1.py",
+    "thresholds_r1.py",
+    "tie_sensitivity.py",
+    "verify_public.py"
+  ],
+  "supported_entrypoints": [
+    "replay.py init",
+    "replay.py verify",
+    "replay.py etl",
+    "replay.py analysis",
+    "replay.py supplemental",
+    "replay.py finalize",
+    "replay.py retained-correction",
+    "replay.py raw-audit",
+    "replay.py ties",
+    "replay.py spotcheck"
+  ],
+  "dependency_only_legacy_modules": [
+    "run_v31_analysis.py",
+    "run_postreview_analysis.py",
+    "etl_common_v32.py",
+    "etl_outcome_representations_v32.py",
+    "build_v32_figures.py"
+  ],
+  "no_v31_output_files_shipped": true,
+  "modules": {
+    "finalize_r1_analysis.py": {
+      "local": [
+        "build_v32_figures"
+      ],
+      "external_or_stdlib": [
+        "argparse",
+        "hashlib",
+        "json",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "platform",
+        "shutil"
+      ]
+    },
+    "spotcheck_aki_r1.py": {
+      "local": [
+        "run_v32_analysis"
+      ],
+      "external_or_stdlib": [
+        "argparse",
+        "joblib",
+        "json",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "scipy",
+        "sys"
+      ]
+    },
+    "run_r1_supplemental.py": {
+      "local": [
+        "etl_outcome_representations_v32",
+        "run_v32_analysis"
+      ],
+      "external_or_stdlib": [
+        "argparse",
+        "hashlib",
+        "joblib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "sklearn"
+      ]
+    },
+    "run_postreview_analysis.py": {
+      "local": [],
+      "external_or_stdlib": [
+        "__future__",
+        "argparse",
+        "datetime",
+        "hashlib",
+        "joblib",
+        "json",
+        "math",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "platform",
+        "scipy",
+        "sklearn",
+        "time",
+        "typing"
+      ]
+    },
+    "run_v31_analysis.py": {
+      "local": [
+        "run_postreview_analysis"
+      ],
+      "external_or_stdlib": [
+        "__future__",
+        "argparse",
+        "concurrent",
+        "datetime",
+        "hashlib",
+        "joblib",
+        "json",
+        "math",
+        "multiprocessing",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "platform",
+        "scipy",
+        "sklearn",
+        "sys",
+        "time",
+        "typing"
+      ]
+    },
+    "build_v32_figures.py": {
+      "local": [],
+      "external_or_stdlib": [
+        "__future__",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib"
+      ]
+    },
+    "independent_raw_audit.py": {
+      "local": [],
+      "external_or_stdlib": [
+        "argparse",
+        "csv",
+        "decimal",
+        "gzip",
+        "hashlib",
+        "json",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "re",
+        "time",
+        "zipfile"
+      ]
+    },
+    "etl_common_v32.py": {
+      "local": [
+        "thresholds_r1"
+      ],
+      "external_or_stdlib": [
+        "__future__",
+        "argparse",
+        "dataclasses",
+        "datetime",
+        "gzip",
+        "hashlib",
+        "joblib",
+        "json",
+        "math",
+        "matplotlib",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "platform",
+        "re",
+        "scipy",
+        "sklearn",
+        "sys",
+        "time",
+        "typing",
+        "warnings",
+        "zipfile"
+      ]
+    },
+    "public_disclosure.py": {
+      "local": [],
+      "external_or_stdlib": [
+        "argparse",
+        "csv",
+        "json",
+        "math",
+        "pathlib"
+      ]
+    },
+    "prepare_mover_v32.py": {
+      "local": [
+        "etl_common_v32",
+        "etl_outcome_representations_v32"
+      ],
+      "external_or_stdlib": [
+        "__future__",
+        "argparse",
+        "json",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib"
+      ]
+    },
+    "run_v32_analysis.py": {
+      "local": [
+        "run_postreview_analysis",
+        "run_v31_analysis"
+      ],
+      "external_or_stdlib": [
+        "__future__",
+        "argparse",
+        "concurrent",
+        "copy",
+        "datetime",
+        "hashlib",
+        "joblib",
+        "json",
+        "math",
+        "matplotlib",
+        "multiprocessing",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "platform",
+        "scipy",
+        "sklearn",
+        "sys",
+        "time",
+        "typing"
+      ]
+    },
+    "thresholds_r1.py": {
+      "local": [],
+      "external_or_stdlib": [
+        "numpy"
+      ]
+    },
+    "replay.py": {
+      "local": [
+        "verify_public"
+      ],
+      "external_or_stdlib": [
+        "__future__",
+        "argparse",
+        "json",
+        "os",
+        "pathlib",
+        "shutil",
+        "subprocess",
+        "sys"
+      ]
+    },
+    "tie_sensitivity.py": {
+      "local": [
+        "run_v32_analysis"
+      ],
+      "external_or_stdlib": [
+        "argparse",
+        "decimal",
+        "json",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib",
+        "sys"
+      ]
+    },
+    "prepare_inspire_v32.py": {
+      "local": [
+        "etl_common_v32",
+        "etl_outcome_representations_v32"
+      ],
+      "external_or_stdlib": [
+        "__future__",
+        "json",
+        "os",
+        "pandas",
+        "pathlib"
+      ]
+    },
+    "etl_outcome_representations_v32.py": {
+      "local": [
+        "etl_common_v32",
+        "thresholds_r1"
+      ],
+      "external_or_stdlib": [
+        "__future__",
+        "argparse",
+        "datetime",
+        "hashlib",
+        "joblib",
+        "json",
+        "math",
+        "matplotlib",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "platform",
+        "re",
+        "scipy",
+        "sklearn",
+        "sys",
+        "time",
+        "traceback",
+        "typing"
+      ]
+    },
+    "prepare_vitaldb_v32.py": {
+      "local": [
+        "etl_common_v32",
+        "thresholds_r1"
+      ],
+      "external_or_stdlib": [
+        "__future__",
+        "json",
+        "numpy",
+        "os",
+        "pandas",
+        "pathlib"
+      ]
+    },
+    "prepare_r1_corrected.py": {
+      "local": [
+        "etl_common_v32",
+        "etl_outcome_representations_v32",
+        "thresholds_r1"
+      ],
+      "external_or_stdlib": [
+        "argparse",
+        "decimal",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "shutil"
+      ]
+    },
+    "aki_r1_audit.py": {
+      "local": [
+        "etl_common_v32",
+        "etl_outcome_representations_v32"
+      ],
+      "external_or_stdlib": [
+        "argparse",
+        "hashlib",
+        "json",
+        "numpy",
+        "pandas",
+        "pathlib",
+        "re",
+        "sys",
+        "zipfile"
+      ]
+    },
+    "verify_public.py": {
+      "local": [],
+      "external_or_stdlib": [
+        "__future__",
+        "ast",
+        "csv",
+        "hashlib",
+        "json",
+        "openpyxl",
+        "pathlib",
+        "re",
+        "zipfile"
+      ]
+    }
+  }
+}

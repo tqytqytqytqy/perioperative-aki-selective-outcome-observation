@@ -1,0 +1,307 @@
+{
+  "audit_date": "2026-10-05",
+  "implementation": "independent raw CSV/ZIP extraction and Decimal threshold comparison; no production ETL or classifier imports",
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "independent_audit_missing_and_decimal_boundary_unit_tests",
+      "n": 10,
+      "discrepancies": 0,
+      "passed": true
+    },
+    {
+      "check": "INSPIRE_removed_eligible_cases_have_five_character_obstetric_code",
+      "n": 2,
+      "discrepancies": 0,
+      "passed": true
+    },
+    {
+      "check": "INSPIRE_raw_operation_link",
+      "n": 33394,
+      "discrepancies": 0,
+      "passed": true
+    },
+    {
+      "check": "INSPIRE_baseline_cr",
+      "n": 33394,
+      "discrepancies": 0,
+      "passed": true
+    },
+    {
+      "check": "INSPIRE_cr_max_48h",
+      "n": 33394,
+      "discrepancies": 0,
+      "passed": true
+    },
+    {
+      "check": "INSPIRE_cr_max_7d",
+      "n": 33394,
+      "discrepancies": 0,
+      "passed": true
+    },
+    {
+      "check": "INSPIRE_postop_cr_7d_count",
+      "n": 33394,
+      "discrepancies": 0,
+      "passed": true
+    },
+    {
+      "check": "INSPIRE_tested_7d",
+      "n": 33394,
+      "discrepancies": 0,
+      "passed": true
+    },
+    {
+      "check": "INSPIRE_aki",
+      "n": 33394,
+      "discrepancies": 0,
+      "passed": true
+    },
+    {
+      "check": "INSPIRE_changed_labels_decimal_confirmation",
+      "n": 9,
+      "discrepancies": 0,
+      "passed": true
+    },
+    {
+      "check": "MOVER_retained_operation_duplicate_conflicts",
+      "n": 5389,
+      "discrepancies": 0,
+      "passed": true
+    },
+    {
+      "check": "MOVER_raw_operation_link",
+      "n": 5389,
+      "discrepancies": 0,
+      "passed": true
+    },
+    {
+      "check": "MOVER_baseline_cr",
+      "n": 5389,
+      "discrepancies": 0,
+      "passed": true
+    },
+    {
+      "check": "MOVER_cr_max_48h",
+      "n": 5389,
+      "discrepancies": 0,
+      "passed": true
+    },
+    {
+      "check": "MOVER_cr_max_7d",
+      "n": 5389,
+      "discrepancies": 0,
+      "passed": true
+    },
+    {
+      "check": "MOVER_postop_cr_7d_count",
+      "n": 5389,
+      "discrepancies": 0,
+      "passed": true
+    },
+    {
+      "check": "MOVER_tested_7d",
+      "n": 5389,
+      "discrepancies": 0,
+      "passed": true
+    },
+    {
+      "check": "MOVER_aki",
+      "n": 5389,
+      "discrepancies": 0,
+      "passed": true
+    },
+    {
+      "check": "MOVER_changed_labels_decimal_confirmation",
+      "n": 64,
+      "discrepancies": 0,
+      "passed": true
+    },
+    {
+      "check": "MOVER_independent_coarsening_values",
+      "n": 16167,
+      "discrepancies": 0,
+      "passed": true
+    },
+    {
+      "check": "MOVER_independent_coarsened_labels",
+      "n": 5389,
+      "discrepancies": 0,
+      "passed": true
+    },
+    {
+      "check": "MOVER2022_paired_coarsening_change_count",
+      "n": 2033,
+      "discrepancies": 0,
+      "passed": true
+    },
+    {
+      "check": "VitalDB_raw_operation_link",
+      "n": 4095,
+      "discrepancies": 0,
+      "passed": true
+    },
+    {
+      "check": "VitalDB_baseline_cr",
+      "n": 4095,
+      "discrepancies": 0,
+      "passed": true
+    },
+    {
+      "check": "VitalDB_postop_cr_7d_count",
+      "n": 4095,
+      "discrepancies": 0,
+      "passed": true
+    },
+    {
+      "check": "VitalDB_tested_7d",
+      "n": 4095,
+      "discrepancies": 0,
+      "passed": true
+    },
+    {
+      "check": "VitalDB_aki",
+      "n": 4095,
+      "discrepancies": 0,
+      "passed": true
+    },
+    {
+      "check": "VitalDB_changed_labels_decimal_confirmation",
+      "n": 2,
+      "discrepancies": 0,
+      "passed": true
+    },
+    {
+      "check": "source_unchanged_inspire_archive",
+      "n": 1,
+      "discrepancies": 0,
+      "passed": true
+    },
+    {
+      "check": "source_unchanged_mover_patient_information",
+      "n": 1,
+      "discrepancies": 0,
+      "passed": true
+    },
+    {
+      "check": "source_unchanged_mover_patient_labs",
+      "n": 1,
+      "discrepancies": 0,
+      "passed": true
+    },
+    {
+      "check": "source_unchanged_vitaldb_cases",
+      "n": 1,
+      "discrepancies": 0,
+      "passed": true
+    },
+    {
+      "check": "source_unchanged_vitaldb_labs",
+      "n": 1,
+      "discrepancies": 0,
+      "passed": true
+    }
+  ],
+  "summaries": [
+    {
+      "cohort": "INSPIRE",
+      "retained_eligible_or_supportive_cases": 33394,
+      "observed_outcomes": 24872,
+      "raw_decimal_events": 1680,
+      "threshold_changed": 9,
+      "verified_changed_labels": 9
+    },
+    {
+      "cohort": "MOVER 2021",
+      "retained_eligible_or_supportive_cases": 2802,
+      "observed_outcomes": 2212,
+      "raw_decimal_events": 274,
+      "threshold_changed": 29,
+      "verified_changed_labels": 29
+    },
+    {
+      "cohort": "MOVER 2022",
+      "retained_eligible_or_supportive_cases": 2587,
+      "observed_outcomes": 2033,
+      "raw_decimal_events": 259,
+      "threshold_changed": 35,
+      "verified_changed_labels": 35
+    },
+    {
+      "cohort": "VitalDB",
+      "retained_eligible_or_supportive_cases": 4095,
+      "observed_outcomes": 4095,
+      "raw_decimal_events": 271,
+      "threshold_changed": 2,
+      "verified_changed_labels": 2
+    }
+  ],
+  "details": {
+    "scope": {
+      "removed_eligible": 2,
+      "removed_previously_observed": 2,
+      "removed_previous_events": 0,
+      "new_eligible_cases": 0
+    },
+    "INSPIRE_scan": {
+      "all_lab_rows_scanned": 19464283,
+      "retained_creatinine_rows_for_audit": 508809,
+      "measurement_basis": "released INSPIRE 1.4.2 values; not unavailable pre-release laboratory values"
+    },
+    "INSPIRE": {
+      "baseline_same_time_conflicting_values": 12,
+      "labels_sensitive_to_baseline_tie": 1,
+      "changed_cases_with_baseline_tie": 0,
+      "raw_linked_cases": 33394,
+      "threshold_changed": 9,
+      "changed_contributing_qualified_values": 0
+    },
+    "MOVER_scan": {
+      "all_lab_rows_scanned": 29079344,
+      "strict_blood_creatinine_rows": 724437,
+      "qualified_or_nonplain_numeric_values": 0
+    },
+    "MOVER": {
+      "baseline_same_time_conflicting_values": 4,
+      "labels_sensitive_to_baseline_tie": 0,
+      "changed_cases_with_baseline_tie": 0,
+      "raw_linked_cases": 5389,
+      "threshold_changed": 64,
+      "changed_contributing_qualified_values": 0
+    },
+    "coarsening": {
+      "observed_denominator": 2033,
+      "changed_labels": 163,
+      "non_AKI_to_AKI": 120,
+      "AKI_to_non_AKI": 43,
+      "quantiles_recomputed_from_all_valid_raw_MOVER_creatinine": true,
+      "not_an_estimate_of_actual_INSPIRE_misclassification": true
+    },
+    "coarsening_boundary_corrections": {
+      "2021": 107,
+      "2022": 87
+    },
+    "VitalDB": {
+      "baseline_same_time_conflicting_values": 0,
+      "labels_sensitive_to_baseline_tie": 0,
+      "changed_cases_with_baseline_tie": 0,
+      "raw_linked_cases": 4095,
+      "threshold_changed": 2,
+      "changed_contributing_qualified_values": 0
+    },
+    "VitalDB_definition_boundary": {
+      "baseline": "cases.preop_cr preferred, otherwise latest preoperative lab without seven-day restriction",
+      "time_origin": "surgery end rather than anesthesia end",
+      "discharge_censoring": false,
+      "numeric_range_filter": false,
+      "interpretation": "supportive available observed cohort only, not harmonized eligible population or independent hospital confirmation"
+    }
+  },
+  "privacy": "record-level evidence is local restricted internal material; not for public release",
+  "boundaries": [
+    "Computational source-data verification, not physician chart adjudication.",
+    "INSPIRE verification is against publicly released representations, not unavailable pre-release lab values.",
+    "No inference about AKI status in untested patients.",
+    "No new clinical validation or publication authorization."
+  ]
+}

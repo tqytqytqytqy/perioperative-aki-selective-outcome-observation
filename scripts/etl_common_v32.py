@@ -39,7 +39,9 @@ from sklearn.model_selection import StratifiedKFold
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import SplineTransformer, StandardScaler
 
-from author_metadata_v32 import AFFILIATIONS, AUTHOR_METADATA
+AFFILIATIONS = {}
+AUTHOR_METADATA = []
+from thresholds_r1 import ge_threshold
 
 warnings.filterwarnings("ignore", category=RuntimeWarning)
 warnings.filterwarnings("ignore", message=".*feature names.*")
@@ -277,14 +279,14 @@ def finalize_outcomes(cohort: pd.DataFrame) -> pd.DataFrame:
     out["tested_7d"] = out["postop_cr_7d_count"].gt(0)
     observed = out["has_baseline_cr"] & out["tested_7d"]
     aki_7d = (
-        (out["cr_max_48h"].notna() & ((out["cr_max_48h"] - out["baseline_cr"]) >= 0.3))
-        | (out["cr_max_7d"].notna() & (out["cr_max_7d"] >= 1.5 * out["baseline_cr"]))
+        (out["cr_max_48h"].notna() & ge_threshold(out["cr_max_48h"] - out["baseline_cr"], 0.3))
+        | (out["cr_max_7d"].notna() & ge_threshold(out["cr_max_7d"], 1.5 * out["baseline_cr"]))
     )
     aki_48h = (
         out["cr_max_48h"].notna()
         & (
-            ((out["cr_max_48h"] - out["baseline_cr"]) >= 0.3)
-            | (out["cr_max_48h"] >= 1.5 * out["baseline_cr"])
+            ge_threshold(out["cr_max_48h"] - out["baseline_cr"], 0.3)
+            | ge_threshold(out["cr_max_48h"], 1.5 * out["baseline_cr"])
         )
     )
     out["aki"] = np.where(observed, aki_7d.astype(float), np.nan)
@@ -319,7 +321,7 @@ def build_inspire(config: dict[str, Any]) -> tuple[pd.DataFrame, dict[str, int]]
     dept = ops["department"].fillna("").astype(str).str.upper()
     pcs = ops["icd10_pcs"].fillna("").astype(str).str.upper()
     ops["cardiac_flag"] = dept.eq("CTS") | ops["cpbon_time"].notna() | pcs.str.contains(r"(^|[,;\s])02[A-Z0-9]", regex=True)
-    ops["obstetric_flag"] = dept.eq("OG") | pcs.str.contains(r"(^|[,;\s])1[A-Z0-9]{6}", regex=True)
+    ops["obstetric_flag"] = dept.eq("OG") | pcs.str.contains(r"(?:^|[,;\s])1(?:[A-Z0-9]{4}|[A-Z0-9]{6})(?=$|[,;\s])", regex=True)
     ops["clinical_eligible"] = (
         ops["age"].ge(18)
         & ops["antype"].fillna("").astype(str).str.casefold().eq("general")

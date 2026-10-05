@@ -1,0 +1,15 @@
+dataset,flag,n_before_surgery_exclusions
+INSPIRE,CTS_department,8533
+INSPIRE,CPB_record,2520
+INSPIRE,cardiac_PCS,2775
+INSPIRE,cardiac_union,8976
+INSPIRE,OG_department,9915
+INSPIRE,obstetric_PCS_7char,0
+INSPIRE,obstetric_PCS_5char,264
+INSPIRE,obstetric_union_corrected,suppressed
+INSPIRE,cardiac_obstetric_overlap,<5
+INSPIRE,CTS_without_CPB_or_cardiac_PCS,5859
+INSPIRE,OG_without_obstetric_PCS,suppressed
+MOVER all years,cardiac_procedure,801
+MOVER all years,obstetric_procedure,1117
+MOVER all years,cardiac_obstetric_overlap,0

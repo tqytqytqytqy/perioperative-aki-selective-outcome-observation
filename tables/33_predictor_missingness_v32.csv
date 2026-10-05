@@ -1,11 +1,11 @@
 phase,variable,eligible_n,missing_n,missing_percent,handling
-INSPIRE,age,33396,0,0.0,median imputation
-INSPIRE,sex_male,33396,0,0.0,most-frequent imputation
-INSPIRE,duration_h,33396,0,0.0,median imputation
-INSPIRE,baseline_cr,33396,0,0.0,eligibility requires observed baseline creatinine
-INSPIRE,asa,33396,1151,3.4465205413822013,most-frequent category in expanded nuisance models; not used by audit risk model
-INSPIRE,surgery_category,33396,0,0.0,most-frequent category in MOVER nuisance models; unavailable in INSPIRE
-INSPIRE,outcome_operational,33396,8522,25.518026110911485,not imputed as observed truth; addressed with IPW/AIPW and MNAR scenarios
+INSPIRE,age,33394,0,0.0,median imputation
+INSPIRE,sex_male,33394,0,0.0,most-frequent imputation
+INSPIRE,duration_h,33394,0,0.0,median imputation
+INSPIRE,baseline_cr,33394,0,0.0,eligibility requires observed baseline creatinine
+INSPIRE,asa,33394,1151,3.446726956938372,most-frequent category in expanded nuisance models; not used by audit risk model
+INSPIRE,surgery_category,33394,0,0.0,most-frequent category in MOVER nuisance models; unavailable in INSPIRE
+INSPIRE,outcome_operational,33394,8522,25.51955441097203,not imputed as observed truth; addressed with IPW/AIPW and MNAR scenarios
 MOVER 2021,age,2802,0,0.0,median imputation
 MOVER 2021,sex_male,2802,0,0.0,most-frequent imputation
 MOVER 2021,duration_h,2802,0,0.0,median imputation

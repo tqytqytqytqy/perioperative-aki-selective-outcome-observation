@@ -1284,6 +1284,17 @@ def bootstrap_once(
         seed + 4,
     )
     canonical_row = canonical_bootstrap_row(replicate, attempt, canonical)
+    # Use the same independently resampled cohorts for paired updating contrasts.
+    up_pred = canonical["source_model"].predict_proba(update_sample[FEATURES])[:, 1]
+    up_obs = update_bundle["observed"]
+    cc_alpha, cc_beta = base.fit_recalibration(update_bundle["y"][up_obs], up_pred[up_obs])
+    for label, ca, cb in [("unupdated", 0.0, 1.0), ("complete_case", cc_alpha, cc_beta)]:
+        cp = base.apply_recalibration(canonical["source_prediction_target"], ca, cb)
+        cm = aipw_hybrid_metrics(target_sample, cp, target_bundle)
+        canonical_row[f"comparison_{label}_update_alpha"] = float(ca)
+        canonical_row[f"comparison_{label}_update_beta"] = float(cb)
+        for metric in ["oe_ratio", "calibration_slope", "auroc", "brier"]:
+            canonical_row[f"comparison_{label}_{metric}"] = float(cm[metric])
     mnar_points: list[dict[str, Any]] = []
 
     source_expected = float(
@@ -1956,11 +1967,13 @@ def write_analysis_reports(
     source_range = intervals.loc[
         intervals["stage_varied"].eq("source") & intervals["metric"].eq("target_oe_ratio")
     ]
-    report = f"""# v3.2 canonical and stage-specific MNAR results
+    flow = pd.read_csv(TABLE_DIR / "01_cohort_flow_and_roles_v32.csv")
+    source_flow = flow.loc[flow["cohort"].eq("INSPIRE")].iloc[0]
+    report = f"""# R1 corrected canonical and stage-specific MNAR results
 
 Status: **SCIENTIFIC ANALYSIS COMPLETE; NOT READY FOR SUBMISSION**. Administrative, authorship, ethics, license, and independent-review gates remain open.
 
-The source preprocessor was fitted in all 33,396 eligible INSPIRE patients, while the canonical classifier was fitted in the 24,874 outcome-observed patients using normalized inverse-observation weights truncated at the 1st and 99th percentiles. The same sequence was repeated within every bootstrap sample.
+The source preprocessor was fitted in all {int(source_flow['eligible_n']):,} eligible INSPIRE patients, while the canonical classifier was fitted in the {int(source_flow['observed_outcome_n']):,} outcome-observed patients using normalized inverse-observation weights truncated at the 1st and 99th percentiles. The same sequence was repeated within every bootstrap sample.
 
 The canonical MOVER 2022 O/E estimate was {oe['estimate']:.3f} (95% percentile interval {oe['ci_lower']:.3f} to {oe['ci_upper']:.3f}), and the calibration slope was {slope['estimate']:.3f} ({slope['ci_lower']:.3f} to {slope['ci_upper']:.3f}). These are measured-variable MAR estimates, not identified full-population truths.
 

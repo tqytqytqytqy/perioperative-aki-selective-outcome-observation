@@ -1,30 +1,25 @@
-# Model card v3.2.5
+# Perioperative AKI methodological model
 
 ## Purpose
 
-Auditable methodological probe for selective outcome observation across model development, local recalibration, and post-exploration temporal evaluation.
+This four-variable model examines selective outcome observation across model development, local recalibration, and temporal evaluation. It is not intended for clinical care, triage, treatment selection, or prospective deployment.
 
-## Inputs and timing
+## Inputs and fitted specification
 
-Age, released binary sex, anesthesia duration, and baseline creatinine; prediction at the end of anesthesia.
+Inputs are age, sex as recorded in the source datasets, anesthesia duration in hours, and baseline creatinine. The complete fitted coefficients, spline knots, preprocessing parameters, source and target estimands, and recalibration equation are in `models/model_specification_v32.json`. The retained filename is a code-interface identifier; its content and analysis-version field belong to the corrected analysis, not the earlier v3.2.5 fitted model.
 
-## Model
+Baseline creatinine uses the latest valid pre-anesthesia measurement in the specified window. Different values at the same latest timestamp are resolved deterministically by the first valid record in released-file order. The release does not claim that this technical convention identifies the clinically correct specimen or amended report.
 
-- Source preprocessor population: all 33,396 eligible INSPIRE operations.
-- Source classifier population: 24,874 outcome-observed INSPIRE operations.
-- Classifier weighting: normalized inverse observation probability truncated at the 1st and 99th percentiles.
-- Source intercept: -1.6689550104.
-- Recalibration: `expit(0.0884660935 + 0.8963305835 * logit(source_probability))`.
-- Full ordered coefficients and preprocessing: `models/model_specification_v32.json`.
+## Population and missing outcomes
 
-## Claim boundaries
+INSPIRE supplies model development, MOVER 2021 local recalibration, and MOVER 2022 post-exploration temporal evaluation. VitalDB is supportive observed-cohort evidence, not a full eligible-population validation. Primary eligible denominators are 33,394, 2,802, and 2,587; corresponding observed-outcome denominators are 24,872, 2,212, and 2,033.
 
-Not for clinical use, triage, treatment selection, patient communication, or deployment. MOVER 2022 is a post-exploration temporally held-out evaluation, not independent confirmation. Clinical utility, fairness, prospective workflow performance, and patient benefit were not evaluated.
+Selective postoperative creatinine testing leaves some AKI outcomes unknown. The canonical full-population analysis depends on measured-variable MAR assumptions and positivity, with truncated inverse-probability weights and hybrid AIPW/IPW evaluation. MNAR scenarios explore dependence on departures from these assumptions; they do not identify the missing outcomes.
 
-## Outcome-observation boundary
+## Corrected performance and limitations
 
-Canonical estimates rely on measured-variable MAR with truncated IPW/AIPW. Source-, update-, and target-stage MNAR sensitivities show assumption dependence; multiplier 1 is an outcome-regression reference and is not the canonical estimator.
+The target canonical IPW-recalibrated point estimates are O/E approximately 1.012, calibration slope 0.884, AUROC 0.674, and Brier score 0.0937. Consult the aggregate tables for uncertainty intervals and paired comparisons. Recalibration does not improve ranking when it is a monotone transformation, and these values do not demonstrate that weighting is superior to complete-case recalibration.
 
-## Release status
+Same-timestamp minimum/maximum scenarios are retained-cohort point-estimate checks. Under the maximum rule, one source event changes and one outcome-unobserved target operation is excluded by the reapplied baseline threshold. No additional bootstrap intervals or statistical-equivalence conclusion are supplied for these scenarios.
 
-This non-peer-reviewed reproducibility package contains no manuscript file and is not itself a journal submission or a clinical model release. Version v3.2.5 corrects the public release metadata by removing an unpublished Zenodo draft DOI from v3.2.4 while leaving the scientific analysis unchanged from v3.2.3. Repository: https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation. A version DOI is cited only after successful Zenodo publication. All-versions concept DOI: 10.5281/zenodo.21366088.
+The work does not establish clinical utility, subgroup fairness, prospective workflow effects, or patient benefit. The released parameters are research metadata; no patient-level predictions or serialized fitted model objects are distributed.

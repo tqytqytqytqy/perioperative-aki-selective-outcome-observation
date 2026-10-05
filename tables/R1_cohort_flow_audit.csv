@@ -1,0 +1,22 @@
+dataset,stage,n
+INSPIRE,raw_operations,130960
+INSPIRE,adult_general_anesthesia,102790
+INSPIRE,valid_time_duration,101748
+INSPIRE,surgery_scope_eligible_corrected,82855
+INSPIRE,first_clinically_eligible_corrected,67667
+INSPIRE,first_with_baseline,34164
+INSPIRE,first_baseline_under4,33394
+MOVER all years,raw_operation_rows,65728
+MOVER all years,after_duplicate_resolution,64346
+MOVER all years,adult_general_anesthesia,51712
+MOVER all years,valid_time_duration,49170
+MOVER all years,surgery_scope_eligible,47252
+MOVER all years,first_clinically_eligible,33163
+MOVER all years,first_with_baseline,12449
+MOVER all years,first_baseline_under4,11470
+MOVER 2021,final_eligible,2802
+MOVER 2021,outcome_observed,2212
+MOVER 2021,outcome_unobserved,590
+MOVER 2022,final_eligible,2587
+MOVER 2022,outcome_observed,2033
+MOVER 2022,outcome_unobserved,554

@@ -11,6 +11,7 @@ import numpy as np
 import pandas as pd
 
 import etl_common_v32 as base
+from thresholds_r1 import ge_threshold
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -63,8 +64,8 @@ def main() -> int:
     ].gt(0)
     derived["baseline_cr_under4"] = derived["baseline_cr"].lt(4.0)
     derived["aki"] = (
-        (derived["cr_max_48h"] - derived["baseline_cr"] >= 0.3)
-        | (derived["cr_max_7d"] / derived["baseline_cr"] >= 1.5)
+        ge_threshold(derived["cr_max_48h"] - derived["baseline_cr"], 0.3)
+        | ge_threshold(derived["cr_max_7d"], 1.5 * derived["baseline_cr"])
     ).astype(float)
     derived.loc[
         ~(derived["has_baseline_cr"] & derived["tested_7d"]), "aki"

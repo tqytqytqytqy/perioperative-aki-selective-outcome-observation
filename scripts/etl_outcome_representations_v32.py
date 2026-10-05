@@ -288,10 +288,11 @@ def apply_percentile_release(values: pd.Series, edges: np.ndarray, representativ
 
 
 def classify_exact_aki(frame: pd.DataFrame, baseline: str, max48: str, max7: str) -> pd.Series:
+    from thresholds_r1 import ge_threshold
     observed = frame["tested_7d"].fillna(False).astype(bool) & frame[baseline].notna()
     event = (
-        (frame[max48].notna() & ((frame[max48] - frame[baseline]) >= 0.3))
-        | (frame[max7].notna() & (frame[max7] >= 1.5 * frame[baseline]))
+        (frame[max48].notna() & ge_threshold(frame[max48] - frame[baseline], 0.3))
+        | (frame[max7].notna() & ge_threshold(frame[max7], 1.5 * frame[baseline]))
     )
     return pd.Series(np.where(observed, event.astype(float), np.nan), index=frame.index)
 
@@ -305,14 +306,15 @@ def classify_interval_aki(
     max7_lower: str,
     max7_upper: str,
 ) -> tuple[pd.Series, pd.Series]:
+    from thresholds_r1 import ge_threshold
     observed = frame["tested_7d"].fillna(False).astype(bool) & frame[baseline_lower].notna() & frame[baseline_upper].notna()
     definite = (
-        (frame[max48_lower].notna() & ((frame[max48_lower] - frame[baseline_upper]) >= 0.3))
-        | (frame[max7_lower].notna() & (frame[max7_lower] >= 1.5 * frame[baseline_upper]))
+        (frame[max48_lower].notna() & ge_threshold(frame[max48_lower] - frame[baseline_upper], 0.3))
+        | (frame[max7_lower].notna() & ge_threshold(frame[max7_lower], 1.5 * frame[baseline_upper]))
     )
     possible = (
-        (frame[max48_upper].notna() & ((frame[max48_upper] - frame[baseline_lower]) >= 0.3))
-        | (frame[max7_upper].notna() & (frame[max7_upper] >= 1.5 * frame[baseline_lower]))
+        (frame[max48_upper].notna() & ge_threshold(frame[max48_upper] - frame[baseline_lower], 0.3))
+        | (frame[max7_upper].notna() & ge_threshold(frame[max7_upper], 1.5 * frame[baseline_lower]))
     )
     return (
         pd.Series(np.where(observed, definite.astype(float), np.nan), index=frame.index),

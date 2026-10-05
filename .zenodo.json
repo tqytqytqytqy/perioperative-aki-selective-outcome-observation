@@ -1,7 +1,7 @@
 {
-  "title": "Selective Outcome Observation Across Development, Recalibration, and Temporal Evaluation of a Transported Perioperative AKI Model",
+  "title": "Selective Postoperative Creatinine Testing and AKI Model Transport: A Multidatabase Study",
   "upload_type": "software",
-  "description": "Journal-neutral public reproducibility package for a methodological study of selective postoperative creatinine outcome observation across model development, recalibration, and post-exploration temporal evaluation. The package contains analysis code, aggregate outputs, figures, a complete JSON model specification, a consolidated workbook, quality-assurance records, and reproducibility documentation. It excludes raw or row-level patient data, serialized model objects, private runtime configuration, and manuscript files. The four-variable model is an auditable methodological probe and is not released for clinical care, triage, treatment selection, or deployment.",
+  "description": "Corrected, journal-neutral reproducibility package for a multidatabase methodological study of selective postoperative creatinine testing across AKI model development, local recalibration, and post-exploration temporal evaluation. Version v3.3.0 supersedes v3.2.5 for reproducing the revised results: it includes cohort and numerical-threshold corrections, corrected aggregate results and model parameters, paired recalibration comparisons, an aggregate raw-record verification summary, and same-timestamp baseline-selection sensitivity analyses. The package contains analysis code, aggregate tables, figures, model metadata, and reproducibility documentation; it does not contain raw or patient-level data, individual predictions, serialized model objects, manuscripts, or confidential peer-review material. The four-variable model is a methodological probe, not a model approved or validated for clinical deployment. Missing postoperative creatinine does not establish absence of AKI. Same-timestamp sensitivity results are post hoc refitted point estimates in retained cohorts, not clinical adjudication, performance bounds, or evidence of statistical equivalence. The earlier v3.2.5 archive remains available as provenance but does not reproduce the corrected results. Code is MIT-licensed; original documentation, aggregate results, figures, and model metadata are CC BY 4.0. Source datasets retain their own access and redistribution conditions.",
   "creators": [
     {
       "name": "Teng, Qingyu",
@@ -39,10 +39,10 @@
       "orcid": "0009-0006-5460-3845"
     }
   ],
+  "version": "v3.3.0",
+  "publication_date": "2026-10-05",
   "access_right": "open",
-  "license": "MIT",
-  "version": "v3.2.5",
-  "publication_date": "2026-07-29",
+  "license": "mit",
   "keywords": [
     "acute kidney injury",
     "selective outcome observation",
@@ -53,10 +53,15 @@
   ],
   "related_identifiers": [
     {
-      "identifier": "https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation/tree/v3.2.5",
+      "identifier": "https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation/tree/v3.3.0",
       "relation": "isSupplementTo",
       "scheme": "url"
+    },
+    {
+      "identifier": "10.5281/zenodo.21666483",
+      "relation": "isNewVersionOf",
+      "scheme": "doi"
     }
   ],
-  "notes": "Please cite this versioned reproducibility package. Qingyu Teng, Tingting Niu, and Qian Chen contributed equally. Correspondence: Qi Li, Yingya Zhao, and Hui Zhang. Version v3.2.5 supersedes v3.2.4 for current use and citation; earlier versions remain immutable provenance records. Version v3.2.4 was a GitHub-only metadata release whose attempted Zenodo draft was discarded unpublished. The scientific analysis is unchanged from v3.2.3."
+  "notes": "Qingyu Teng, Tingting Niu, and Qian Chen contributed equally. Corresponding authors: Qi Li, Yingya Zhao, and Hui Zhang; submitting corresponding author: Hui Zhang. This corrected research-software release is not an accepted journal publication or a clinical model release. The all-versions concept DOI is 10.5281/zenodo.21366088."
 }

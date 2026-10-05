@@ -1,0 +1,4 @@
+cohort,n,observed,original_events,corrected_events,labels_changed,original_coarse_events,corrected_coarse_events,coarse_labels_changed
+INSPIRE,33396,24874,1671,1680,9,,,
+MOVER 2021,2802,2212,245,274,29,275.0,382.0,107.0
+MOVER 2022,2587,2033,224,259,35,249.0,336.0,87.0

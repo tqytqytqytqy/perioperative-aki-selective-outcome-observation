@@ -1,0 +1,2052 @@
+{
+  "policy": "Positive aggregate subgroup counts below 5 are <5; linked rates use upper bounds.",
+  "secondary_control": "Categorical balance diagnostics are suppressed for affected phase-variable groups to prevent reconstruction.",
+  "exceptions": "Whole-population correction and tie-sensitivity facts without case attributes.",
+  "changed_csv_files": [
+    "tables/33_predictor_missingness_v32.csv",
+    "tables/R1_surgical_flags.csv",
+    "tables/32_stage_observation_balance_v32.csv"
+  ],
+  "workbook_edits": [
+    {
+      "sheet": "Table_S5",
+      "cell": "D13",
+      "value": "<5"
+    },
+    {
+      "sheet": "Table_S5",
+      "cell": "E13",
+      "value": "<0.18"
+    },
+    {
+      "sheet": "Table_S23",
+      "cell": "C9",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S23_numeric",
+      "cell": "C9",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S23",
+      "cell": "C10",
+      "value": "<5"
+    },
+    {
+      "sheet": "S23_numeric",
+      "cell": "C10",
+      "value": "<5"
+    },
+    {
+      "sheet": "Table_S23",
+      "cell": "C12",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S23_numeric",
+      "cell": "C12",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D6",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D6",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E6",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E6",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F6",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F6",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G6",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G6",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H6",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H6",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D7",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D7",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E7",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E7",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F7",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F7",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G7",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G7",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H7",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H7",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D8",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D8",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E8",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E8",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F8",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F8",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G8",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G8",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H8",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H8",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D9",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D9",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E9",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E9",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F9",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F9",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G9",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G9",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H9",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H9",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D10",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D10",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E10",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E10",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F10",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F10",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G10",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G10",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H10",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H10",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D11",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D11",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E11",
+      "value": "<0.000202"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E11",
+      "value": "<0.000202"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F11",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F11",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G11",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G11",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H11",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H11",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D12",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D12",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E12",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E12",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F12",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F12",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G12",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G12",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H12",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H12",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D17",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D17",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E17",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E17",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F17",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F17",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G17",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G17",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H17",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H17",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D18",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D18",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E18",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E18",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F18",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F18",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G18",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G18",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H18",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H18",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D19",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D19",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E19",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E19",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F19",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F19",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G19",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G19",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H19",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H19",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D20",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D20",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E20",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E20",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F20",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F20",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G20",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G20",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H20",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H20",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D21",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D21",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E21",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E21",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F21",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F21",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G21",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G21",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H21",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H21",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D22",
+      "value": "<0.001785"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D22",
+      "value": "<0.001785"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E22",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E22",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F22",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F22",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G22",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G22",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H22",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H22",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D23",
+      "value": "<0.001785"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D23",
+      "value": "<0.001785"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E23",
+      "value": "<0.002261"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E23",
+      "value": "<0.002261"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F23",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F23",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G23",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G23",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H23",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H23",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D24",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D24",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E24",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E24",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F24",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F24",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G24",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G24",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H24",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H24",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D25",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D25",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E25",
+      "value": "<0.002261"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E25",
+      "value": "<0.002261"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F25",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F25",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G25",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G25",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H25",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H25",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D26",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D26",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E26",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E26",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F26",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F26",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G26",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G26",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H26",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H26",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D27",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D27",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E27",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E27",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F27",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F27",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G27",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G27",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H27",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H27",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D28",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D28",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E28",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E28",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F28",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F28",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G28",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G28",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H28",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H28",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D29",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D29",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E29",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E29",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F29",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F29",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G29",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G29",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H29",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H29",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D30",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D30",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E30",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E30",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F30",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F30",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G30",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G30",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H30",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H30",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D31",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D31",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E31",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E31",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F31",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F31",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G31",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G31",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H31",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H31",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D32",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D32",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E32",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E32",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F32",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F32",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G32",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G32",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H32",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H32",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D33",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D33",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E33",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E33",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F33",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F33",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G33",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G33",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H33",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H33",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D38",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D38",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E38",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E38",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F38",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F38",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G38",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G38",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H38",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H38",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D39",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D39",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E39",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E39",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F39",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F39",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G39",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G39",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H39",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H39",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D40",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D40",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E40",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E40",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F40",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F40",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G40",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G40",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H40",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H40",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D41",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D41",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E41",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E41",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F41",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F41",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G41",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G41",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H41",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H41",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D42",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D42",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E42",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E42",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F42",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F42",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G42",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G42",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H42",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H42",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D43",
+      "value": "<0.001933"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D43",
+      "value": "<0.001933"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E43",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E43",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F43",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F43",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G43",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G43",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H43",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H43",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D44",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D44",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E44",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E44",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F44",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F44",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G44",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G44",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H44",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H44",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D45",
+      "value": "<0.001933"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D45",
+      "value": "<0.001933"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E45",
+      "value": "<0.002460"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E45",
+      "value": "<0.002460"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F45",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F45",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G45",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G45",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H45",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H45",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D46",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D46",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E46",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E46",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F46",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F46",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G46",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G46",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H46",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H46",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D47",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D47",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E47",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E47",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F47",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F47",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G47",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G47",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H47",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H47",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D48",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D48",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E48",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E48",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F48",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F48",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G48",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G48",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H48",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H48",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D49",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D49",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E49",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E49",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F49",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F49",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G49",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G49",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H49",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H49",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D50",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D50",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E50",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E50",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F50",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F50",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G50",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G50",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H50",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H50",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D51",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D51",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E51",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E51",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F51",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F51",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G51",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G51",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H51",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H51",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D52",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D52",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E52",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E52",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F52",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F52",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G52",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G52",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H52",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H52",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "D53",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "D53",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "E53",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "E53",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "F53",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "F53",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "G53",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "G53",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "Table_S24",
+      "cell": "H53",
+      "value": "suppressed"
+    },
+    {
+      "sheet": "S24_numeric",
+      "cell": "H53",
+      "value": "suppressed"
+    }
+  ]
+}
