@@ -7,7 +7,9 @@ Version v3.3.0 is the corrected reproducibility release for the multidatabase st
 - Repository: https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation
 - Release: https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation/releases/tag/v3.3.0
 - All-versions concept DOI: https://doi.org/10.5281/zenodo.21366088
-- Version-specific DOI: assigned by Zenodo after successful publication; use the v3.3.0 record linked from the release page. Do not cite a draft identifier.
+- Version-specific DOI: https://doi.org/10.5281/zenodo.23157606 (published v3.3.0 archive).
+
+The v3.3.0 tag and Zenodo archive are immutable snapshots of the scientific release. This main-branch citation update adds the DOI returned after automatic archiving; it does not change the released analysis or results.
 
 This version supersedes v3.2.5 for the corrected findings. The earlier archive, https://doi.org/10.5281/zenodo.21666483, remains immutable provenance and does not reproduce the revised numerical results. See `CHANGELOG.md` for the scientific corrections.
 

@@ -1,5 +1,6 @@
 cff-version: 1.2.0
 message: "Please cite the version-specific Zenodo record for v3.3.0 when reproducing the corrected results."
+doi: "10.5281/zenodo.23157606"
 type: software
 title: "Selective Postoperative Creatinine Testing and AKI Model Transport: A Multidatabase Study"
 version: v3.3.0
@@ -38,4 +39,4 @@ authors:
 identifiers:
   - type: doi
     value: "10.5281/zenodo.21366088"
-    description: "All-versions concept DOI; the version-specific DOI is assigned by Zenodo on publication."
+    description: "All-versions concept DOI; use the top-level version DOI for the corrected v3.3.0 results."
