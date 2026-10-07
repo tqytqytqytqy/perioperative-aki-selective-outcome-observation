@@ -1,5 +1,6 @@
 cff-version: 1.2.0
 message: "Please cite the version-specific Zenodo record for v3.4.0 when reproducing the corrected results."
+doi: "10.5281/zenodo.23204344"
 type: software
 title: "Outcome ascertainment and laboratory representation in perioperative acute kidney injury model transport: a multidatabase study"
 version: v3.4.0
@@ -38,4 +39,4 @@ authors:
 identifiers:
   - type: doi
     value: "10.5281/zenodo.21366088"
-    description: "All-versions concept DOI; the new version-specific DOI is assigned by Zenodo on publication."
+    description: "All-versions concept DOI; use the top-level version DOI to cite v3.4.0."

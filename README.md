@@ -7,10 +7,10 @@ Version v3.4.0 combines the corrected multidatabase analysis with a new postoper
 - Repository: https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation
 - Release: https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation/releases/tag/v3.4.0
 - All-versions concept DOI: https://doi.org/10.5281/zenodo.21366088
-- The version-specific DOI for v3.4.0 is assigned by Zenodo after the GitHub release and will be added to this main-branch citation record.
+- Version-specific DOI: https://doi.org/10.5281/zenodo.23204344 (published v3.4.0 archive).
 - Corrected primary-analysis predecessor: https://doi.org/10.5281/zenodo.23157606 (v3.3.0).
 
-The new diagnostic is first included in v3.4.0. Previous immutable versions retain their historical contents. The older v3.2 releases do not reproduce the corrected primary findings.
+The v3.4.0 tag and Zenodo archive are immutable snapshots. This main-branch citation update adds the assigned DOI without changing the release tag or scientific outputs. The new diagnostic is first included in v3.4.0. Previous immutable versions retain their historical contents. The older v3.2 releases do not reproduce the corrected primary findings.
 
 ## What this release adds
 
