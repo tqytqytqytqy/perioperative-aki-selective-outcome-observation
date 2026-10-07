@@ -1,0 +1,8 @@
+{
+  "comparison": "Original algorithmic opportunity versus excluding unusable discharge stops",
+  "comparisons": 48,
+  "all_absolute_changes_less_than_1_percentage_point": true,
+  "exact_counts": "Withheld from public output to prevent complementary disclosure of small cells",
+  "interpretation": "Metadata-restricted sensitivity, not confirmation of complete testing or postdischarge outcomes",
+  "plan_deviation": "Unusable discharge combines missing, parsing failure and nonpositive duration; causes and effective death truncation are not separately enumerated"
+}

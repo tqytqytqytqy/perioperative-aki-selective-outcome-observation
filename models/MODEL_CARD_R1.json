@@ -17,5 +17,12 @@
   "model_specification": "models/model_specification_v32.json",
   "missing_outcomes": "Unknown outcomes are not coded as non-events; inference depends on MAR/positivity/nuisance-model assumptions or explicit MNAR scenarios",
   "clinical_validation": "No prospective silent evaluation or intervention evaluation; no thresholds recommended",
-  "archive": "Research-software version 3.3.0 contains the corrected result artifacts; v3.2.5 remains historical."
+  "archive": "Research-software v3.4.0 contains the corrected v3.3.0 primary results and the 2026-10-07 testing-time diagnostic; prior versions remain provenance.",
+  "timing_diagnostic": {
+    "date": "2026-10-07",
+    "model_refitted": false,
+    "labels_changed": false,
+    "scope": "Post hoc recorded testing and algorithmic follow-up coverage; no clinical adjudication",
+    "location": "diagnostics/timing"
+  }
 }

@@ -1,7 +1,7 @@
 {
-  "title": "Selective Postoperative Creatinine Testing and AKI Model Transport: A Multidatabase Study",
+  "title": "Outcome ascertainment and laboratory representation in perioperative acute kidney injury model transport: a multidatabase study",
   "upload_type": "software",
-  "description": "Corrected, journal-neutral reproducibility package for a multidatabase methodological study of selective postoperative creatinine testing across AKI model development, local recalibration, and post-exploration temporal evaluation. Version v3.3.0 supersedes v3.2.5 for reproducing the revised results: it includes cohort and numerical-threshold corrections, corrected aggregate results and model parameters, paired recalibration comparisons, an aggregate raw-record verification summary, and same-timestamp baseline-selection sensitivity analyses. The package contains analysis code, aggregate tables, figures, model metadata, and reproducibility documentation; it does not contain raw or patient-level data, individual predictions, serialized model objects, manuscripts, or confidential peer-review material. The four-variable model is a methodological probe, not a model approved or validated for clinical deployment. Missing postoperative creatinine does not establish absence of AKI. Same-timestamp sensitivity results are post hoc refitted point estimates in retained cohorts, not clinical adjudication, performance bounds, or evidence of statistical equivalence. The earlier v3.2.5 archive remains available as provenance but does not reproduce the corrected results. Code is MIT-licensed; original documentation, aggregate results, figures, and model metadata are CC BY 4.0. Source datasets retain their own access and redistribution conditions.",
+  "description": "Journal-neutral reproducibility release for a multidatabase study of outcome ascertainment and laboratory representation across perioperative AKI model development, local recalibration, and post-exploration temporal evaluation. Version v3.4.0 retains the corrected v3.3.0 analysis and adds a post hoc raw-record diagnostic of creatinine testing timing, frequency, and follow-up coverage in INSPIRE and MOVER, with Tables S28-S31, a consolidated workbook, current figures, and portable code. In MOVER 2022, 2033/2587 patients had any postoperative creatinine record and 1290/2587 had records in both early and late windows; these are coverage indicators rather than a count of missed AKI events. Original AKI labels, models, primary estimates, and bootstrap results were frozen for this diagnostic. The release contains code, aggregate outputs, model metadata, documentation and figures, without raw or row-level patient data, individual predictions, serialized models, manuscripts or confidential peer-review material. The four-variable model is a research probe; clinical implementation and patient benefit have not been established. Code is MIT-licensed and original content is CC BY 4.0. Source-dataset access conditions continue to apply.",
   "creators": [
     {
       "name": "Teng, Qingyu",
@@ -39,8 +39,8 @@
       "orcid": "0009-0006-5460-3845"
     }
   ],
-  "version": "v3.3.0",
-  "publication_date": "2026-10-05",
+  "version": "v3.4.0",
+  "publication_date": "2026-10-07",
   "access_right": "open",
   "license": "mit",
   "keywords": [
@@ -49,16 +49,20 @@
     "model transportability",
     "recalibration",
     "missing outcomes",
-    "perioperative medicine"
+    "perioperative medicine",
+    "outcome ascertainment",
+    "testing timing",
+    "follow-up coverage",
+    "laboratory representation"
   ],
   "related_identifiers": [
     {
-      "identifier": "https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation/tree/v3.3.0",
+      "identifier": "https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation/tree/v3.4.0",
       "relation": "isSupplementTo",
       "scheme": "url"
     },
     {
-      "identifier": "10.5281/zenodo.21666483",
+      "identifier": "10.5281/zenodo.23157606",
       "relation": "isNewVersionOf",
       "scheme": "doi"
     }

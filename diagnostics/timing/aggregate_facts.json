@@ -1,0 +1,50 @@
+{
+  "INSPIRE": {
+    "n": 33394,
+    "observed": 24872,
+    "aki_events": 1680,
+    "early_n": 24488,
+    "late_n": 18498,
+    "both_n": 18114,
+    "one_occasion_n": 4040,
+    "opportunity_lt48_n": 5317,
+    "opportunity_lt168_n": 21415,
+    "opportunity_gt48_n": 28066,
+    "first_test_h_median_iqr": "0.6 (0.3-17.2)",
+    "occasions_median_iqr": "3.0 (2.0-5.0)",
+    "gap_h_median_iqr": "22.2 (11.4-39.8)",
+    "discharge_unusable_n": "<5"
+  },
+  "MOVER 2021": {
+    "n": 2802,
+    "observed": 2212,
+    "aki_events": 274,
+    "early_n": 2194,
+    "late_n": 1358,
+    "both_n": 1340,
+    "one_occasion_n": 489,
+    "opportunity_lt48_n": 1162,
+    "opportunity_lt168_n": 2149,
+    "opportunity_gt48_n": 1640,
+    "first_test_h_median_iqr": "12.0 (2.1-16.9)",
+    "occasions_median_iqr": "4.0 (2.0-7.0)",
+    "gap_h_median_iqr": "9.1 (5.6-13.8)",
+    "discharge_unusable_n": "<5"
+  },
+  "MOVER 2022": {
+    "n": 2587,
+    "observed": 2033,
+    "aki_events": 259,
+    "early_n": 2018,
+    "late_n": 1305,
+    "both_n": 1290,
+    "one_occasion_n": 405,
+    "opportunity_lt48_n": 979,
+    "opportunity_lt168_n": 1898,
+    "opportunity_gt48_n": 1608,
+    "first_test_h_median_iqr": "11.9 (1.9-17.0)",
+    "occasions_median_iqr": "4.0 (2.0-7.0)",
+    "gap_h_median_iqr": "9.7 (6.1-14.4)",
+    "discharge_unusable_n": "<5"
+  }
+}

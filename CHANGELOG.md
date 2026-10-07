@@ -1,3 +1,16 @@
+# Version v3.4.0 2026-10-07
+
+## New diagnostic and presentation
+
+- Added post hoc raw-record testing timing and follow-up coverage in the retained corrected INSPIRE/MOVER cohorts, with Tables S28-S31 and a consolidated workbook.
+- Distinguished any testing from early/late and elapsed-day coverage, with explicit algorithmic observation-opportunity denominators and timestamp semantics.
+- Added metadata-restricted coverage sensitivity and documented departures from the pre-computation descriptive plan. Missing/unusable discharge stops were combined; effective competing-stop causes were not separately adjudicated.
+- Added current four-figure presentation and portable aggregate-figure code, using retained full-chain and paired intervals where applicable.
+- Controlled small counts and linked fields; risk-quintile early counts are withheld and longer follow-up groups are combined to prevent complementary disclosure.
+- Preserved all corrected primary model coefficients, labels, performance estimates and statistical intervals from v3.3.0. No model refit or new bootstrap was performed for publication.
+
+The diagnostic clarifies recorded measurement coverage. It does not identify true outcomes in untested patients, count missed AKI episodes, or establish clinical surveillance adequacy.
+
 # Version v3.3.0 2026-10-05
 
 This scientific correction release supersedes v3.2.5 for current results. Prior version identifiers and archived files are retained as provenance; they are not evidence that the corrected results were available in July 2026.

@@ -23,3 +23,7 @@ The target canonical IPW-recalibrated point estimates are O/E approximately 1.01
 Same-timestamp minimum/maximum scenarios are retained-cohort point-estimate checks. Under the maximum rule, one source event changes and one outcome-unobserved target operation is excluded by the reapplied baseline threshold. No additional bootstrap intervals or statistical-equivalence conclusion are supplied for these scenarios.
 
 The work does not establish clinical utility, subgroup fairness, prospective workflow effects, or patient benefit. The released parameters are research metadata; no patient-level predictions or serialized fitted model objects are distributed.
+
+## Testing-time diagnostic in v3.4.0
+
+The post hoc diagnostic retains the original operational AKI labels and prediction values. It measures recorded testing times and coverage within the original discharge/death-limited windows. INSPIRE chart time and MOVER specimen collection datetime are not assumed to be interchangeable. The absolute-creatinine threshold uses the selected preoperative baseline; the analysis does not evaluate every possible rolling 48-hour measurement pair. Timing outputs are descriptive indicators, not a clinically adjudicated endpoint or a new model performance estimator.

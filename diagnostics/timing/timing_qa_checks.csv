@@ -1,0 +1,40 @@
+check,passed,details
+INSPIRE_unique_case,True,
+INSPIRE_unique_raw_operation,True,
+INSPIRE_all_retained_linked,True,
+INSPIRE_raw_reconciliation_observed,True,0 mismatches across 33394 patients
+INSPIRE_raw_reconciliation_count48,True,0 mismatches across 33394 patients
+INSPIRE_raw_reconciliation_count7,True,0 mismatches across 33394 patients
+INSPIRE_raw_reconciliation_max48,True,0 mismatches across 33394 patients
+INSPIRE_raw_reconciliation_max7,True,0 mismatches across 33394 patients
+INSPIRE_raw_reconciliation_aki,True,0 mismatches across 33394 patients
+MOVER_unique_case,True,
+Frozen target 10pct alert count,True,
+MOVER_duplicate_metadata_consistency,True,
+MOVER_all_retained_linked,True,
+MOVER_raw_reconciliation_observed,True,0 mismatches across 5389 patients
+MOVER_raw_reconciliation_count48,True,0 mismatches across 5389 patients
+MOVER_raw_reconciliation_count7,True,0 mismatches across 5389 patients
+MOVER_raw_reconciliation_max48,True,0 mismatches across 5389 patients
+MOVER_raw_reconciliation_max7,True,0 mismatches across 5389 patients
+MOVER_raw_reconciliation_aki,True,0 mismatches across 5389 patients
+INSPIRE_frozen_counts,True,
+MOVER 2021_frozen_counts,True,
+MOVER 2022_frozen_counts,True,
+At most seven measured bins,True,
+Opportunity nonnegative capped 168h,True,
+Late testing implies late opportunity,True,
+Both windows identity,True,
+Day 1 test implies opportunity,True,
+Day 2 test implies opportunity,True,
+Day 3 test implies opportunity,True,
+Day 4 test implies opportunity,True,
+Day 5 test implies opportunity,True,
+Day 6 test implies opportunity,True,
+Day 7 test implies opportunity,True,
+Input untouched inspire_archive,True,
+Input untouched mover_patient_information,True,
+Input untouched mover_patient_labs,True,
+Input untouched frozen_source_model,True,
+Input untouched frozen_INSPIRE,True,
+Input untouched frozen_MOVER,True,

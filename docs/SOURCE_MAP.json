@@ -1,10 +1,13 @@
 {
-  "scientific_release": "3.3.0",
+  "scientific_release": "3.4.0",
   "source_sets": {
     "corrected_analysis_20260930": "Retained corrected computational analysis",
     "raw_audit_20261005": "Independent raw audit and post hoc tie-sensitivity code",
     "current_revision_2_1_20261005": "Current approved-scope tables, workbook and figures",
-    "staging_authored_v330": "New portable wrapper, disclosure controls, bounded verification and documentation"
+    "staging_authored_v330": "New portable wrapper, disclosure controls, bounded verification and documentation",
+    "timing_diagnostic_20261007": "Completed post hoc raw-record diagnostic; public aggregate addendum",
+    "current_figures_20261007": "Current scientific presentation figures; original estimates and intervals retained",
+    "public_workbook_20261007": "Consolidated corrected workbook extended with timing tables"
   },
   "files": [
     {
@@ -562,10 +565,11 @@
       "source_set": "corrected_analysis_20260930",
       "source_file": "MODEL_CARD_R1.json",
       "source_sha256": "a3f40b73b4d199b9bfa0a01cc1ddb38bc17a65a41e48275bf38d3a0e20873b6b",
-      "staged_sha256": "a2e8d91a6bd25d6320c328f758fafdd3cfdd4a7c2ba2460557165beaf6cab289",
+      "staged_sha256": "c11eeae357cb3600eef7e161661326eafe487ccf6971c97688cba026c0cc2ff4",
       "byte_identical": false,
       "changes": [
-        "Archive metadata describes research-software version 3.3.0; scientific model fields unchanged"
+        "Archive metadata describes research-software version 3.3.0; scientific model fields unchanged",
+        "Add timing diagnostic scope; no fitted parameter changes"
       ]
     },
     {
@@ -699,10 +703,11 @@
       "source_set": "current_revision_2_1_20261005",
       "source_file": "All_Revised_Tables.xlsx",
       "source_sha256": "27208354c77cd0fe9b4eb853c08f9781562b9346975942936f12f1219ab9e067",
-      "staged_sha256": "3204e4467aa9af0051e575c2bc34228d883ae0660a50924c762ab68142684ba2",
+      "staged_sha256": "ffbb84bf564ad2931982fbd990e3e29b941ec1b8369a1f58c16328056cf1a3db",
       "byte_identical": false,
       "changes": [
-        "Public disclosure controls only; exact original remains unchanged; see docs/disclosure_control.json"
+        "Public disclosure controls only; exact original remains unchanged; see docs/disclosure_control.json",
+        "Publication provenance update; existing scientific values retained"
       ]
     },
     {
@@ -863,10 +868,11 @@
       "source_set": "staging_authored_v330",
       "source_file": "DISCLOSURE_CONTROL.md",
       "source_sha256": "a4b41a44813f7f326c781b06afaab1686623c6ebaaf3790630546cc2c2059c91",
-      "staged_sha256": "a4b41a44813f7f326c781b06afaab1686623c6ebaaf3790630546cc2c2059c91",
-      "byte_identical": true,
+      "staged_sha256": "c57b3e622eeff45ddda91f3a4037e8e858b85ca7d8c65418d7452333be72aebc",
+      "byte_identical": false,
       "changes": [
-        "New staging utility, audit output, test or documentation; not a historical scientific result"
+        "New staging utility, audit output, test or documentation; not a historical scientific result",
+        "Publication provenance update; existing scientific values retained"
       ]
     },
     {
@@ -874,10 +880,11 @@
       "source_set": "staging_authored_v330",
       "source_file": "REPLAY.md",
       "source_sha256": "926b1f633c51520f21f7b65ff456722fce92a0ddd516e0069ed4fcf4323dca15",
-      "staged_sha256": "926b1f633c51520f21f7b65ff456722fce92a0ddd516e0069ed4fcf4323dca15",
-      "byte_identical": true,
+      "staged_sha256": "8769300d4ac4401a95630c1d12e63663fbfe990910143e860a5ae8da9096b52e",
+      "byte_identical": false,
       "changes": [
-        "New staging utility, audit output, test or documentation; not a historical scientific result"
+        "New staging utility, audit output, test or documentation; not a historical scientific result",
+        "Publication provenance update; existing scientific values retained"
       ]
     },
     {
@@ -901,6 +908,201 @@
       "changes": [
         "New staging utility, audit output, test or documentation; not a historical scientific result"
       ]
+    },
+    {
+      "file": "diagnostics/timing/README.md",
+      "source_set": "timing_diagnostic_20261007",
+      "source_file": "README.md",
+      "source_sha256": "711833444537a495211f6bb48902e8534a6d984c670d55a15bd0944901c76ace",
+      "staged_sha256": "d6eeb9016f16b2d976d867ffc64763ca63887f5375b88fc961903a1c23b96bea",
+      "byte_identical": false,
+      "changes": [
+        "Update release status and journal-neutral context; scientific values retained"
+      ]
+    },
+    {
+      "file": "diagnostics/timing/S28_overall_timing.csv",
+      "source_set": "timing_diagnostic_20261007",
+      "source_file": "S28_overall_timing.csv",
+      "source_sha256": "e44f95100747ee645d8cda283fb435162fc7c7f90892d05e278ddf93630a1edd",
+      "staged_sha256": "e44f95100747ee645d8cda283fb435162fc7c7f90892d05e278ddf93630a1edd",
+      "byte_identical": true,
+      "changes": []
+    },
+    {
+      "file": "diagnostics/timing/S29_source_risk_strata.csv",
+      "source_set": "timing_diagnostic_20261007",
+      "source_file": "S29_source_risk_strata.csv",
+      "source_sha256": "75467874493bf101b6d6ac800e3d7dde55ed4b90ee64df80014be5b10293db14",
+      "staged_sha256": "75467874493bf101b6d6ac800e3d7dde55ed4b90ee64df80014be5b10293db14",
+      "byte_identical": true,
+      "changes": []
+    },
+    {
+      "file": "diagnostics/timing/S30_followup_strata.csv",
+      "source_set": "timing_diagnostic_20261007",
+      "source_file": "S30_followup_strata.csv",
+      "source_sha256": "466cb28dae5b9402597b2852ae46ab1df5cbf6d3f2ccf6e8f3a9ebc8546f3d69",
+      "staged_sha256": "466cb28dae5b9402597b2852ae46ab1df5cbf6d3f2ccf6e8f3a9ebc8546f3d69",
+      "byte_identical": true,
+      "changes": []
+    },
+    {
+      "file": "diagnostics/timing/S31_elapsed_day_coverage.csv",
+      "source_set": "timing_diagnostic_20261007",
+      "source_file": "S31_elapsed_day_coverage.csv",
+      "source_sha256": "df521f35b12c6c75408cc790cfc29ce34ea2fe3d68e2347dc3ce780e2f1d5559",
+      "staged_sha256": "df521f35b12c6c75408cc790cfc29ce34ea2fe3d68e2347dc3ce780e2f1d5559",
+      "byte_identical": true,
+      "changes": []
+    },
+    {
+      "file": "diagnostics/timing/aggregate_facts.json",
+      "source_set": "timing_diagnostic_20261007",
+      "source_file": "aggregate_facts.json",
+      "source_sha256": "a2c42edb63abdcb67234f30e3ef569ac0cd45c9604bca9f3fa1286141601b65c",
+      "staged_sha256": "a2c42edb63abdcb67234f30e3ef569ac0cd45c9604bca9f3fa1286141601b65c",
+      "byte_identical": true,
+      "changes": []
+    },
+    {
+      "file": "diagnostics/timing/analysis_plan_before_computation.md",
+      "source_set": "timing_diagnostic_20261007",
+      "source_file": "analysis_plan_before_computation.md",
+      "source_sha256": "c6f5f0bb691c4be70b48c9b5dd5597a3170be4c85dc819eb73a19ed7349c610c",
+      "staged_sha256": "c6f5f0bb691c4be70b48c9b5dd5597a3170be4c85dc819eb73a19ed7349c610c",
+      "byte_identical": true,
+      "changes": []
+    },
+    {
+      "file": "diagnostics/timing/confirmed_stop_sensitivity_summary.json",
+      "source_set": "timing_diagnostic_20261007",
+      "source_file": "confirmed_stop_sensitivity_summary.json",
+      "source_sha256": "0395d98110628cb8484f4ff5d9c770d2a2b235568c7029b8933b5124cc958ff1",
+      "staged_sha256": "0395d98110628cb8484f4ff5d9c770d2a2b235568c7029b8933b5124cc958ff1",
+      "byte_identical": true,
+      "changes": []
+    },
+    {
+      "file": "diagnostics/timing/input_fingerprints.csv",
+      "source_set": "timing_diagnostic_20261007",
+      "source_file": "input_fingerprints.csv",
+      "source_sha256": "967e59eae637096d966b93799e3c16c2a2f5acd1085694ac75790730bf0282f0",
+      "staged_sha256": "967e59eae637096d966b93799e3c16c2a2f5acd1085694ac75790730bf0282f0",
+      "byte_identical": true,
+      "changes": []
+    },
+    {
+      "file": "diagnostics/timing/requirements-timing.txt",
+      "source_set": "timing_diagnostic_20261007",
+      "source_file": "requirements-timing.txt",
+      "source_sha256": "149e89c6e8d2a1f0ed29b3628fc6f597aa3fbda16f101f4966dabba16f00ebcf",
+      "staged_sha256": "149e89c6e8d2a1f0ed29b3628fc6f597aa3fbda16f101f4966dabba16f00ebcf",
+      "byte_identical": true,
+      "changes": []
+    },
+    {
+      "file": "diagnostics/timing/timing_diagnostic.py",
+      "source_set": "timing_diagnostic_20261007",
+      "source_file": "timing_diagnostic.py",
+      "source_sha256": "0f558e044c397cf35356ae8bf2503cad3ee3090228dcba6e02efec6019474628",
+      "staged_sha256": "fff4b5a68ac97efa7ed417cb3dc4305b99e55e75a0a2f8b0dce69ab554986658",
+      "byte_identical": false,
+      "changes": [
+        "Update release status and journal-neutral context; scientific values retained"
+      ]
+    },
+    {
+      "file": "diagnostics/timing/timing_qa_checks.csv",
+      "source_set": "timing_diagnostic_20261007",
+      "source_file": "timing_qa_checks.csv",
+      "source_sha256": "f81ed531ce1ac18a21eb99de35a186e8f01e789dacf66c594a23e2700bac62ab",
+      "staged_sha256": "f81ed531ce1ac18a21eb99de35a186e8f01e789dacf66c594a23e2700bac62ab",
+      "byte_identical": true,
+      "changes": []
+    },
+    {
+      "file": "diagnostics/timing/timing_run_summary.json",
+      "source_set": "timing_diagnostic_20261007",
+      "source_file": "timing_run_summary.json",
+      "source_sha256": "d8930512931f060e5ae987c4dc16b3aff1cfff35bc54d46bf0342e33a78351c4",
+      "staged_sha256": "b1cc0ded770cd74f9fb4a1cb5b4e7b08ce70be22976b8e45bb8062feb78bfb55",
+      "byte_identical": false,
+      "changes": [
+        "Update release status and journal-neutral context; scientific values retained"
+      ]
+    },
+    {
+      "file": "figures/revision_20261007/Figure_1.pdf",
+      "source_set": "current_figures_20261007",
+      "source_file": "Figure_1.pdf",
+      "source_sha256": "bfa34a6cbe11a070162942834dc5aa2b845dc451cee1c34510fa2836b118181a",
+      "staged_sha256": "bfa34a6cbe11a070162942834dc5aa2b845dc451cee1c34510fa2836b118181a",
+      "byte_identical": true,
+      "changes": []
+    },
+    {
+      "file": "figures/revision_20261007/Figure_1.png",
+      "source_set": "current_figures_20261007",
+      "source_file": "Figure_1.png",
+      "source_sha256": "919b26c96a7e908c1e89269bb36e1c22391ef0cf2e3bf96fb0816208bc80e9ec",
+      "staged_sha256": "919b26c96a7e908c1e89269bb36e1c22391ef0cf2e3bf96fb0816208bc80e9ec",
+      "byte_identical": true,
+      "changes": []
+    },
+    {
+      "file": "figures/revision_20261007/Figure_2.pdf",
+      "source_set": "current_figures_20261007",
+      "source_file": "Figure_2.pdf",
+      "source_sha256": "8b3cd1a9ec65ef2aa8577aaa38bfab0620fd7f62c361574588b6944d87323adc",
+      "staged_sha256": "8b3cd1a9ec65ef2aa8577aaa38bfab0620fd7f62c361574588b6944d87323adc",
+      "byte_identical": true,
+      "changes": []
+    },
+    {
+      "file": "figures/revision_20261007/Figure_2.png",
+      "source_set": "current_figures_20261007",
+      "source_file": "Figure_2.png",
+      "source_sha256": "4b5c2803afd9a589c56ca2ce0bd8546af4f13ce4ae4f0670c8c3b84154fdc859",
+      "staged_sha256": "4b5c2803afd9a589c56ca2ce0bd8546af4f13ce4ae4f0670c8c3b84154fdc859",
+      "byte_identical": true,
+      "changes": []
+    },
+    {
+      "file": "figures/revision_20261007/Figure_3.pdf",
+      "source_set": "current_figures_20261007",
+      "source_file": "Figure_3.pdf",
+      "source_sha256": "718f2de4ec2fb24b58d9df304fb59a0f6a1620a19efcc9cf3f3be4205cdf9abe",
+      "staged_sha256": "718f2de4ec2fb24b58d9df304fb59a0f6a1620a19efcc9cf3f3be4205cdf9abe",
+      "byte_identical": true,
+      "changes": []
+    },
+    {
+      "file": "figures/revision_20261007/Figure_3.png",
+      "source_set": "current_figures_20261007",
+      "source_file": "Figure_3.png",
+      "source_sha256": "6b803f387b09f97e83c2eb6147a8d99b28dec33cdda6b4bbcd5c106163d0caa8",
+      "staged_sha256": "6b803f387b09f97e83c2eb6147a8d99b28dec33cdda6b4bbcd5c106163d0caa8",
+      "byte_identical": true,
+      "changes": []
+    },
+    {
+      "file": "figures/revision_20261007/Figure_4.pdf",
+      "source_set": "current_figures_20261007",
+      "source_file": "Figure_4.pdf",
+      "source_sha256": "a5d8214ccf158e4fd1570a9fc82a8c4701d4259acf90bc49aa00187ebeb0b0cb",
+      "staged_sha256": "a5d8214ccf158e4fd1570a9fc82a8c4701d4259acf90bc49aa00187ebeb0b0cb",
+      "byte_identical": true,
+      "changes": []
+    },
+    {
+      "file": "figures/revision_20261007/Figure_4.png",
+      "source_set": "current_figures_20261007",
+      "source_file": "Figure_4.png",
+      "source_sha256": "394b6660823193847bcf0700eefe2ea14cd7470d0ead3dd33040a63658c74038",
+      "staged_sha256": "394b6660823193847bcf0700eefe2ea14cd7470d0ead3dd33040a63658c74038",
+      "byte_identical": true,
+      "changes": []
     }
   ]
 }

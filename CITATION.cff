@@ -1,12 +1,11 @@
 cff-version: 1.2.0
-message: "Please cite the version-specific Zenodo record for v3.3.0 when reproducing the corrected results."
-doi: "10.5281/zenodo.23157606"
+message: "Please cite the version-specific Zenodo record for v3.4.0 when reproducing the corrected results."
 type: software
-title: "Selective Postoperative Creatinine Testing and AKI Model Transport: A Multidatabase Study"
-version: v3.3.0
-date-released: "2026-10-05"
+title: "Outcome ascertainment and laboratory representation in perioperative acute kidney injury model transport: a multidatabase study"
+version: v3.4.0
+date-released: "2026-10-07"
 repository-code: "https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation"
-url: "https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation/releases/tag/v3.3.0"
+url: "https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation/releases/tag/v3.4.0"
 license: [MIT, CC-BY-4.0]
 authors:
   - family-names: "Teng"
@@ -39,4 +38,4 @@ authors:
 identifiers:
   - type: doi
     value: "10.5281/zenodo.21366088"
-    description: "All-versions concept DOI; use the top-level version DOI for the corrected v3.3.0 results."
+    description: "All-versions concept DOI; the new version-specific DOI is assigned by Zenodo on publication."

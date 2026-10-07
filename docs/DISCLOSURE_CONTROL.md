@@ -47,3 +47,7 @@ formal anonymization guarantee or a substitute for provider terms and privacy
 review. Current data-access and acquisition-time terms are documented by the
 root package owner. No raw data are redistributed here irrespective of provider
 license differences.
+
+## Added timing diagnostic
+
+Positive counts below five and linked rates/intervals are suppressed in timing summaries and JSON outputs. Early counts within source-score quintiles are omitted because subtracting them from any-test counts could reveal small late-only patterns. Follow-up groups are <=48 hours versus >48 hours for every cohort; finer long-window groups remain private. Exact exclusions for unusable-discharge sensitivity remain private. Public files must not contain the local timestamp cache, case-level identifiers or predictions, or a manifest of private file paths.

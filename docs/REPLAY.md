@@ -1,4 +1,4 @@
-# Scientific replay, version 3.3.0
+# Scientific replay, version 3.4.0
 
 This versioned research-software package supports scientific reproducibility.
 It is not a journal publication or a clinical model release, and does not
@@ -9,7 +9,7 @@ current 2.1 workbook including Table S27.
 
 ## Supported entrypoints
 
-Use only `python scripts/replay.py`. Help and `verify` do not read raw data,
+For the corrected primary analysis use `python scripts/replay.py`. The additional timing entrypoint is described below. Help and `verify` do not read raw data,
 fit models, or perform network operations. Internal filenames retaining
 `v32` or `R1` are provenance identifiers, not the scientific release version.
 `run_v31_analysis.py` and `run_postreview_analysis.py` are imported function
@@ -139,3 +139,16 @@ not be described as a new independent equivalence or clinical validation.
 - Historical v3.2.5 aggregate results are not current corrected outputs. No v3.1 output table/model/figure is shipped.
 - All replay output remains local. There is no uploader, release creator, browser editing or publishing step.
 - Consult the repository-level citation, license, data-access documentation and release manifest for archive-wide metadata.
+
+## Added testing-time and follow-up diagnostic
+
+Read `diagnostics/timing/README.md`, including the documented plan deviations and disclosure controls. After rebuilding the corrected primary workspace and its local source-model object, run:
+
+```sh
+python diagnostics/timing/timing_diagnostic.py --test-only
+python diagnostics/timing/timing_diagnostic.py --analysis-root ../private-replay --output-root ../private-timing
+```
+
+Use the versions in `diagnostics/timing/requirements-timing.txt`. The diagnostic leaves source inputs unchanged and writes private row-level derivatives under the specified private output root. Only its disclosure-controlled aggregate outputs are reference release contents. Use `--summaries-only` solely for the same retained timestamp cache; it does not rebuild raw records. The archived 39-check log is the original extraction log, while the current entrypoint also performs the subsequently added metadata-sensitivity check.
+
+The consolidated workbook now includes Tables S28-S31 and Timing_Definitions. Current presentation figures are under `figures/revision_20261007`; old figure paths retain their provenance roles.
