@@ -1,0 +1,8 @@
+Table S1. Complete cohort flow and analytic roles,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+Cohort,Role,Eligible,Observed,Unobserved,Observed rate,Events,MOVER overlap,Denominator definition
+INSPIRE,MAR source development,33394,24872,8522,0.7448,1680,NA,NA
+MOVER 2021,MAR local recalibration,2800,2211,589,0.7896,274,0,NA
+MOVER 2022,post-exploration temporal evaluation,2585,2031,554,0.7857,259,0,NA
+VitalDB available analysis-ready observed cohort,supportive observed-cohort stress test,NA,4095,NA,NA,271,NA,6388 official released cases reconstructed; source-compatible all-eligible denominator not used

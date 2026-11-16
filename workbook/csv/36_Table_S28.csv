@@ -1,0 +1,21 @@
+Table S28. Postoperative testing times and available follow-up,,,
+,,,
+,,,
+Measure,INSPIRE,MOVER 2021,MOVER 2022
+Any postoperative test,24872/33394 (74.5%) [74.0-74.9],2211/2800 (79.0%) [77.4-80.4],2031/2585 (78.6%) [76.9-80.1]
+No postoperative test,8522/33394 (25.5%) [25.1-26.0],589/2800 (21.0%) [19.6-22.6],554/2585 (21.4%) [19.9-23.1]
+"Test in (0,48] h",24488/33394 (73.3%) [72.9-73.8],2193/2800 (78.3%) [76.8-79.8],2016/2585 (78.0%) [76.4-79.5]
+"Test in (48,168] h before recorded stop",18498/33394 (55.4%) [54.9-55.9],1358/2800 (48.5%) [46.7-50.4],1303/2585 (50.4%) [48.5-52.3]
+Tests in both early and late windows,18114/33394 (54.2%) [53.7-54.8],1340/2800 (47.9%) [46.0-49.7],1288/2585 (49.8%) [47.9-51.8]
+Only one distinct testing time,4040/33394 (12.1%) [11.8-12.5],489/2800 (17.5%) [16.1-18.9],405/2585 (15.7%) [14.3-17.1]
+Algorithmic observation window <48 h,5317/33394 (15.9%) [15.5-16.3],1161/2800 (41.5%) [39.7-43.3],979/2585 (37.9%) [36.0-39.8]
+Algorithmic observation window <168 h,21415/33394 (64.1%) [63.6-64.6],2147/2800 (76.7%) [75.1-78.2],1896/2585 (73.3%) [71.6-75.0]
+Discharge stop time missing or unusable,<5/33394 (suppressed),<5 (rate and interval withheld),<5 (rate and interval withheld)
+Early test among algorithmic window >=48 h,22989/28077 (81.9%) [81.4-82.3],1589/1639 (96.9%) [96.0-97.7],1538/1606 (95.8%) [94.7-96.6]
+Late test among algorithmic window >48 h,18498/28066 (65.9%) [65.4-66.5],1358/1639 (82.9%) [81.0-84.6],1303/1606 (81.1%) [79.1-83.0]
+First test hours among observed,0.6 (0.3-17.2),12.0 (2.1-16.9),11.9 (1.9-17.0)
+Last test hours among observed,111.5 (46.9-156.4),70.9 (28.6-147.6),83.8 (35.6-153.1)
+Testing occasions among observed,3.0 (2.0-5.0),4.0 (2.0-7.0),4.0 (2.0-7.0)
+Elapsed 24 h bins with test among observed,3.0 (2.0-4.0),3.0 (1.0-6.0),3.0 (2.0-7.0)
+Gap from last test to recorded stop among observed,22.2 (11.4-39.8),9.1 (5.6-13.8),9.7 (6.1-14.4)
+Observation opportunity hours,127.6 (61.3-168.0),69.8 (22.8-159.0),73.7 (24.2-168.0)

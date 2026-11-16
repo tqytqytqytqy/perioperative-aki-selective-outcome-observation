@@ -1,0 +1,13 @@
+Table S22. Fixed-prediction performance under original and coarsened target labels,,,,,,
+,,,,,,
+,,,,,,
+Metric,Label / contrast,Estimate,95% lower,95% upper,Observed n,Paired replicates
+event_rate,original,0.1275,0.1118,0.1423,2031,1000
+event_rate,coarsened,0.1654,0.1482,0.1812,2031,1000
+event_rate,difference,0.0379,0.0261,0.0497,2031,1000
+oe_ratio,original,1.0747,0.9476,1.1954,2031,1000
+oe_ratio,coarsened,1.3942,1.2507,1.5291,2031,1000
+oe_ratio,difference,0.3195,0.2179,0.4186,2031,1000
+auroc,original,0.6568,0.6206,0.693,2031,1000
+auroc,coarsened,0.6232,0.5911,0.6577,2031,1000
+auroc,difference,-0.0336,-0.0611,-0.0033,2031,1000

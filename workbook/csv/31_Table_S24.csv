@@ -1,0 +1,56 @@
+Table S24. Covariate balance relative to the full eligible population,,,,,,,
+,,,,,,,
+,,,,,,,
+Cohort,Variable,Level,Full eligible mean / proportion,Observed unweighted,Observed weighted,SMD before,SMD after
+INSPIRE,age,continuous_or_binary,55.977,57.5607,55.8599,0.1,-0.0074
+INSPIRE,sex_male,continuous_or_binary,0.5142,0.5449,0.5149,0.0615,0.0014
+INSPIRE,duration_h,continuous_or_binary,3.0115,3.4673,3.0493,0.2344,0.0195
+INSPIRE,baseline_cr,continuous_or_binary,0.8486,0.8594,0.8491,0.0307,0.0012
+INSPIRE,asa,1,suppressed,suppressed,suppressed,suppressed,suppressed
+INSPIRE,asa,2,suppressed,suppressed,suppressed,suppressed,suppressed
+INSPIRE,asa,3,suppressed,suppressed,suppressed,suppressed,suppressed
+INSPIRE,asa,4,suppressed,suppressed,suppressed,suppressed,suppressed
+INSPIRE,asa,5,suppressed,suppressed,suppressed,suppressed,suppressed
+INSPIRE,asa,6,suppressed,<0.000202,suppressed,suppressed,suppressed
+INSPIRE,asa,<missing>,suppressed,suppressed,suppressed,suppressed,suppressed
+MOVER 2021,age,continuous_or_binary,51.3771,53.4536,51.5968,0.1075,0.0114
+MOVER 2021,sex_male,continuous_or_binary,0.5971,0.6097,0.5969,0.0256,-0.0005
+MOVER 2021,duration_h,continuous_or_binary,3.3615,3.5747,3.3877,0.1029,0.0126
+MOVER 2021,baseline_cr,continuous_or_binary,0.9035,0.9079,0.9023,0.0091,-0.0024
+MOVER 2021,asa,1,suppressed,suppressed,suppressed,suppressed,suppressed
+MOVER 2021,asa,2,suppressed,suppressed,suppressed,suppressed,suppressed
+MOVER 2021,asa,3,suppressed,suppressed,suppressed,suppressed,suppressed
+MOVER 2021,asa,4,suppressed,suppressed,suppressed,suppressed,suppressed
+MOVER 2021,asa,5,suppressed,suppressed,suppressed,suppressed,suppressed
+MOVER 2021,asa,6,<0.001785,suppressed,suppressed,suppressed,suppressed
+MOVER 2021,asa,<missing>,<0.001785,<0.002261,suppressed,suppressed,suppressed
+MOVER 2021,surgery_category,abdominal,suppressed,suppressed,suppressed,suppressed,suppressed
+MOVER 2021,surgery_category,breast,suppressed,<0.002261,suppressed,suppressed,suppressed
+MOVER 2021,surgery_category,head_neck,suppressed,suppressed,suppressed,suppressed,suppressed
+MOVER 2021,surgery_category,neurologic,suppressed,suppressed,suppressed,suppressed,suppressed
+MOVER 2021,surgery_category,orthopedic,suppressed,suppressed,suppressed,suppressed,suppressed
+MOVER 2021,surgery_category,other,suppressed,suppressed,suppressed,suppressed,suppressed
+MOVER 2021,surgery_category,plastic,suppressed,suppressed,suppressed,suppressed,suppressed
+MOVER 2021,surgery_category,thoracic,suppressed,suppressed,suppressed,suppressed,suppressed
+MOVER 2021,surgery_category,urologic,suppressed,suppressed,suppressed,suppressed,suppressed
+MOVER 2021,surgery_category,vascular,suppressed,suppressed,suppressed,suppressed,suppressed
+MOVER 2022,age,continuous_or_binary,51.6124,54.1162,51.7744,0.1282,0.0083
+MOVER 2022,sex_male,continuous_or_binary,0.5803,0.5982,0.5845,0.0364,0.0085
+MOVER 2022,duration_h,continuous_or_binary,3.2577,3.4709,3.2737,0.1083,0.0081
+MOVER 2022,baseline_cr,continuous_or_binary,0.9066,0.9237,0.9089,0.0367,0.0049
+MOVER 2022,asa,1,suppressed,suppressed,suppressed,suppressed,suppressed
+MOVER 2022,asa,2,suppressed,suppressed,suppressed,suppressed,suppressed
+MOVER 2022,asa,3,suppressed,suppressed,suppressed,suppressed,suppressed
+MOVER 2022,asa,4,suppressed,suppressed,suppressed,suppressed,suppressed
+MOVER 2022,asa,5,suppressed,suppressed,suppressed,suppressed,suppressed
+MOVER 2022,asa,6,<0.001933,suppressed,suppressed,suppressed,suppressed
+MOVER 2022,surgery_category,abdominal,suppressed,suppressed,suppressed,suppressed,suppressed
+MOVER 2022,surgery_category,breast,<0.001933,<0.002460,suppressed,suppressed,suppressed
+MOVER 2022,surgery_category,head_neck,suppressed,suppressed,suppressed,suppressed,suppressed
+MOVER 2022,surgery_category,neurologic,suppressed,suppressed,suppressed,suppressed,suppressed
+MOVER 2022,surgery_category,orthopedic,suppressed,suppressed,suppressed,suppressed,suppressed
+MOVER 2022,surgery_category,other,suppressed,suppressed,suppressed,suppressed,suppressed
+MOVER 2022,surgery_category,plastic,suppressed,suppressed,suppressed,suppressed,suppressed
+MOVER 2022,surgery_category,thoracic,suppressed,suppressed,suppressed,suppressed,suppressed
+MOVER 2022,surgery_category,urologic,suppressed,suppressed,suppressed,suppressed,suppressed
+MOVER 2022,surgery_category,vascular,suppressed,suppressed,suppressed,suppressed,suppressed

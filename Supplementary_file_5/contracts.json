@@ -1,0 +1,39 @@
+{
+  "analysis_version": "R2_IDQC_20261113",
+  "aggregate_root": "aggregates",
+  "ownership": "Authors supply publication-filtered aggregates. Never copy internal workbook, patient records or replicate distributions.",
+  "aggregate_files": {
+    "S6_calibration_points.csv": {
+      "required": ["strategy", "risk_group", "weighted_mean_prediction", "ipw_event_frequency", "conditional_ci_lower", "conditional_ci_upper"],
+      "numeric": ["risk_group", "weighted_mean_prediction", "ipw_event_frequency", "conditional_ci_lower", "conditional_ci_upper", "eligible_n", "observed_n", "observed_events", "effective_observed_n", "source_lower_boundary", "source_upper_boundary", "all_eligible_mean_prediction"],
+      "probabilities": ["weighted_mean_prediction", "ipw_event_frequency", "conditional_ci_lower", "conditional_ci_upper", "source_lower_boundary", "source_upper_boundary", "all_eligible_mean_prediction"],
+      "counts": ["eligible_n", "observed_n", "observed_events"],
+      "key": ["strategy", "risk_group"],
+      "optional_count_columns": "Counts may be omitted or publication-suppressed; plotting never infers them"
+    },
+    "prediction_distribution.csv": {
+      "required": ["strategy", "quantile", "prediction"],
+      "numeric": ["quantile", "prediction"],
+      "probabilities": ["quantile", "prediction"],
+      "key": ["strategy", "quantile"],
+      "quantiles": [0, 0.05, 0.25, 0.5, 0.75, 0.95, 1]
+    },
+    "reproduction_metrics.csv": {
+      "required": ["strategy", "events", "event_rate", "predicted_mean", "oe_ratio", "calibration_intercept", "calibration_joint_intercept", "calibration_slope", "auroc", "auprc", "brier", "brier_skill_score", "grouped_absolute_calibration_error_10q"],
+      "numeric": ["events", "event_rate", "predicted_mean", "oe_ratio", "calibration_intercept", "calibration_joint_intercept", "calibration_slope", "auroc", "auprc", "brier", "brier_skill_score", "grouped_absolute_calibration_error_10q"],
+      "note": "Hybrid AIPW event totals are not necessarily integer counts. Do not impose probability bounds on AIPW estimates."
+    }
+  },
+  "strategies": ["Unupdated", "Complete-case recalibration", "IPW recalibration"],
+  "local_inputs_not_included": {
+    "data/processed": ["inspire_rebuilt_v32.parquet", "mover_rebuilt_v32.parquet", "vitaldb_supportive_v32.parquet"],
+    "models": ["source_logistic_spline_ipw_v32.joblib", "model_specification_v32.json"],
+    "tables": ["30_update_selection_target_performance_v32.csv", "34_update_strategy_workload_v32.csv"],
+    "joblib_warning": "Load only trusted authorized model artifacts; joblib can execute code. Match packaged pinned versions."
+  },
+  "outputs": {
+    "level_1": ["aggregate_checks.json", "Figure_S6_calibration_curves.pdf", "Figure_S6_calibration_curves.png"],
+    "level_2": ["S6_calibration_points.csv", "prediction_distribution.csv", "reproduction_metrics.csv", "local_calibration_qa.json"]
+  },
+  "intervals": "Seed 20261007; 1000 conditional target-patient resamples; fixed predictions, reconstructed cross-fitted weights, fixed source-risk groups. Not full-chain or simultaneous intervals."
+}

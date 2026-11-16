@@ -1,0 +1,7 @@
+Table 2. Unupdated and complete-case or observation-weighted recalibration of the same source model,,,,,,
+,,,,,,
+,,,,,,
+Strategy,Alpha,Beta,Target O/E,Target slope,AUROC,Brier
+No local update,0,1,1.488,0.788,0.674,0.0952
+Complete-case recalibration,0.152,0.845,0.968,0.933,0.674,0.0937
+IPW recalibration,0.208,0.892,1.014,0.884,0.674,0.0938

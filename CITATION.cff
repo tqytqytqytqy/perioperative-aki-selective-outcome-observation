@@ -1,42 +1,26 @@
 cff-version: 1.2.0
-message: "Please cite the version-specific Zenodo record for v3.4.0 when reproducing the corrected results."
-doi: "10.5281/zenodo.23204344"
+message: "Please cite the exact version of this research software."
 type: software
-title: "Outcome ascertainment and laboratory representation in perioperative acute kidney injury model transport: a multidatabase study"
-version: v3.4.0
-date-released: "2026-10-07"
-repository-code: "https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation"
-url: "https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation/releases/tag/v3.4.0"
-license: [MIT, CC-BY-4.0]
+title: "Selective creatinine testing and laboratory representation in perioperative acute kidney injury prediction: identity-consistent reanalysis code and aggregate results"
+version: v4.0.0
+date-released: '2026-11-16'
+license: MIT
+repository-code: https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation
+url: https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation/releases/tag/v4.0.0
 authors:
   - family-names: "Teng"
     given-names: "Qingyu"
-    affiliation: "Department of Anesthesiology, Shanghai Sixth People's Hospital, Shanghai Jiao Tong University School of Medicine, Shanghai, China"
   - family-names: "Niu"
     given-names: "Tingting"
-    affiliation: "School of Public Health, Fudan University, Shanghai, China"
   - family-names: "Chen"
     given-names: "Qian"
-    affiliation: "Department of Anesthesiology, Shanghai Sixth People's Hospital, Shanghai Jiao Tong University School of Medicine, Shanghai, China"
   - family-names: "Tao"
     given-names: "Min"
-    affiliation: "Department of Anesthesiology, Shanghai Sixth People's Hospital, Shanghai Jiao Tong University School of Medicine, Shanghai, China"
   - family-names: "Gu"
     given-names: "Ziyan"
-    affiliation: "Department of Anesthesiology, Shanghai Sixth People's Hospital, Shanghai Jiao Tong University School of Medicine, Shanghai, China"
   - family-names: "Li"
     given-names: "Qi"
-    affiliation: "Department of Anesthesiology, Shanghai Sixth People's Hospital, Shanghai Jiao Tong University School of Medicine, Shanghai, China"
-    orcid: "https://orcid.org/0009-0003-3140-5887"
   - family-names: "Zhao"
     given-names: "Yingya"
-    affiliation: "School of Public Health, Fudan University, Shanghai, China"
-    orcid: "https://orcid.org/0009-0005-3335-8193"
   - family-names: "Zhang"
     given-names: "Hui"
-    affiliation: "Department of Anesthesiology, Shanghai Sixth People's Hospital, Shanghai Jiao Tong University School of Medicine, Shanghai, China"
-    orcid: "https://orcid.org/0009-0006-5460-3845"
-identifiers:
-  - type: doi
-    value: "10.5281/zenodo.21366088"
-    description: "All-versions concept DOI; use the top-level version DOI to cite v3.4.0."

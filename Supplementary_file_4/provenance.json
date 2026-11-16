@@ -1,0 +1,1069 @@
+{
+  "analysis_version": "R2_IDQC_20261113",
+  "extraction": "Verbatim function/class source segments; AST hashes unchanged.",
+  "excluded": [
+    "legacy entry points",
+    "author metadata",
+    "historical report assertions",
+    "private path constants",
+    "all source datasets and model artifacts"
+  ],
+  "source_sha256": {
+    "run_v32_analysis.py": "4046c3a887f858e6c270ef4c7d64f3e9071731b7c2ddb84acf4fe6ef1a8dce2e",
+    "run_v31_analysis.py": "979612a260140417cb48aded24201d0225e30f1a139ce64723a774787ce22296",
+    "run_postreview_analysis.py": "4080c42ec530a0d07e00e5397519102489be6f16412bbe1a6784cf5020389b5a",
+    "etl_common_v32.py": "70218d4a87afe890ed294e1f6d893bcd102a98228a10114e251f6b5696f5a444",
+    "etl_outcome_representations_v32.py": "bad8e657ca6898c9818aebc9fe20e122f990e025d80eb3db142751904fdd99e0",
+    "thresholds_r1.py": "bdc6e0e71d142c6e2e8c4d31968b9c427039ad08914d65fa04919037f738eff3",
+    "audit_mover.py": "2953f284fa47bc56967bd5645b09ea58b8257084f03f0113b41681ed6ebccd80",
+    "raw_linkage_audit.py": "fc6a073998ecaeb864f5ac2bbbcce205b4075ef7adb9f49bcf69423240bbe300",
+    "derived_cohort_comparison.py": "a0a8a28361a32decb218d3353515c38e8be52cabd65914d367fa06b2997efbc3",
+    "build_diagnostics.py": "1f52db3f2327ea97dc7da9178e202f4a5c9254f56829a09441a275dcaec20c3d",
+    "timing_helpers.py": "0f558e044c397cf35356ae8bf2503cad3ee3090228dcba6e02efec6019474628",
+    "supplementary_common.py": "58c4758cabd5809e0471b5fdf3c1ef3aad57b842f017d81417833df1bcf639ce",
+    "r1_threshold_validation.py": "b90a7d35b87b97239c5642032e9dcb3eda7a25cb3df17a0073f208bbe58f3972",
+    "analysis_config_v32.json": "c807be41121ba6517b1ac31b86b7d6ed123ccd4af90b4ca92433ee7b4f7a2bfc"
+  },
+  "functions": [
+    {
+      "source": "run_v32_analysis.py",
+      "name": "write_csv",
+      "source_lines": [
+        99,
+        107
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "bb69c0d41c81899e8ac394c72fb738700c9b7d06956ce21cd0a3585faf80fbfb"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "write_json",
+      "source_lines": [
+        110,
+        112
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "2b0b9eed4eee1711a11b3b80918c7104b0c061ece3997d5caaf0b1800e6e0c46"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "performance_metrics",
+      "source_lines": [
+        123,
+        128
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "0826794334edc9dc294113530f3c43fd1ba9c385dbdafa319b34b76a7fd6d767"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "workload_metrics",
+      "source_lines": [
+        131,
+        142
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "bc44465599cdb07cc9c8bbb7a4c0e92f53a2cab6c61ccb8dd79cc090833ad095"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "observed_indicator",
+      "source_lines": [
+        145,
+        149
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "c0893173fb41c2f76012d45862a0c82877974a06052af046e04bdde0b1d194f4"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "prepare_cohorts",
+      "source_lines": [
+        152,
+        184
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "d79df4c05b3dbe07c72a5b4eaf9bf42104102bba4582443d95a59292256773ed"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "cohort_flow_table_v32",
+      "source_lines": [
+        187,
+        194
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "63e74d95dd34cd189894378d0c8bf0d1e295c45840a34370219fba5a6c6136e2"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "crossfit_binary_model",
+      "source_lines": [
+        197,
+        250
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "6aa9321caec4ea643f7663658794ae550a3028a84affa4b27719128bb30f6e02"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "make_weights",
+      "source_lines": [
+        253,
+        281
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "4e8b6f2ad564bbeb84ae3f525efdebb9d646bdd3173142689b6cb7a2333ea0ad"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "observation_diagnostic_row",
+      "source_lines": [
+        284,
+        321
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "9cad061b1c9b97a44992b51434a2332667eac7f36c5cf681604e70b0f97c923e"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "observation_bundle",
+      "source_lines": [
+        324,
+        404
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "bbde09d3ee694e3a75b8f29895ec7293229bbabe2afcfd2f6d96fed3093b59a7"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "bundle_with_weight_rule",
+      "source_lines": [
+        407,
+        418
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "30a5743e4315fbce9fb99942c09aa6d54203ed1447fdbc7d427ea5c394dcd817"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "fit_source_model",
+      "source_lines": [
+        421,
+        436
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "a8269efb85263a27c07ede7a1f9955246f02441da05981ce62fc6e46289922f7"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "fit_fractional_source_model",
+      "source_lines": [
+        439,
+        456
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "7e048c48fa79aad92bcb22f710839c2f585aba03ff53f45e6517d680c8e756c6"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "fractional_logistic_equivalence_test",
+      "source_lines": [
+        459,
+        489
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "cd09ddafca4923866f3e2a294cd7c6b421869b45a24062ca289884697d3bd837"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "ipw_full_metrics",
+      "source_lines": [
+        492,
+        506
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "6fcb197fb762a5dca69b563752492a3a95c65b6a38108f6542030cd772dbb22a"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "aipw_pseudo_outcome",
+      "source_lines": [
+        509,
+        514
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "41d123a951b5221f479c68e899e349ae386f47567f34ef9eb54ca1280c6f2fa0"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "aipw_hybrid_metrics",
+      "source_lines": [
+        517,
+        545
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "7139b2cf4e31615689d764c0e7b2c3347090e768d8603e16c14ce58891a33fb6"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "target_workload",
+      "source_lines": [
+        548,
+        560
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "1fee3849651a7158c6fcfded926418e3a1a986d869054423d51d213c5d0dd9b4"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "completed_workload",
+      "source_lines": [
+        563,
+        571
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "f39a0ff00a78eb76b998e679610e6bbb1cb2a4df24d8b19ddb84f8597b327826"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "recalibrate_ipw",
+      "source_lines": [
+        574,
+        581
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "9d3fd10974f2f6bf7bc1ac4b7c7561579eb2203690a999509df57c2e89c07eab"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "shifted_fractional_outcome",
+      "source_lines": [
+        584,
+        588
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "9fa4cf71d3d43f047f897c9e3e8fd5cb6bc61bc5593edf5bb283e2e5c6f0bd40"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "add_workload_columns",
+      "source_lines": [
+        591,
+        595
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "12725b6abb82021342955d1b40f3858d71537bc5f856006e019867fbe337c218"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "canonical_result",
+      "source_lines": [
+        598,
+        622
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "a95bb4ddeee55525c013864c24545185d5672235ed979424c7ca7713498c19de"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "scenario_row",
+      "source_lines": [
+        625,
+        666
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "c9a3d3e784720f0f74e325c8d6bc72b9f7c99676bee2627216ab733e78eda509"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "canonical_scenario_row",
+      "source_lines": [
+        669,
+        701
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "9ba46adb3af1881b45e8c131a03576a4dd144e706cf0fba1c42c36753a231232"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "source_mnar_propagation",
+      "source_lines": [
+        704,
+        755
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "c345c2e82542578f4e724ddef07557a3641e3b93867dfc2e7a4183fdb957d420"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "update_mnar_propagation",
+      "source_lines": [
+        758,
+        809
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "69973b1b9bc19ad9effc88cfe55310da3d50c09ca54616f3f7891f01134d83c5"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "target_mnar_sensitivity",
+      "source_lines": [
+        812,
+        862
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "633a1c6740727f851740029ba2af28930b2233b5051c92aa8b847d37538449b9"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "mnar_anchor_table",
+      "source_lines": [
+        865,
+        896
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "4349f8c62631dfa2ea55e33bfa5a847e61bfae53d2640bf7dd874c4db31940ee"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "auxiliary_outcome_diagnostics",
+      "source_lines": [
+        899,
+        943
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "b0135152e1bfc0a79ee2e4bf674b0bad69cdf59e24b7a548985c8bb1b192b8b7"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "weight_truncation_sensitivity",
+      "source_lines": [
+        946,
+        989
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "f7e23d8b495b729e15b55c69e32ef616b3b938f3d35f8bfac4e2ef58c7ea7b1c"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "preprocessing_audit",
+      "source_lines": [
+        992,
+        1024
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "83f5b91e5f82769b05e130b5e675e104d0d4182864dd5b269abfaad4e9cc50da"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "target_nonparametric_bounds",
+      "source_lines": [
+        1027,
+        1053
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "a7a41729613f5c77fb06fe2e21216e42dd227e03e7e66b9b8c832913f25778be"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "selection_chain_comparators",
+      "source_lines": [
+        1056,
+        1123
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "fa6eec2bb5e3ff22319005378dad026fb774adb26b94fc8766a1cc9a48963214"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "vitaldb_supportive",
+      "source_lines": [
+        1126,
+        1148
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "e9001b9359ec9637085e78f4e150e8324a0f5d0e0f95e9a8badd6c12750fef39"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "canonical_bootstrap_row",
+      "source_lines": [
+        1151,
+        1170
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "b40a2d029f04d11d4644dc197e321d73bacb9cccab7851f0e357684483d3f3df"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "mnar_bootstrap_row",
+      "source_lines": [
+        1173,
+        1230
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "93bed9b9ef0ba0258fc6a2996a7387e9d451ce04c6f8c9f2f92810ab2e830aae"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "bootstrap_once",
+      "source_lines": [
+        1233,
+        1399
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "b7b5071a066700aac41cb18a0d9cc3b4c68394fdee4329e6864be407636378a1"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "bootstrap_worker_run",
+      "source_lines": [
+        1411,
+        1441
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "ad9a7c53c97a2f8d9a5e4b8aa070e9e5fc80778a7d97e2296486751c5876a8d6"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "canonical_long_table",
+      "source_lines": [
+        1529,
+        1607
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "25c5397eed36d108582a5ca891056bd5838d9fe719f5d2d1e2d94f8105c440d4"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "mnar_interval_table",
+      "source_lines": [
+        1610,
+        1659
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "25880a6c0cb805e380872437c3ae5420f86e38d5bfb5f94c61d3c59a756138f8"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "model_specification",
+      "source_lines": [
+        1662,
+        1681
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "4a16d90c5797fa6b4a9fd7919d7b84f783e32c1ca8a46cfe340c191dacbb6115"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "metric_reporting_map",
+      "source_lines": [
+        1731,
+        1749
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "b34629bdbc599b799db4df10cf7a52a01d5f72e7fa6ad96c0def9f07f20e66b4"
+    },
+    {
+      "source": "run_v32_analysis.py",
+      "name": "run_point_analysis",
+      "source_lines": [
+        1847,
+        1951
+      ],
+      "output": "scripts/run_v32_analysis.py",
+      "ast_sha256": "16772019b54833390f51ceaeb9b8ea758aa70e0614e4803791ac93de0ee00f2c"
+    },
+    {
+      "source": "run_v31_analysis.py",
+      "name": "make_risk_model",
+      "source_lines": [
+        97,
+        111
+      ],
+      "output": "scripts/run_v31_analysis.py",
+      "ast_sha256": "cbebe5eafc134d72dcc4dd7fb10479db86077b01c3e0262f24b60e38c1b6e645"
+    },
+    {
+      "source": "run_v31_analysis.py",
+      "name": "nuisance_specification",
+      "source_lines": [
+        114,
+        145
+      ],
+      "output": "scripts/run_v31_analysis.py",
+      "ast_sha256": "15b78fe57ddc89104ad27a4240f6375df14dd9f4b41ea62b9cf13894fc4e0947"
+    },
+    {
+      "source": "run_v31_analysis.py",
+      "name": "observed_indicator",
+      "source_lines": [
+        183,
+        187
+      ],
+      "output": "scripts/run_v31_analysis.py",
+      "ast_sha256": "c0893173fb41c2f76012d45862a0c82877974a06052af046e04bdde0b1d194f4"
+    },
+    {
+      "source": "run_v31_analysis.py",
+      "name": "weighted_balance",
+      "source_lines": [
+        209,
+        254
+      ],
+      "output": "scripts/run_v31_analysis.py",
+      "ast_sha256": "95625c592fdf6cbdb6bf605f9e2c1c8c48ca7e78b768658098ba83758b151bc1"
+    },
+    {
+      "source": "run_v31_analysis.py",
+      "name": "cohort_flow_table",
+      "source_lines": [
+        383,
+        421
+      ],
+      "output": "scripts/run_v31_analysis.py",
+      "ast_sha256": "5ab6105a557da55579a38dd68d9b7a0f9412ebd5cf9837e2a7470d088f9a01cf"
+    },
+    {
+      "source": "run_v31_analysis.py",
+      "name": "group_characteristics",
+      "source_lines": [
+        424,
+        455
+      ],
+      "output": "scripts/run_v31_analysis.py",
+      "ast_sha256": "1fe558d8fae3a9454169947d9b65f0a9529e27e78b66e20e21c638742646d246"
+    },
+    {
+      "source": "run_v31_analysis.py",
+      "name": "missingness_table",
+      "source_lines": [
+        458,
+        486
+      ],
+      "output": "scripts/run_v31_analysis.py",
+      "ast_sha256": "42e17ff0d24a42d8cf40a430fb75ac36e7d23716000c3658641297c1e0deb417"
+    },
+    {
+      "source": "run_v31_analysis.py",
+      "name": "model_specification",
+      "source_lines": [
+        853,
+        922
+      ],
+      "output": "scripts/run_v31_analysis.py",
+      "ast_sha256": "7103829420fef2142d01dba191f7dfabdfc56036805049955682bdc77a52577e"
+    },
+    {
+      "source": "run_postreview_analysis.py",
+      "name": "clip_probability",
+      "source_lines": [
+        89,
+        90
+      ],
+      "output": "scripts/run_postreview_analysis.py",
+      "ast_sha256": "bc1782041d8954be3a0f027a7d68d51115c1197d7580e61c176437360bbb8e85"
+    },
+    {
+      "source": "run_postreview_analysis.py",
+      "name": "eligible_base",
+      "source_lines": [
+        93,
+        100
+      ],
+      "output": "scripts/run_postreview_analysis.py",
+      "ast_sha256": "93b154a88ee23d41974772541702be3be4549f8ec9f4f72dabd62fba8ae93dba"
+    },
+    {
+      "source": "run_postreview_analysis.py",
+      "name": "fit_recalibration",
+      "source_lines": [
+        266,
+        300
+      ],
+      "output": "scripts/run_postreview_analysis.py",
+      "ast_sha256": "28cf0b9d515b427712e42862dc6ecd731228c048e84a18a2eea3ca971f46ded5"
+    },
+    {
+      "source": "run_postreview_analysis.py",
+      "name": "apply_recalibration",
+      "source_lines": [
+        303,
+        304
+      ],
+      "output": "scripts/run_postreview_analysis.py",
+      "ast_sha256": "0124003dba8f82ffca9b4399f24873b6377006aeebacbe099aa7c1cf01d584de"
+    },
+    {
+      "source": "run_postreview_analysis.py",
+      "name": "grouped_ici",
+      "source_lines": [
+        307,
+        320
+      ],
+      "output": "scripts/run_postreview_analysis.py",
+      "ast_sha256": "b2d75fc44f0e0b72da4f1bafe93246614bcf7f4a68444bc3b29446d7f1cfdae0"
+    },
+    {
+      "source": "run_postreview_analysis.py",
+      "name": "fractional_discrimination",
+      "source_lines": [
+        323,
+        333
+      ],
+      "output": "scripts/run_postreview_analysis.py",
+      "ast_sha256": "7b13fbb491cdcd66c4b72ece2aa008cd43775251a355e22e1bc3af8eb57f1a85"
+    },
+    {
+      "source": "run_postreview_analysis.py",
+      "name": "performance_metrics",
+      "source_lines": [
+        336,
+        366
+      ],
+      "output": "scripts/run_postreview_analysis.py",
+      "ast_sha256": "2f9b94857e8d62f2e6092c1b9e6b7abfa6e6a238d75127d1cd2974de22d464ca"
+    },
+    {
+      "source": "run_postreview_analysis.py",
+      "name": "workload_metrics",
+      "source_lines": [
+        465,
+        489
+      ],
+      "output": "scripts/run_postreview_analysis.py",
+      "ast_sha256": "99cd1adbe368b0e20ba0c4e63f5af9b3d34e1bd2df108f6497b0d32840f6bcb7"
+    },
+    {
+      "source": "etl_common_v32.py",
+      "name": "stable_key",
+      "source_lines": [
+        155,
+        157
+      ],
+      "output": "scripts/etl_common_v32.py",
+      "ast_sha256": "4e8be84117a4049a91fba8783b0443f2fe1a97b7bef03dcef543cc52c57cad03"
+    },
+    {
+      "source": "etl_common_v32.py",
+      "name": "find_zip_member",
+      "source_lines": [
+        160,
+        164
+      ],
+      "output": "scripts/etl_common_v32.py",
+      "ast_sha256": "1ca6a84de535c7182d6b69cf091c0b3cfea1726aede7f6573b1be26c39bc7ffe"
+    },
+    {
+      "source": "etl_common_v32.py",
+      "name": "read_zip_gzip_csv",
+      "source_lines": [
+        167,
+        172
+      ],
+      "output": "scripts/etl_common_v32.py",
+      "ast_sha256": "62c97c8741f2775060424b1193b76c54e8238e11187caef8ec9f31513df435a3"
+    },
+    {
+      "source": "etl_common_v32.py",
+      "name": "iter_zip_gzip_csv",
+      "source_lines": [
+        175,
+        191
+      ],
+      "output": "scripts/etl_common_v32.py",
+      "ast_sha256": "862bedb269ed01ba72c568fc013d357263774df5af608f6be687078204834f58"
+    },
+    {
+      "source": "etl_common_v32.py",
+      "name": "finite_min",
+      "source_lines": [
+        194,
+        201
+      ],
+      "output": "scripts/etl_common_v32.py",
+      "ast_sha256": "8b91c8b5402d85a32546adaebba0d0862215f76fc6f54cb07698a57b8850ea39"
+    },
+    {
+      "source": "etl_common_v32.py",
+      "name": "attach_creatinine_outcomes_relative",
+      "source_lines": [
+        204,
+        236
+      ],
+      "output": "scripts/etl_common_v32.py",
+      "ast_sha256": "f449907f023e0a0f7d95322ae67f60dad33e166338314ba610ec473c771351eb"
+    },
+    {
+      "source": "etl_common_v32.py",
+      "name": "finalize_outcomes",
+      "source_lines": [
+        274,
+        293
+      ],
+      "output": "scripts/etl_common_v32.py",
+      "ast_sha256": "e233060bd8e1fd123693ea226bb06bb2e18443a57cb8f3596d2e9a8f4268c2a1"
+    },
+    {
+      "source": "etl_common_v32.py",
+      "name": "build_inspire",
+      "source_lines": [
+        296,
+        398
+      ],
+      "output": "scripts/etl_common_v32.py",
+      "ast_sha256": "7f8836e4f1204d6fb7734f85c651f90c8c40742455031ced592b611d630709b8"
+    },
+    {
+      "source": "etl_outcome_representations_v32.py",
+      "name": "interval_bounds_from_levels",
+      "source_lines": [
+        252,
+        268
+      ],
+      "output": "scripts/etl_outcome_representations_v32.py",
+      "ast_sha256": "3336429a7476f48a3c9874da3d81f597c2108cf46c644c2b6ae80022c6373bec"
+    },
+    {
+      "source": "etl_outcome_representations_v32.py",
+      "name": "apply_percentile_release",
+      "source_lines": [
+        281,
+        287
+      ],
+      "output": "scripts/etl_outcome_representations_v32.py",
+      "ast_sha256": "9aa74f923dfe830a47a6086566800c08e73c2e25d314571964bdd93f5deb6e3f"
+    },
+    {
+      "source": "etl_outcome_representations_v32.py",
+      "name": "classify_exact_aki",
+      "source_lines": [
+        290,
+        297
+      ],
+      "output": "scripts/etl_outcome_representations_v32.py",
+      "ast_sha256": "723c08ca3b562e4395a12da4994a57463f835259085a0f909a2b2e6914b1080a"
+    },
+    {
+      "source": "etl_outcome_representations_v32.py",
+      "name": "classify_interval_aki",
+      "source_lines": [
+        300,
+        322
+      ],
+      "output": "scripts/etl_outcome_representations_v32.py",
+      "ast_sha256": "2b5c6b1fa9bc758a27f06c9407b9de0eb315ef29732e572ae29ccf5138e853f7"
+    },
+    {
+      "source": "etl_outcome_representations_v32.py",
+      "name": "inspire_release_levels",
+      "source_lines": [
+        376,
+        401
+      ],
+      "output": "scripts/etl_outcome_representations_v32.py",
+      "ast_sha256": "491a686c69dd87d63bc23d37c23c1e08ceb74ad5874e452fd27dada3be3ad494"
+    },
+    {
+      "source": "thresholds_r1.py",
+      "name": "ge_threshold",
+      "source_lines": [
+        4,
+        6
+      ],
+      "output": "scripts/thresholds_r1.py",
+      "ast_sha256": "791963a114b5d1922a3f657e9bc07b10e686be6c36925d01e91640692cdcb5a8"
+    },
+    {
+      "source": "audit_mover.py",
+      "name": "key",
+      "source_lines": [
+        32,
+        33
+      ],
+      "output": "scripts/audit_mover.py",
+      "ast_sha256": "95ddc08860f0da2d0a47cf3814597f8ade9f5c167a8f9d7a7d58edddb631503d"
+    },
+    {
+      "source": "audit_mover.py",
+      "name": "ge",
+      "source_lines": [
+        38,
+        39
+      ],
+      "output": "scripts/audit_mover.py",
+      "ast_sha256": "af9b2d058a18bf880fdc5baff65769479d4bd9941eb774a2374df50ccf65bd68"
+    },
+    {
+      "source": "audit_mover.py",
+      "name": "positive",
+      "source_lines": [
+        41,
+        45
+      ],
+      "output": "scripts/audit_mover.py",
+      "ast_sha256": "89dede98485960d6a68afce1ebc46c0095b5af3e59003e079359e388d50f988b"
+    },
+    {
+      "source": "audit_mover.py",
+      "name": "rise",
+      "source_lines": [
+        47,
+        50
+      ],
+      "output": "scripts/audit_mover.py",
+      "ast_sha256": "ccff7c999cad6d960fc07cab46b62fe329b0d96e65c90583959a87d10d26d5a1"
+    },
+    {
+      "source": "audit_mover.py",
+      "name": "serial",
+      "source_lines": [
+        52,
+        69
+      ],
+      "output": "scripts/audit_mover.py",
+      "ast_sha256": "9082a4e67646b2e272862b258ff6dffdb017cb026796bf2ddd8df8091ca1610e"
+    },
+    {
+      "source": "audit_mover.py",
+      "name": "derive",
+      "source_lines": [
+        71,
+        106
+      ],
+      "output": "scripts/audit_mover.py",
+      "ast_sha256": "92dce143a2ecf4cd1c36b2e5fd1a08833640b0854d1da77083844dfa60d5ed17"
+    },
+    {
+      "source": "audit_mover.py",
+      "name": "Boundaries",
+      "source_lines": [
+        108,
+        148
+      ],
+      "output": "scripts/audit_mover.py",
+      "ast_sha256": "d07be0012a8b2d5ff60c519c1ddea136b6c6630702ec71bf7498f70047565b8a"
+    },
+    {
+      "source": "raw_linkage_audit.py",
+      "name": "present",
+      "source_lines": [
+        26,
+        27
+      ],
+      "output": "scripts/raw_linkage_audit.py",
+      "ast_sha256": "f5780eb977fc3cca1db8f5b0f093342c6a67c2853bb8fbbc4a0f7f79d9b6d41f"
+    },
+    {
+      "source": "raw_linkage_audit.py",
+      "name": "exact",
+      "source_lines": [
+        29,
+        30
+      ],
+      "output": "scripts/raw_linkage_audit.py",
+      "ast_sha256": "5afa5ad978ec677ea3d1c1cac85c3418007807e843f7a8baefc89e83829f612d"
+    },
+    {
+      "source": "raw_linkage_audit.py",
+      "name": "unique_triples",
+      "source_lines": [
+        32,
+        37
+      ],
+      "output": "scripts/raw_linkage_audit.py",
+      "ast_sha256": "9102c5b0fad716018572f005171233b34654530d92736f9f080d535f5e96da71"
+    },
+    {
+      "source": "raw_linkage_audit.py",
+      "name": "explains_difference",
+      "source_lines": [
+        39,
+        46
+      ],
+      "output": "scripts/raw_linkage_audit.py",
+      "ast_sha256": "18675672c2437bd8a519dbe9a24fd1ba4dfe8c10fb31b8e9561b6d1e31c0f374"
+    },
+    {
+      "source": "raw_linkage_audit.py",
+      "name": "classify",
+      "source_lines": [
+        48,
+        59
+      ],
+      "output": "scripts/raw_linkage_audit.py",
+      "ast_sha256": "6fd4958ae5c41de1637ef139efbd513aeb0ae3a729deaca1f51f96c67ec7d758"
+    },
+    {
+      "source": "derived_cohort_comparison.py",
+      "name": "first_subset",
+      "source_lines": [
+        23,
+        28
+      ],
+      "output": "scripts/derived_cohort_comparison.py",
+      "ast_sha256": "664a529df3d4fb098a5224337a448323a9cef175244fa8682894edea6b6185a3"
+    },
+    {
+      "source": "derived_cohort_comparison.py",
+      "name": "retained",
+      "source_lines": [
+        30,
+        31
+      ],
+      "output": "scripts/derived_cohort_comparison.py",
+      "ast_sha256": "1d7d59de881533982d73feff6097e6824f40ad5844a7d9f04d4eaef3e4dd7b94"
+    },
+    {
+      "source": "build_diagnostics.py",
+      "name": "save",
+      "source_lines": [
+        65,
+        70
+      ],
+      "output": "scripts/build_diagnostics.py",
+      "ast_sha256": "049300b4ce835f681cea0d6943f339522857419f1944fbd4d1efbdc6e6acf8c7"
+    },
+    {
+      "source": "build_diagnostics.py",
+      "name": "first_rows",
+      "source_lines": [
+        77,
+        79
+      ],
+      "output": "scripts/build_diagnostics.py",
+      "ast_sha256": "97714c9a834bd4d43de5c613766c75273179b9b61d8d4e3b99ab0b8bd373c985"
+    },
+    {
+      "source": "build_diagnostics.py",
+      "name": "category_smd",
+      "source_lines": [
+        82,
+        91
+      ],
+      "output": "scripts/build_diagnostics.py",
+      "ast_sha256": "ae15398b5491fd55560549c8414db6127c9da98ed714f57dfc4a279dbc2a92dc"
+    },
+    {
+      "source": "build_diagnostics.py",
+      "name": "selection_tables",
+      "source_lines": [
+        120,
+        172
+      ],
+      "output": "scripts/build_diagnostics.py",
+      "ast_sha256": "4e1de992cfda67fab0b3b984c84152fd29375b03e08fc97c5796996e86bea2f9"
+    },
+    {
+      "source": "build_diagnostics.py",
+      "name": "coverage_tables",
+      "source_lines": [
+        175,
+        256
+      ],
+      "output": "scripts/build_diagnostics.py",
+      "ast_sha256": "a151d7919a4a7e55278912aefec745e8b79bf5037860c43ebaea9733e4303c92"
+    },
+    {
+      "source": "timing_helpers.py",
+      "name": "summarize_times",
+      "source_lines": [
+        27,
+        38
+      ],
+      "output": "scripts/timing_helpers.py",
+      "ast_sha256": "e10d46d4cefb6ee8e4ff61fc336b2afac7302dcefa60e9c4861e1b5a8161ad94"
+    },
+    {
+      "source": "timing_helpers.py",
+      "name": "unit_tests",
+      "source_lines": [
+        40,
+        47
+      ],
+      "output": "scripts/timing_helpers.py",
+      "ast_sha256": "d6d7a33c4ed1e5c23b12099895f20b7541fc702e437e58526c70d27cdb4f0add"
+    },
+    {
+      "source": "timing_helpers.py",
+      "name": "wilson",
+      "source_lines": [
+        49,
+        53
+      ],
+      "output": "scripts/timing_helpers.py",
+      "ast_sha256": "08974d01b4960ec7e1b7e48babc1b4698f73bfb5e4057bb22a1ff39c6089badd"
+    },
+    {
+      "source": "timing_helpers.py",
+      "name": "qstr",
+      "source_lines": [
+        55,
+        58
+      ],
+      "output": "scripts/timing_helpers.py",
+      "ast_sha256": "9fb66c75104e4a139109597aec2c2af0862dec114eaf1e088c8050b542d0928e"
+    },
+    {
+      "source": "timing_helpers.py",
+      "name": "prop",
+      "source_lines": [
+        60,
+        61
+      ],
+      "output": "scripts/timing_helpers.py",
+      "ast_sha256": "53104d75bcd519641fe450cd98f40a820f6810442dcb8ef7301b0540d268a2e4"
+    },
+    {
+      "source": "supplementary_common.py",
+      "name": "threshold_label",
+      "source_lines": [
+        70,
+        78
+      ],
+      "output": "scripts/supplementary_common.py",
+      "ast_sha256": "cdd1174ab598f7be9237986ac709bc4ef639de8c9f115e342c699a55ac1af3e3"
+    },
+    {
+      "source": "supplementary_common.py",
+      "name": "reproduction_difference",
+      "source_lines": [
+        113,
+        121
+      ],
+      "output": "scripts/supplementary_common.py",
+      "ast_sha256": "9c22705545c4b84a186f09d16b6a831bcefea881b2e1c3c9c5733732b15dd4e7"
+    },
+    {
+      "source": "supplementary_common.py",
+      "name": "safe_groups",
+      "source_lines": [
+        124,
+        133
+      ],
+      "output": "scripts/supplementary_common.py",
+      "ast_sha256": "2b9b5e2e30ca17f1e792fd7217c5929af279d24bebd36896706c66b1a2b48d03"
+    },
+    {
+      "source": "supplementary_common.py",
+      "name": "conditional_bootstrap",
+      "source_lines": [
+        136,
+        152
+      ],
+      "output": "scripts/supplementary_common.py",
+      "ast_sha256": "21013d6c495414b692d1ba0ec7bf5f50861f5735e9f07a5f15fb12fd0aaad831"
+    },
+    {
+      "source": "r1_threshold_validation.py",
+      "name": "decimal_aki",
+      "source_lines": [
+        13,
+        17
+      ],
+      "output": "scripts/r1_threshold_validation.py",
+      "ast_sha256": "b3645ada03959803cb6bdac19d9edd8ad9cfc328b1e452d5290076bc854004a3"
+    }
+  ]
+}

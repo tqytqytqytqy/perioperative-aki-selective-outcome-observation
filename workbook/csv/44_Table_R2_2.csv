@@ -1,0 +1,22 @@
+Table R2.2. Historical association-rule versus identity-consistent model estimates,,,,
+,,,,
+,,,,
+Strategy,Metric,Historical LOG_ID,Identity-consistent,Difference
+unupdated,update_alpha,0,0,0
+unupdated,update_beta,1,1,0
+unupdated,oe_ratio,1.486795,1.488164,0.001368
+unupdated,calibration_slope,0.788008,0.788213,0.000206
+unupdated,auroc,0.673718,0.674023,0.000305
+unupdated,brier,0.095079,0.095207,0.000129
+complete_case,update_alpha,0.152699,0.152071,-0.000628
+complete_case,update_beta,0.845662,0.845263,-0.000399
+complete_case,oe_ratio,0.966914,0.967603,0.000689
+complete_case,calibration_slope,0.931824,0.932507,0.000683
+complete_case,auroc,0.673718,0.674023,0.000305
+complete_case,brier,0.093624,0.093735,0.000111
+IPW,update_alpha,0.206568,0.208339,0.00177
+IPW,update_beta,0.890956,0.892132,0.001175
+IPW,oe_ratio,1.011826,1.013683,0.001856
+IPW,calibration_slope,0.884451,0.883517,-0.000935
+IPW,auroc,0.673718,0.674023,0.000305
+IPW,brier,0.093684,0.093803,0.000118

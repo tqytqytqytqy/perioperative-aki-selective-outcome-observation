@@ -1,0 +1,11 @@
+{
+  "upstream_sources": {
+    "prepare_inspire_v32.py": "ff6b7829779fe17d647f7c5c70d2ff80c761116e42149772df695fa30708e116",
+    "prepare_vitaldb_v32.py": "e8e8d4501b96a041b7aae8bbe5313a7a30fc276ccb2e4fdb54023c05734ed6b1",
+    "prepare_r1_corrected.py": "b90a7d35b87b97239c5642032e9dcb3eda7a25cb3df17a0073f208bbe58f3972"
+  },
+  "VitalDB": "Calculation statements from prepare_vitaldb_v32.main retained through cohort creation; file IO moved to parameterized entry; old audit result counts and paths excluded.",
+  "INSPIRE": "Same build_inspire, released-level representations and threshold functions as upstream prepare_inspire_v32. Five-character obstetric exclusion retained in the R2-copy build_inspire.",
+  "R1_corrections": "decimal_aki independent boundary check retained; no historical scope parquet or old result-count assertions required.",
+  "real_raw_rescan_performed": false
+}

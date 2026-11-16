@@ -1,0 +1,87 @@
+{
+  "analysis_version": "R2_IDQC_20261113",
+  "aggregate_root": "aggregates",
+  "ownership": "Authors supply publication-filtered aggregates with harmonized suppression. No internal workbook or verification_checks is required.",
+  "suppression": "<5 and declared text suppression markers remain unknown; no complementary counts or old/new differences are reconstructed.",
+  "aggregate_files": {
+    "analysis_tables/30_update_selection_target_performance_v32.csv": {
+      "required": ["source_model_estimand", "update_estimator", "oe_ratio", "calibration_slope", "auroc", "brier"],
+      "numeric": ["oe_ratio", "calibration_slope", "auroc", "brier", "update_alpha", "update_beta"],
+      "probabilities": ["auroc"]
+    },
+    "analysis_tables/34_update_strategy_workload_v32.csv": {
+      "required": ["strategy", "threshold", "alerts_per_1000"],
+      "numeric": ["threshold", "alerts", "alerts_per_1000", "sensitivity", "positive_predictive_value"],
+      "probabilities": ["threshold", "sensitivity", "positive_predictive_value"],
+      "counts": ["alerts"]
+    },
+    "analysis_tables/38_update_mnar_propagation_v32.csv": {
+      "required": ["odds_multiplier", "is_canonical", "target_oe_ratio", "target_calibration_slope"],
+      "numeric": ["odds_multiplier", "target_oe_ratio", "target_calibration_slope", "target_auroc", "threshold_10_alerts"]
+    },
+    "analysis_tables/40_target_mnar_sensitivity_v32.csv": {
+      "required": ["odds_multiplier", "is_canonical", "target_oe_ratio", "target_calibration_slope"],
+      "numeric": ["odds_multiplier", "target_oe_ratio", "target_calibration_slope", "target_auroc", "threshold_10_alerts"]
+    },
+    "analysis_tables/43_source_mnar_propagation_v32.csv": {
+      "required": ["odds_multiplier", "is_canonical", "target_oe_ratio", "target_calibration_slope"],
+      "numeric": ["odds_multiplier", "target_oe_ratio", "target_calibration_slope", "target_auroc", "threshold_10_alerts"]
+    },
+    "analysis_tables/47_mnar_chain_bootstrap_intervals_v32.csv": {
+      "required": ["stage_varied", "odds_multiplier", "metric", "estimate", "ci_lower", "ci_upper"],
+      "numeric": ["odds_multiplier", "estimate", "ci_lower", "ci_upper"]
+    },
+    "timing/S28_overall_timing.csv": {
+      "required": ["cohort", "metric", "denominator", "display"],
+      "numeric": ["n", "denominator", "percent", "ci_low", "ci_high", "q25", "median", "q75"],
+      "counts": ["n", "denominator"]
+    },
+    "timing/S29_source_risk_strata.csv": {
+      "required": ["cohort", "group", "eligible_n", "observed_n", "observed_pct"],
+      "numeric": ["eligible_n", "observed_n", "observed_pct", "source_risk_min", "source_risk_max", "source_risk_median"],
+      "counts": ["eligible_n", "observed_n"]
+    },
+    "timing/S30_followup_strata.csv": {
+      "required": ["cohort", "group", "eligible_n", "observed_n", "observed_pct"],
+      "numeric": ["eligible_n", "observed_n", "observed_pct"],
+      "counts": ["eligible_n", "observed_n"]
+    },
+    "timing/S31_elapsed_day_coverage.csv": {
+      "required": ["cohort", "elapsed_day", "all_eligible_pct", "any_opportunity_pct", "full_opportunity_pct"],
+      "numeric": ["elapsed_day", "all_eligible_pct", "any_opportunity_pct", "full_opportunity_pct", "tested_n", "all_eligible_n", "any_opportunity_n", "full_opportunity_n"],
+      "counts": ["tested_n", "all_eligible_n", "any_opportunity_n", "full_opportunity_n"]
+    }
+  },
+  "prepared_inputs": {
+    "data/processed/inspire_rebuilt_v32.parquet": "Source INSPIRE prepared cohort, not included",
+    "data/processed/mover_rebuilt_v32.parquet": "Identity-QC all clinical operations, first_eligible retained from original ordering, not included",
+    "data/processed/vitaldb_supportive_v32.parquet": "Supportive observed cohort, not included",
+    "common_schema": ["case_key:string", "patient_key:string", "age:number", "sex_male:number", "duration_h:number", "baseline_cr:number", "asa:number-or-missing", "surgery_category:string", "first_eligible:boolean", "year:integer", "has_baseline_cr:boolean", "baseline_cr_under4:boolean", "tested_7d:boolean", "outcome_operational:0-or-1-or-missing", "aki:0-or-1-or-missing"],
+    "additional_current_columns": "Retain the complete R2 prepared schema for sensitivity/supportive analysis; no schema downcast or imputation by adapter. See PREPARED_SCHEMA.json.",
+    "config/analysis_config_v32.json": "If supplied, R2 version/seed/folds/identity rules must match packaged config"
+  },
+  "raw_mover_inputs": {
+    "patient_information.csv": ["LOG_ID", "MRN", "BIRTH_DATE", "ASA_RATING_C", "SEX", "AN_START_DATETIME", "AN_STOP_DATETIME", "HOSP_DISCH_TIME", "PRIMARY_PROCEDURE_NM", "PRIMARY_ANES_TYPE_NM"],
+    "patient_labs.csv": ["LOG_ID", "MRN", "Lab Code", "Lab Name", "Observation Value", "Measurement Units", "Collection Datetime"],
+    "crosswalk.csv": ["LOG_ID", "PAT_ID", "MRN"],
+    "optional_51_mover_deterministic_coarsening_v32.csv": ["upper_cutpoint_mg_dl", "released_representative_mg_dl"],
+    "output": "mover_rebuilt_v32.parquet and rebuild_qa.json in a new authorized local output directory; never in aggregates"
+  },
+  "raw_inspire_inputs": {
+    "archive_members": ["operations.csv.gz", "labs.csv.gz"],
+    "operations_columns": ["subject_id", "op_id", "age", "asa", "sex", "anstart_time", "anend_time", "discharge_time", "inhosp_death_time", "cpbon_time", "department", "icd10_pcs", "antype"],
+    "labs_columns": ["subject_id", "chart_time", "item_name", "value"],
+    "output": "inspire_rebuilt_v32.parquet and inspire_rebuild_qa.json in a new authorized local output directory"
+  },
+  "raw_vitaldb_inputs": {
+    "cases_columns": ["caseid", "opstart", "opend", "preop_cr", "age", "sex", "asa", "ane_type"],
+    "labs_columns": ["caseid", "dt", "name", "result"],
+    "output": "vitaldb_supportive_v32.parquet and vitaldb_rebuild_qa.json in a new authorized local output directory",
+    "source_route": "Actual upstream prepare_vitaldb_v32 calculation; not legacy cache-only load_vitaldb"
+  },
+  "outputs": {
+    "level_1": "aggregate_checks.json and per-table metric PDF/PNG files; reports partial aggregate coverage explicitly",
+    "level_2_point": "Current point/sensitivity aggregate CSVs, canonical_point.json and local_run_qa.json; no model or prediction export",
+    "level_2_full": "31_canonical_primary_bootstrap_v32.csv, 47_mnar_chain_bootstrap_intervals_v32.csv; replicates remain in memory only"
+  }
+}

@@ -1,0 +1,8 @@
+Table S26. Historical correction history preceding the R2 identity-consistent reanalysis,,
+,,
+,,
+Cohort,Historical correction,Relation to the present analysis
+INSPIRE,Five-character obstetric-code screening and inclusive numerical creatinine-threshold comparisons were corrected.,These corrections precede R2; the corrected source definition is retained.
+MOVER 2021,Inclusive numerical creatinine-threshold comparisons were corrected.,R2 subsequently rederived measurements after identity QC and reran affected model stages and intervals.
+MOVER 2022,Inclusive numerical creatinine-threshold comparisons were corrected.,R2 subsequently rederived measurements after identity QC and reran affected evaluation and sensitivity analyses.
+VitalDB supportive,Inclusive numerical creatinine-threshold comparisons were corrected within its supportive definition.,The supportive cohort is not treated as a harmonized independent external validation.

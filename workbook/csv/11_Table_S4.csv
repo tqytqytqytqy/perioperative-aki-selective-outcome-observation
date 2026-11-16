@@ -1,0 +1,10 @@
+Table S4. Cross-fitted auxiliary outcome-model diagnostics,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+Phase,Evaluation,n,Weighted n,Events,Event rate,Predicted,O/E,Slope,AUROC,AUPRC,Brier,10-q grouped error
+INSPIRE,observed-unweighted,24872,24872,1680,0.068,0.067,1.001,1.029,0.695,0.152,0.061,0.006
+INSPIRE,observed-IPW-weighted,24872,33394,1973.648,0.059,0.061,0.962,1.111,0.717,0.146,0.053,0.007
+MOVER 2021,observed-unweighted,2211,2211,274,0.124,0.124,0.998,0.962,0.739,0.303,0.099,0.008
+MOVER 2021,observed-IPW-weighted,2211,2800,317.177,0.113,0.115,0.986,0.992,0.747,0.294,0.092,0.009
+MOVER 2022,observed-unweighted,2031,2031,259,0.128,0.128,0.996,0.931,0.738,0.304,0.101,0.012
+MOVER 2022,observed-IPW-weighted,2031,2585,290.087,0.112,0.114,0.983,0.961,0.752,0.295,0.09,0.012

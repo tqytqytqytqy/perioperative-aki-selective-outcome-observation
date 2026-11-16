@@ -1,41 +1,87 @@
-# Outcome ascertainment and laboratory representation in perioperative AKI model transport
+# Perioperative AKI ascertainment and representation
 
-Version v3.4.0 combines the corrected multidatabase analysis with a new postoperative creatinine timing and follow-up coverage diagnostic. The package contains research code, aggregate tables, figures, model parameters and one consolidated workbook.
+## Current release
 
-## Citation and provenance
+**v4.0.0** contains the author-approved identity-consistent reanalysis
+`R2_IDQC_20261113`, distributed on 16 November 2026. It supersedes v3.4.0 for
+the current analysis. Earlier tags and their Zenodo records remain historical
+records and must not be substituted for this version.
 
-- Repository: https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation
-- Release: https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation/releases/tag/v3.4.0
-- All-versions concept DOI: https://doi.org/10.5281/zenodo.21366088
-- Version-specific DOI: https://doi.org/10.5281/zenodo.23204344 (published v3.4.0 archive).
-- Corrected primary-analysis predecessor: https://doi.org/10.5281/zenodo.23157606 (v3.3.0).
+This release examines how selective creatinine testing, follow-up coverage,
+and laboratory representation affect model development, local recalibration,
+and temporal evaluation. It is research software, not a clinically validated
+prediction service or an accepted journal publication.
 
-The v3.4.0 tag and Zenodo archive are immutable snapshots. This main-branch citation update adds the assigned DOI without changing the release tag or scientific outputs. The new diagnostic is first included in v3.4.0. Previous immutable versions retain their historical contents. The older v3.2 releases do not reproduce the corrected primary findings.
+## Contents
 
-## What this release adds
+- `Supplementary_file_4/`: portable R2 analysis, raw-data entry points, testing-time
+  diagnostic, tests, contracts, provenance, and publication-filtered aggregates.
+- `Supplementary_file_5/`: independent grouped-calibration calculation, tests,
+  contracts, provenance, and three publication-filtered aggregate tables.
+- `workbook/Supplementary_file_2_Reported_aggregate_results.xlsx`: the complete
+  approved 44-sheet results workbook, unchanged from the submission source.
+- `workbook/csv/` and `workbook/INDEX.json`: lossless cell-value exports for
+  convenient inspection. The original workbook controls formatting and notes.
+- `RELEASE_MANIFEST_SHA256.csv`: exact file fingerprints, excluding itself.
 
-The new raw-record diagnostic separates whether a creatinine result is available from when measurements occurred and how they cover the recorded observation window. It retains INSPIRE 33,394 operations, MOVER 2021 2,802, and MOVER 2022 2,587. VitalDB remains supportive and is not included in the new time-origin comparison.
+Download the tagged release from https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation/releases/tag/v4.0.0.
+Extract the archive without renaming the two supplementary directories. Start
+with the README in the directory of interest. Both packages are independently
+runnable; repeated helper files are intentional, not additional observations.
 
-In MOVER 2022, any postoperative testing was recorded in 2,033/2,587 (78.6%), while both early and late windows were covered in 1,290/2,587 (49.9%). Among the 2,033 patients with records, 405 (19.9%) had only one distinct testing time. The algorithmic follow-up window ended before 168 hours in 1,898/2,587 (73.4%). Early discharge and differences in timestamp semantics constrain interpretation; these statistics do not estimate the number of missed AKI cases.
+## Aggregate checks without patient data
 
-Tables S28-S31 describe overall timing, within-cohort source-score quintiles, follow-up-window groups and elapsed-day coverage. Full-population, partial-window and complete-window opportunity denominators are reported separately. Small counts and complementary reconstruction paths are controlled. The 48 metadata-restricted coverage contrasts all changed by less than one percentage point.
+Use Python 3.12 and the pinned `requirements.txt` inside each package. With a
+matching environment and the working directory set to `Supplementary_file_4`:
 
-The corrected primary model, coefficients, AKI labels and existing inferential results are unchanged. The current presentation figures also show stage-specific sensitivity of predictions and workload, and label changes under fixed-patient, fixed-prediction numerical coarsening.
+```sh
+export PYTHONDONTWRITEBYTECODE=1
+export MPLBACKEND=Agg
+export MPLCONFIGDIR="$PWD/../local_plot_cache"
+python -B aggregate_only.py --aggregates aggregates --output ../file4_aggregate_plots
+```
 
-## Reproduction
+From `Supplementary_file_5`, run:
 
-Read `docs/REPLAY.md` for the corrected primary replay. Acquire the source data separately through the original providers. Read `diagnostics/timing/README.md` for the new diagnostic and its assumptions, source fingerprints, definitions, plan deviations and portable command.
+```sh
+python -B aggregate_only.py --aggregates aggregates --output ../file5_aggregate_plot
+```
 
-The full raw extraction for the diagnostic was completed before this release, with 39 recorded reconciliation checks. Later metadata sensitivity and disclosure adjustments re-summarized the same private cache. Release checks verify retained outputs, code and package contents; they do not constitute another raw-data extraction or a new full-chain bootstrap.
+The first command checks the supplied tables and draws supported metrics. The
+second redraws Figure S6 directly from numeric calibration summaries. Suppressed
+and unknown values are not replaced with zero or reconstructed.
 
-Raw and patient-level derivatives, individual predictions, serialized models and local runtime settings remain outside the public archive. The code creates private local derivatives when users rebuild the analysis; those derivatives must not be uploaded.
+## Validation and access boundary
 
-## Interpretation
+The packaged validation reports dated 15 November 2026 record prepared-R2 point
+analysis and grouped-calibration agreement, synthetic raw-route tests, and
+aggregate plotting. Their original "author-review candidate" labels describe
+their preparation status. The unchanged workbook likewise retains its preparation
+snapshot notes about approval and archive status. Author approval for this public
+distribution was confirmed on 16 November; this release README records the current
+distribution status. No new numerical analysis is asserted by packaging.
 
-The four-variable model is an auditable methodological probe. MOVER 2022 remains a post-exploration temporal evaluation. Missing postoperative creatinine does not establish absence of AKI, and sparse observed measurements may leave episodes undetected. The diagnostic describes recorded testing and follow-up; it does not establish adequate surveillance, clinical deployability or patient benefit.
+Full real raw-to-R2 equivalence across all three databases and a new real-data
+1000-replicate full-chain bootstrap were not established by that distribution
+validation. S6 uses conditional target-patient intervals, not full-chain or
+simultaneous intervals. Testing-time source-risk stratification retains its
+specified earlier frozen diagnostic model rather than silently substituting an
+R2 refit. Detailed commands, frozen rules and limitations are in each README.
 
-## Authors and rights
+Obtain source data separately from INSPIRE, MOVER and VitalDB under their access
+and redistribution terms. This release contains no raw data, patient identifiers,
+row-level clinical records, individual predictions, serialized models, bootstrap
+replicates, manuscript files or confidential peer-review correspondence. Small
+cells and linked summaries remain suppressed in the supplied aggregate tables.
+Source-provider restrictions are not replaced by this repository's licenses.
 
-Qingyu Teng, Tingting Niu, Qian Chen, Min Tao, Ziyan Gu, Qi Li, Yingya Zhao, and Hui Zhang. Qingyu Teng, Tingting Niu, and Qian Chen contributed equally. Corresponding authors are Qi Li, Yingya Zhao, and Hui Zhang.
+## Licensing and citation
 
-Code is MIT-licensed. Original documentation, aggregate results, figures, model metadata and workbook content are CC BY 4.0 except where otherwise noted. These licenses do not replace source-dataset conditions. See `LICENSE`, `THIRD_PARTY_NOTICES.md`, and `DATA_ACCESS_AND_REDISTRIBUTION.md`.
+Original code is MIT-licensed. Original documentation and permitted aggregate
+content are CC BY 4.0. See the license files, third-party notices and the provider
+attribution in each supplementary directory. Cite this exact tagged version and
+its corresponding Zenodo version DOI, rather than an earlier version's DOI.
+
+Authors: Qingyu Teng, Tingting Niu, Qian Chen, Min Tao, Ziyan Gu, Qi Li,
+Yingya Zhao and Hui Zhang. The first three authors contributed equally.
+Corresponding authors: Qi Li, Yingya Zhao and Hui Zhang.

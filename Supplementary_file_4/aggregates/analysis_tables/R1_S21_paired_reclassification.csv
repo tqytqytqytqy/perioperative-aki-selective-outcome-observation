@@ -1,0 +1,3 @@
+cohort,observed_n,original_AKI,coarsened_AKI,original_0_coarsened_0,original_0_coarsened_1,original_1_coarsened_0,original_1_coarsened_1,discordant_n,discordant_percent,net_event_change,nonAKI_to_AKI_percent_of_original_nonAKI,AKI_to_nonAKI_percent_of_original_AKI
+MOVER 2021,2211,274,382,1798,139,31,243,170,7.688828584350972,108,7.176045431078988,11.313868613138686
+MOVER 2022,2031,259,336,1652,120,43,216,163,8.025603151157066,77,6.772009029345373,16.602316602316602

@@ -1,0 +1,5 @@
+contrast,metric,estimate,ci_lower,ci_upper,replicates
+IPW minus complete-case recalibration,oe_ratio,0.04607999145113839,0.02007513726151924,0.07194980962330878,1000
+IPW minus complete-case recalibration,calibration_slope,-0.0489901186799937,-0.09988648856724652,-0.015841883645967208,1000
+IPW minus complete-case recalibration,auroc,0.0,0.0,0.0,1000
+IPW minus complete-case recalibration,brier,6.736115934259657e-05,-0.000178746887474256,0.0003155120613290183,1000

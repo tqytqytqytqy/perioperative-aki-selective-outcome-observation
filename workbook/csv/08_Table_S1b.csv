@@ -1,0 +1,29 @@
+Table S1b. Sequential raw-to-analysis flow with the identity-QC gate,,,,,
+,,,,,
+,,,,,
+Dataset / period,Retention step or partition,Entering n,Removed n,Retained / partition n,Counting unit
+INSPIRE,raw operations,NA,NA,130960,operation records
+INSPIRE,Operation ID check; no duplicates or missing IDs,130960,0,130960,operation records
+INSPIRE,adult general anesthesia,130960,28170,102790,operation records
+INSPIRE,valid time duration,102790,1042,101748,operation records
+INSPIRE,surgery scope eligible corrected,101748,18893,82855,operation records
+INSPIRE,first clinically eligible corrected,82855,15188,67667,one operation / patient
+INSPIRE,first with baseline,67667,33503,34164,one operation / patient
+INSPIRE,first baseline under4,34164,770,33394,one operation / patient
+INSPIRE,final outcome observed,33394,NA (partition),24872,one operation / patient
+INSPIRE,final outcome unobserved,33394,NA (partition),8522,one operation / patient
+MOVER all years,raw operation rows,NA,NA,65728,operation records
+MOVER all years,after duplicate resolution,65728,1382,64346,operation records
+MOVER all years,adult general anesthesia,64346,12634,51712,operation records
+MOVER all years,valid time duration,51712,2542,49170,operation records
+MOVER all years,surgery scope eligible,49170,1918,47252,operation records
+MOVER all years,first clinically eligible,47252,14089,33163,one operation / patient
+MOVER all years,Identity QC after fixed original first operation,33163,15,33148,one operation / patient
+MOVER all years,Identity-consistent baseline available,33148,20707,12441,one operation / patient
+MOVER all years,Identity-consistent baseline below 4 mg/dL,12441,979,11462,one operation / patient
+MOVER 2021,Calendar-year partition after original-first identity QC,11462,8662,2800,one operation / patient
+MOVER 2021,outcome observed,2800,NA (partition),2211,one operation / patient
+MOVER 2021,outcome unobserved,2800,NA (partition),589,one operation / patient
+MOVER 2022,Calendar-year partition after original-first identity QC,11462,8877,2585,one operation / patient
+MOVER 2022,outcome observed,2585,NA (partition),2031,one operation / patient
+MOVER 2022,outcome unobserved,2585,NA (partition),554,one operation / patient

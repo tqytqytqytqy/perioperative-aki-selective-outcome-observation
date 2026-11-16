@@ -1,0 +1,15 @@
+Reported aggregate results,
+,
+,
+Item,Description
+Analysis,R2_IDQC_20261113
+Content,Reported main and supplementary tables for the identity-consistent reanalysis.
+Precision,Values follow the manuscript reporting precision. Compound estimates and intervals are retained as text; standalone numeric values are stored as numbers.
+NR,"Not reported for disclosure control; not a zero, a missing outcome, or a failed analysis."
+Disclosure control,"Counts below five and selected complementary or small-change fields, including associated rates and intervals, are withheld consistently with Supplementary file 1. Exact data were used in the analyses."
+Scope,"Only reported tables are included. Private file paths, patient-level records, individual predictions, serialized models, and internal QA worksheets are excluded."
+Code and aggregates,"Supplementary files 4 and 5 provide code, selected full-precision aggregate outputs, dependencies, and verification instructions."
+Historical archive,The historical Zenodo DOI 10.5281/zenodo.23204344 does not reproduce the current reanalysis. No new public archive is claimed.
+Outcome,Recorded postoperative creatinine-threshold labels do not establish verified incident AKI or complete rolling-48-hour KDIGO ascertainment.
+Intervals,"Main performance intervals use full-chain bootstrap resampling. Figure S6 uses pointwise conditional target-patient bootstrap intervals with fixed predictions, weights, and risk-group membership."
+Author review,Local submission candidate; final author approval and live submission-system checks have not been performed.

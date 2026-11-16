@@ -1,0 +1,10 @@
+Table S3. Cross-fitted outcome-observation model diagnostics,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+Phase,Model,Eligible,Observed,Rate,g min,g p01,g median,g p99,g max,Outside support,AUROC,Brier,Max weight,ESS
+INSPIRE,basic,33394,24872,0.745,0.102,0.212,0.8,1,1,0.003,0.837,0.137,NA,NA
+INSPIRE,expanded,33394,24872,0.745,0.012,0.195,0.815,0.996,1,0.009,0.845,0.133,3.729,21751
+MOVER 2021,basic,2800,2211,0.79,0.363,0.474,0.81,0.989,0.999,0.025,0.713,0.15,NA,NA
+MOVER 2021,expanded,2800,2211,0.79,0.256,0.34,0.844,0.994,0.998,0.036,0.8,0.132,2.585,2075
+MOVER 2022,basic,2585,2031,0.786,0.342,0.44,0.812,0.991,0.999,0.01,0.734,0.149,NA,NA
+MOVER 2022,expanded,2585,2031,0.786,0.174,0.297,0.853,0.996,0.999,0.013,0.814,0.13,2.926,1871

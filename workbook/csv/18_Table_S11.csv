@@ -1,0 +1,11 @@
+Table S11. Source-stage outcome-completion sensitivity propagated through update and target estimation,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+Reference,k,Alpha,Beta,Target O/E,Slope,AUROC,Brier,10% alerts
+Canonical MAR reference,NA,0.208,0.892,1.014,0.884,0.674,0.0938,977
+OR-completion sensitivity,0.5,0.333,0.919,1.014,0.89,0.679,0.0936,981
+OR-completion sensitivity,0.667,0.293,0.918,1.013,0.884,0.676,0.0938,972
+"OR-completion reference, k=1",1,0.288,0.939,1.012,0.879,0.671,0.0939,953
+OR-completion sensitivity,1.5,0.284,0.971,1.011,0.87,0.666,0.0941,939
+OR-completion sensitivity,2,0.247,0.985,1.009,0.864,0.656,0.0944,957
+OR-completion sensitivity,3,0.088,0.964,1.006,0.846,0.634,0.095,988

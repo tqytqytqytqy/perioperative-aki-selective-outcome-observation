@@ -1,0 +1,10 @@
+Table A2  Selected characteristics with available versus missing baseline,,,,
+,,,,
+,,,,
+Cohort,Characteristic,Available mean (SD),Missing mean (SD),Signed SMD
+INSPIRE,"Age, years",55.88 (15.82),53.10 (15.42),0.178
+INSPIRE,"Anesthesia, h",3.03 (1.95),2.51 (1.76),0.282
+MOVER 2021,"Age, years",51.47 (19.07),55.95 (16.92),-0.248
+MOVER 2021,"Anesthesia, h",3.41 (2.08),4.15 (2.53),-0.321
+MOVER 2022,"Age, years",51.84 (19.26),56.50 (16.72),-0.258
+MOVER 2022,"Anesthesia, h",3.32 (1.96),4.05 (2.44),-0.331

@@ -1,0 +1,6 @@
+Table S16. Nonparametric target-outcome extremes,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+Scenario,Unobserved value,Events,Event rate,O/E,Slope,AUROC,Brier,10% TP/1000,10% incremental NB
+all unobserved outcomes are non-events,0,259,0.1,0.909,0.945,0.69,0.0851,63.1,0.0279
+all unobserved outcomes are events,1,813,0.315,2.853,-0.196,0.434,0.2654,99,-0.1703

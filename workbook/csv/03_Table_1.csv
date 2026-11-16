@@ -1,0 +1,8 @@
+"Table 1. Outcome observability across development, recalibration, and temporal evaluation",,,,,,
+,,,,,,
+,,,,,,
+Cohort,Role,"Eligible, n","Observed, n","Unobserved, n","Observed, %","Observed AKI, n"
+INSPIRE,Development,33394,24872,8522,74.5%,1680
+MOVER 2021,Recalibration,2800,2211,589,79.0%,274
+MOVER 2022,Temporal evaluation,2585,2031,554,78.6%,259
+VitalDB supportive cohort,Supportive stress test,Not used,4095,Not used,Not used,271

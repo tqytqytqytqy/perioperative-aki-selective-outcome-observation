@@ -1,0 +1,190 @@
+{
+  "analysis_version": "R2_IDQC_20261113",
+  "files": [
+    {
+      "file": "CODE_SCOPE.md",
+      "bytes": 1532,
+      "sha256": "06f873085240ff518fa8ce81ada43dbba5e411ab441c9e0a5d10b09153e878d5"
+    },
+    {
+      "file": "DATA_ACCESS_AND_ATTRIBUTION.md",
+      "bytes": 2078,
+      "sha256": "31e1fd2071bc951dd3197d2bf7ff831faae1fa456293b2f0d58ab014208a8734"
+    },
+    {
+      "file": "DISTRIBUTION_VALIDATION.json",
+      "bytes": 863,
+      "sha256": "ffc91cade699d5315a02c4eb0a5505791cb01a0dabb318220b1c1dfb52cda42f"
+    },
+    {
+      "file": "PREPARED_SCHEMA.json",
+      "bytes": 7352,
+      "sha256": "a7ecadf6efafada23cbed40f3c136272cc1d4f85343f55c95fcfd74333739d37"
+    },
+    {
+      "file": "README.md",
+      "bytes": 5668,
+      "sha256": "2c316ba872594b7773b4464bcc9740b89e9ff463ed07d522a4602f80030c8200"
+    },
+    {
+      "file": "TEST_REPORT.md",
+      "bytes": 2987,
+      "sha256": "b20a820255fa65eac4fa5f9cfb8798d3451d7c1c5a52b30e1e71119fd220da3f"
+    },
+    {
+      "file": "adapted_statement_provenance.json",
+      "bytes": 6749,
+      "sha256": "9f5cc864c63f5c5fb2ba22b18318626fbc27a7803456c45e3da291991df64cb3"
+    },
+    {
+      "file": "aggregate_only.py",
+      "bytes": 5293,
+      "sha256": "2bb2dde8dfa0338f710c75707478a2609df0c0565c8db8624092998d6d7a9bee"
+    },
+    {
+      "file": "aggregate_support.py",
+      "bytes": 2397,
+      "sha256": "c00e2f3c5c97677d6a24911b00e00686185cc689f8e25884830c825ec27529cf"
+    },
+    {
+      "file": "aggregates/S6_calibration_points.csv",
+      "bytes": 5943,
+      "sha256": "6d3beb3a33514ad8fee059fe024c948d4bc4585b51cdbf76499ed744c599cb7b"
+    },
+    {
+      "file": "aggregates/prediction_distribution.csv",
+      "bytes": 954,
+      "sha256": "31a315a7230af59e1b57b08140c397094c51122fa8fb5e191f0d6f98a93813cb"
+    },
+    {
+      "file": "aggregates/reproduction_metrics.csv",
+      "bytes": 1014,
+      "sha256": "8407e10e50c49eb76c5d1730dd2dc8190c9a9d44eb749ccd3d35d8a19bde616c"
+    },
+    {
+      "file": "calibration_adaptation.json",
+      "bytes": 451,
+      "sha256": "56b5e0d045a78aa24d5d0be786297ccc538bcd3c648fa97e5764140e0edcc2e5"
+    },
+    {
+      "file": "config/analysis_config_v32.json",
+      "bytes": 5479,
+      "sha256": "b2d348285400c15bd9925155d2b30263f896d2f10155089514513ccaaaf45cbe"
+    },
+    {
+      "file": "config_adaptation.json",
+      "bytes": 439,
+      "sha256": "5ef1725e90b7b0d77a26041bea02cd7f8351496d2480f885ede6aee084953f0b"
+    },
+    {
+      "file": "contracts.json",
+      "bytes": 3121,
+      "sha256": "7c2dad3fa420a8c10a317f27e73883e3ea3e75f28bd35de20a59f7841fbcfc58"
+    },
+    {
+      "file": "portable.py",
+      "bytes": 4341,
+      "sha256": "3a84da300349962e28772882efd04d069c9ce988c57c80dc1d64f438a08a1c7f"
+    },
+    {
+      "file": "provenance.json",
+      "bytes": 30897,
+      "sha256": "b0e283e5660d38cd7cce11995d0ae573f6744e8c8d5f69dbd59d544e1e30ee59"
+    },
+    {
+      "file": "requirements.txt",
+      "bytes": 124,
+      "sha256": "1ccfa3345042dfef3b5393a2a2da06f5358d8f46bf8582da04a453e1e12f23eb"
+    },
+    {
+      "file": "run_local.py",
+      "bytes": 1675,
+      "sha256": "9a42b4a1d85ad43caa50fd6ff125ce5563c9727bfe69c6b64f6569a62ae68c63"
+    },
+    {
+      "file": "scripts/audit_mover.py",
+      "bytes": 8087,
+      "sha256": "6c5cd9a7a16d0b419d3e83a197f865cc75cef290ad27d6728c8779d11d6799c5"
+    },
+    {
+      "file": "scripts/build_diagnostics.py",
+      "bytes": 11401,
+      "sha256": "3376830780018341e4b9e6389e6ffe0644f747a9503b0b93a246d4cd7023dba8"
+    },
+    {
+      "file": "scripts/calibration_calculation.py",
+      "bytes": 5704,
+      "sha256": "8d712ccdfd4ef3480e9a51b95410aa6c1a556de7f2991901b89768c769c78370"
+    },
+    {
+      "file": "scripts/derived_cohort_comparison.py",
+      "bytes": 1387,
+      "sha256": "3e69e89abf9dd3208cc8cbbf180066cf5f2a66ccfabcb0eeef6ed568ff618581"
+    },
+    {
+      "file": "scripts/etl_common_v32.py",
+      "bytes": 10675,
+      "sha256": "00fe1694faadca333edb3fcf0cfea290983104900f8e57fbd9e305b25a1d5ede"
+    },
+    {
+      "file": "scripts/etl_outcome_representations_v32.py",
+      "bytes": 5558,
+      "sha256": "634a65bef364d326573b946458d03842e5c27a582ff6579a0356524018ae42ce"
+    },
+    {
+      "file": "scripts/prepare_vitaldb_v32.py",
+      "bytes": 2949,
+      "sha256": "25d035c94c13eb9d1b9e552265cd94641475419893972f3c3bc83ebee7bef7da"
+    },
+    {
+      "file": "scripts/r1_threshold_validation.py",
+      "bytes": 1444,
+      "sha256": "5c0fe2c114805b7fe4d575e208f45ac30a52ef8e4cdfdc80fd734d061ce84b95"
+    },
+    {
+      "file": "scripts/raw_linkage_audit.py",
+      "bytes": 2708,
+      "sha256": "a26f1e308aeeeed8c3590d48be6438b3972c66bba92120686462bfd0989ccb10"
+    },
+    {
+      "file": "scripts/run_postreview_analysis.py",
+      "bytes": 7902,
+      "sha256": "6b41c305b99d0201db13325ce8e405cb6f0f6347e9230c93bba64a04ea72a671"
+    },
+    {
+      "file": "scripts/run_v31_analysis.py",
+      "bytes": 14595,
+      "sha256": "ce94c6352b9745ed0a17d662272d83a18c95b0e4e97ca0dd13c870a61c91d9ff"
+    },
+    {
+      "file": "scripts/run_v32_analysis.py",
+      "bytes": 69930,
+      "sha256": "87ed5b5c78f900f3591c671fe8e886f20e54f6b0240fa010c8e591be38ccef1b"
+    },
+    {
+      "file": "scripts/supplementary_common.py",
+      "bytes": 3537,
+      "sha256": "03c489c83d30fabfe6c92f06e43fdf89a255b179372a20094b77bc650bbbf479"
+    },
+    {
+      "file": "scripts/thresholds_r1.py",
+      "bytes": 1121,
+      "sha256": "9937325275ec18930dbc2b01ee4ac593fc18d12cdd8bcdf48e9c8ba58e474582"
+    },
+    {
+      "file": "scripts/timing_helpers.py",
+      "bytes": 2603,
+      "sha256": "ce776e2e566a6e3c1fa1b15526a19d40e97042f2522da733d00bcb3378db5bcc"
+    },
+    {
+      "file": "tests/test_toy.py",
+      "bytes": 3255,
+      "sha256": "e5322b173452d1f1ee7de453a2664df06dca9e32bcfe3feb4ddf5a68c0255172"
+    },
+    {
+      "file": "upstream_etl_adaptation.json",
+      "bytes": 888,
+      "sha256": "a2470c4540ab166e651a78550326eea696da2adb903d4f2bb6a59b5d5dfa243c"
+    }
+  ]
+}

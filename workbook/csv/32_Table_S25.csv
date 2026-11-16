@@ -1,0 +1,22 @@
+Table S25. Updating-strategy intervals from the same full-chain bootstrap,,,,,
+,,,,,
+,,,,,
+Strategy,Metric,Estimate,95% lower,95% upper,Status
+unupdated,update_alpha,0,NA,NA,fixed
+unupdated,update_beta,1,NA,NA,fixed
+unupdated,oe_ratio,1.4882,1.2968,1.6866,1000 full-chain patient bootstraps
+unupdated,calibration_slope,0.7882,0.6232,0.9683,1000 full-chain patient bootstraps
+unupdated,auroc,0.674,0.6319,0.7144,1000 full-chain patient bootstraps
+unupdated,brier,0.0952,0.0851,0.106,1000 full-chain patient bootstraps
+complete_case,update_alpha,0.1521,-0.2884,0.5699,1000 full-chain patient bootstraps
+complete_case,update_beta,0.8453,0.6673,1.0184,1000 full-chain patient bootstraps
+complete_case,oe_ratio,0.9676,0.8267,1.1273,1000 full-chain patient bootstraps
+complete_case,calibration_slope,0.9325,0.7114,1.2602,1000 full-chain patient bootstraps
+complete_case,auroc,0.674,0.6319,0.7144,1000 full-chain patient bootstraps
+complete_case,brier,0.0937,0.0848,0.1036,1000 full-chain patient bootstraps
+IPW,update_alpha,0.2083,-0.2312,0.6284,1000 full-chain patient bootstraps
+IPW,update_beta,0.8921,0.7163,1.064,1000 full-chain patient bootstraps
+IPW,oe_ratio,1.0137,0.8662,1.1744,1000 full-chain patient bootstraps
+IPW,calibration_slope,0.8835,0.6789,1.1805,1000 full-chain patient bootstraps
+IPW,auroc,0.674,0.6319,0.7144,1000 full-chain patient bootstraps
+IPW,brier,0.0938,0.0847,0.1038,1000 full-chain patient bootstraps

@@ -1,0 +1,10 @@
+Table 3. Target-population performance under the primary missing-data assumption,,
+,,
+,,
+Metric,Estimate (95% bootstrap interval),Estimator component
+Estimated event rate,11.18 (9.90 to 12.53)%,AIPW; all eligible target operations
+O/E ratio,1.014 (0.866 to 1.174),plug-in ratio of AIPW-estimated event total to exact predicted-event total
+Calibration slope,0.884 (0.679 to 1.181),1/99 truncated expanded IPW
+AUROC,0.674 (0.632 to 0.714),1/99 truncated expanded IPW
+AUPRC,0.241 (0.199 to 0.289),1/99 truncated expanded IPW
+Brier score,0.0938 (0.0847 to 0.1038),AIPW

@@ -1,0 +1,23 @@
+{
+  "status": "PASS_WITH_DOCUMENTED_RAW_AND_DISCLOSURE_LIMITS",
+  "validation_date": "2026-11-15",
+  "tested_from_final_zip_extraction": true,
+  "function_ast_checks": 208,
+  "python_files_parsed": 43,
+  "file4_csv_count": 39,
+  "file5_csv_count": 3,
+  "protected_source_files_unchanged": 28,
+  "real_raw_equivalence_verified": false,
+  "real_1000_fullchain_rerun_this_validation": false,
+  "patient_level_model_or_replicate_files_in_distribution": false,
+  "external_disclosure_approval_claimed": false,
+  "test_commands": [
+    "file4_tests",
+    "file5_tests",
+    "file4_aggregates",
+    "file5_aggregates"
+  ],
+  "file4_test_count": 12,
+  "file5_test_count": 3,
+  "note": "Only these reader-facing validation notes were added after the first extraction tests. Final manifests are regenerated and checked; calculation code and aggregate CSVs are unchanged."
+}

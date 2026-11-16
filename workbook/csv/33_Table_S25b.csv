@@ -1,0 +1,8 @@
+Table S25 continued. Paired incremental weighting contrasts,,,,
+,,,,
+,,,,
+Contrast,Metric,Difference,95% lower,95% upper
+IPW minus complete-case recalibration,oe_ratio,0.04608,0.020075,0.07195
+IPW minus complete-case recalibration,calibration_slope,-0.04899,-0.099886,-0.015842
+IPW minus complete-case recalibration,auroc,0,0,0
+IPW minus complete-case recalibration,brier,6.7e-05,-0.000179,0.000316

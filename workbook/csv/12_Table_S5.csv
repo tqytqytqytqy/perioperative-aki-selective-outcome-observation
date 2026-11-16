@@ -1,0 +1,25 @@
+Table S5. Predictor and outcome-variable availability,,,,,
+,,,,,
+,,,,,
+Phase,Variable,Eligible,Missing,Missing %,Handling
+INSPIRE,age,33394,0,0,median imputation
+INSPIRE,sex_male,33394,0,0,most-frequent imputation
+INSPIRE,duration_h,33394,0,0,median imputation
+INSPIRE,baseline_cr,33394,0,0,eligibility requires observed baseline creatinine
+INSPIRE,asa,33394,1151,3.45,most-frequent category in expanded nuisance models; not used by audit risk model
+INSPIRE,surgery_category,33394,0,0,structurally unavailable; not included in INSPIRE observation model
+INSPIRE,outcome_operational,33394,8522,25.52,not imputed as observed truth; addressed with IPW/AIPW and MNAR scenarios
+MOVER 2021,age,2800,0,0,median imputation
+MOVER 2021,sex_male,2800,0,0,most-frequent imputation
+MOVER 2021,duration_h,2800,0,0,median imputation
+MOVER 2021,baseline_cr,2800,0,0,eligibility requires observed baseline creatinine
+MOVER 2021,asa,2800,<5,<0.18,most-frequent category in expanded nuisance models; not used by audit risk model
+MOVER 2021,surgery_category,2800,0,0,most-frequent category in MOVER nuisance models; unavailable in INSPIRE
+MOVER 2021,outcome_operational,2800,589,21.04,not imputed as observed truth; addressed with IPW/AIPW and MNAR scenarios
+MOVER 2022,age,2585,0,0,median imputation
+MOVER 2022,sex_male,2585,0,0,most-frequent imputation
+MOVER 2022,duration_h,2585,0,0,median imputation
+MOVER 2022,baseline_cr,2585,0,0,eligibility requires observed baseline creatinine
+MOVER 2022,asa,2585,0,0,most-frequent category in expanded nuisance models; not used by audit risk model
+MOVER 2022,surgery_category,2585,0,0,most-frequent category in MOVER nuisance models; unavailable in INSPIRE
+MOVER 2022,outcome_operational,2585,554,21.43,not imputed as observed truth; addressed with IPW/AIPW and MNAR scenarios

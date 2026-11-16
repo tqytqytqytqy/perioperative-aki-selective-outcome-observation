@@ -1,0 +1,6 @@
+Table S17. VitalDB supportive observed-cohort stress test,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+Model,n,Events,Event rate,Predicted,O/E,Slope,AUROC,AUPRC,Brier,Interpretation
+1/99 truncated-IPW INSPIRE source model,4095,271,0.066,0.057,1.162,0.828,0.68,0.127,0.0612,supportive observed-cohort stress test; not independent validation and not a complete eligible-population analysis
+source model plus 1/99 truncated-IPW MOVER 2021 recalibration,4095,271,0.066,0.088,0.748,0.928,0.68,0.127,0.0616,supportive observed-cohort stress test; not independent validation and not a complete eligible-population analysis

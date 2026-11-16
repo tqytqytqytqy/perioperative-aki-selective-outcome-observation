@@ -1,0 +1,22 @@
+strategy,quantile,prediction
+Unupdated,0.0,0.011980814264269701
+Unupdated,0.05,0.02315476004734481
+Unupdated,0.25,0.03643672580935173
+Unupdated,0.5,0.05275149171720904
+Unupdated,0.75,0.08054068508816116
+Unupdated,0.95,0.21779500704830965
+Unupdated,1.0,0.6533695670187187
+Complete-case recalibration,0.0,0.02718410937325565
+Complete-case recalibration,0.05,0.04693095110865385
+Complete-case recalibration,0.25,0.06810206870779861
+Complete-case recalibration,0.5,0.09203627169481038
+Complete-case recalibration,0.75,0.12941250729767284
+Complete-case recalibration,0.95,0.2831986437442047
+Complete-case recalibration,1.0,0.665492824083598
+IPW recalibration,0.0,0.02347419827698584
+IPW recalibration,0.05,0.04188130024728868
+IPW recalibration,0.25,0.062184524759899856
+IPW recalibration,0.5,0.0856369834809691
+IPW recalibration,0.75,0.12303234065238838
+IPW recalibration,0.95,0.2824567719761703
+IPW recalibration,1.0,0.6843523635869705

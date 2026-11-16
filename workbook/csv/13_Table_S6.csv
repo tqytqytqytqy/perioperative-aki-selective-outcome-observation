@@ -1,0 +1,20 @@
+Table S6. Complete canonical source-model coefficients,,
+,,
+,,
+Order,Transformed feature,Coefficient
+1,continuous__age_sp_0,-0.7619909112
+2,continuous__age_sp_1,-0.6918626372
+3,continuous__age_sp_2,0.5733418124
+4,continuous__age_sp_3,-0.2516768084
+5,continuous__age_sp_4,0.2364366129
+6,continuous__duration_h_sp_0,-3.3467171718
+7,continuous__duration_h_sp_1,0.3164520577
+8,continuous__duration_h_sp_2,2.0595869887
+9,continuous__duration_h_sp_3,0.6503466397
+10,continuous__duration_h_sp_4,-0.2922426333
+11,continuous__baseline_cr_sp_0,5.094809121
+12,continuous__baseline_cr_sp_1,-3.4065290415
+13,continuous__baseline_cr_sp_2,-1.9726299763
+14,continuous__baseline_cr_sp_3,1.258957328
+15,continuous__baseline_cr_sp_4,-1.3576928576
+16,binary__sex_male,0.4209282023

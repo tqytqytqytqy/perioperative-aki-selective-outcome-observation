@@ -1,0 +1,36 @@
+Table S18. Raw-to-analysis variable and mapping rules,,,,
+,,,,
+,,,,
+Dataset,Analysis variable,Raw field/table,Derivation,Use or note
+INSPIRE,patient_key,operations.subject_id,SHA-256 namespace key,deidentified grouping key; never release raw identifier
+INSPIRE,case_key,operations.op_id,SHA-256 namespace key,internal deidentified operation grouping key; raw values are not released
+INSPIRE,age,operations.age,numeric,age >=18
+INSPIRE,sex_male,operations.sex,starts with M,binary predictor
+INSPIRE,asa,operations.asa,numeric,expanded observation and auxiliary outcome-model covariate
+INSPIRE,duration_h,operations.anend_time - anstart_time,minutes / 60,general anesthesia; 0.5-24 h
+INSPIRE,cardiac exclusion,"department, cpbon_time, icd10_pcs",CTS or CPB or ICD-10-PCS 02*,Independent CTS exclusion can also exclude noncardiac thoracic operations; absence of a supporting code is not clinical adjudication; scope not equivalent to MOVER
+INSPIRE,obstetric exclusion,"department, icd10_pcs",OG department or section-1 PCS tokens of five or seven characters,Independent OG exclusion can also exclude nonobstetric gynecologic operations; absence of a supporting code is not clinical adjudication; scope not equivalent to MOVER
+INSPIRE,baseline_cr,"labs: creatinine, chart_time, value",latest valid value in 7 d before anesthesia,must be <4 mg/dL
+INSPIRE,tested_7d,labs: postoperative creatinine,>=1 valid value after anesthesia through discharge/death/day 7,outcome-observation indicator
+INSPIRE,aki,"baseline_cr, cr_max_48h, cr_max_7d",Inclusive >=0.3 mg/dL by 48 h or >=1.5 times baseline by day 7; absolute numerical comparison tolerance 1e-12 mg/dL,Operational creatinine label; not complete KDIGO or verified incident onset
+MOVER,patient_key,patient_information.MRN,"Original MRN first-index grouping, then a unique complete crosswalk and exact information-table MRN with globally unambiguous aliases; no approximate identifier repair.",patient grouping and 2021/2022 overlap check
+MOVER,case_key,patient_information.LOG_ID,The fixed original first eligible operation is retained only when its unique complete crosswalk and exact patient identity pass QC; no later-operation substitution.,internal deidentified operation grouping key; raw values are not released
+MOVER,age,patient_information.BIRTH_DATE,released numeric age,field name is provider-specific
+MOVER,sex_male,patient_information.SEX,"equals male, case-insensitive",binary predictor
+MOVER,asa,patient_information.ASA_RATING_C,numeric,expanded observation and auxiliary outcome-model covariate
+MOVER,duration_h,AN_STOP_DATETIME - AN_START_DATETIME,hours,general anesthesia; 0.5-24 h
+MOVER,surgery_category,PRIMARY_PROCEDURE_NM,deterministic keyword map,expanded observation and auxiliary outcome models; not the transported risk model
+MOVER,cardiac/obstetric exclusion,PRIMARY_PROCEDURE_NM,prespecified regular expressions,excluded
+MOVER,baseline_cr,patient_labs,"Last valid exact-identity-consistent creatinine in [anesthesia start minus 7 days, anesthesia start); first released-file row resolves latest-timestamp conflicts; baseline must be below 4 mg/dL.",Lab Name=Creatinine; mg/dL; allowed blood LOINC; <4
+MOVER,tested_7d,patient_labs,>=1 strict blood creatinine after anesthesia through discharge/day 7,outcome-observation indicator
+MOVER,aki,"baseline_cr, cr_max_48h, cr_max_7d",Recomputed only from nonmissing exact-identity-consistent tests strictly after anesthesia completion; original thresholds and discharge-limited windows retained; no postoperative test means unknown.,Operational creatinine label; incident onset not established
+MOVER,analysis phase,AN_START_DATETIME,calendar year 2021 or 2022,2021 update; 2022 post-exploration temporal evaluation
+VitalDB,case_key/patient_key,cases.caseid,SHA-256 namespace key,one supportive case per released case
+VitalDB,age/sex/asa,"cases.age, sex, asa",numeric / M indicator / numeric,supportive observed-cohort predictors
+VitalDB,duration_h,cases.opend - opstart,seconds / 3600,supportive observed-cohort predictor
+VitalDB,baseline_cr,cases.preop_cr then latest pre-op labs cr,preop_cr preferred,must be present and <4 for supportive analysis
+VitalDB,tested_7d,labs.name=cr,>=1 numeric value after opend through day 7,outcome-observation indicator
+VitalDB,aki,baseline_cr and postoperative cr,Inclusive >=0.3 mg/dL by 48 h or >=1.5 times baseline by day 7; absolute numerical comparison tolerance 1e-12 mg/dL,Supportive only; thresholds corrected; release-specific baseline and follow-up definitions differ from primary cohorts
+ALL,first_eligible,patient_key + anesthesia start,earliest clinically eligible operation,applied to INSPIRE and MOVER; VitalDB supportive only
+INSPIRE/MOVER,prediction_time,derived design variable,end of anesthesia,baseline creatinine remains pre-anesthesia
+VitalDB,prediction_time,release-specific supportive design,surgery end,Supportive timing and baseline rules differ from principal cohorts

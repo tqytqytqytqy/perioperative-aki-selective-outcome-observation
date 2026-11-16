@@ -1,0 +1,11 @@
+Table S13. Target-stage outcome-completion sensitivity,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+Reference,k,Alpha,Beta,Target O/E,Slope,AUROC,Brier,10% alerts
+Canonical MAR reference,NA,0.208,0.892,1.014,0.884,0.674,0.0938,977
+OR-completion sensitivity,0.5,0.208,0.892,0.974,0.908,0.679,0.0906,977
+OR-completion sensitivity,0.667,0.208,0.892,0.993,0.895,0.675,0.0922,977
+"OR-completion reference, k=1",1,0.208,0.892,1.029,0.871,0.668,0.0953,977
+OR-completion sensitivity,1.5,0.208,0.892,1.078,0.836,0.659,0.0997,977
+OR-completion sensitivity,2,0.208,0.892,1.123,0.803,0.65,0.1036,977
+OR-completion sensitivity,3,0.208,0.892,1.201,0.746,0.635,0.1107,977

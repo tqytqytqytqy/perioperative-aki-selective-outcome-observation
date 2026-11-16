@@ -1,0 +1,13 @@
+Table S2. Characteristics by outcome-observation status,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+Phase,Group,n,Age mean,Age SD,Male %,ASA mean,"Duration, h",Baseline Cr,Observed AKI
+INSPIRE,all eligible,33394,55.98,15.84,51.42,1.77,3.01,0.85,NA
+INSPIRE,outcome observed,24872,57.56,15.47,54.49,1.83,3.47,0.86,1680
+INSPIRE,outcome unobserved,8522,51.35,15.99,42.45,1.6,1.68,0.82,NA
+MOVER 2021,all eligible,2800,51.38,19.32,59.71,2.7,3.36,0.9,NA
+MOVER 2021,outcome observed,2211,53.45,19.31,60.97,2.83,3.57,0.91,274
+MOVER 2021,outcome unobserved,589,43.58,17.26,55.01,2.2,2.56,0.89,NA
+MOVER 2022,all eligible,2585,51.61,19.52,58.03,2.67,3.26,0.91,NA
+MOVER 2022,outcome observed,2031,54.12,19.51,59.82,2.83,3.47,0.92,259
+MOVER 2022,outcome unobserved,554,42.43,16.63,51.44,2.08,2.48,0.84,NA

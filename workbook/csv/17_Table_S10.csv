@@ -1,0 +1,48 @@
+Table S10. Complete canonical bootstrap estimates,,,,,,
+,,,,,,
+,,,,,,
+Estimand,Metric,Estimate,Lower,Upper,Estimator,Replicates
+hybrid AIPW/IPW performance among all baseline-eligible MOVER 2022 patients under MAR conditional on measured pre-prediction variables,events,288.884206,255.907158,323.966761,AIPW,1000
+hybrid AIPW/IPW performance among all baseline-eligible MOVER 2022 patients under MAR conditional on measured pre-prediction variables,event_rate,0.111754,0.098997,0.125326,AIPW,1000
+hybrid AIPW/IPW performance among all baseline-eligible MOVER 2022 patients under MAR conditional on measured pre-prediction variables,predicted_mean,0.110246,0.098218,0.123245,exact all-eligible predictions,1000
+hybrid AIPW/IPW performance among all baseline-eligible MOVER 2022 patients under MAR conditional on measured pre-prediction variables,oe_ratio,1.013683,0.866248,1.174436,plug-in ratio of AIPW-estimated event total to exact predicted-event total,1000
+hybrid AIPW/IPW performance among all baseline-eligible MOVER 2022 patients under MAR conditional on measured pre-prediction variables,calibration_intercept,0.004833,-0.185054,0.186545,1/99 truncated expanded IPW,1000
+hybrid AIPW/IPW performance among all baseline-eligible MOVER 2022 patients under MAR conditional on measured pre-prediction variables,calibration_joint_intercept,-0.219707,-0.638713,0.384127,1/99 truncated expanded IPW,1000
+hybrid AIPW/IPW performance among all baseline-eligible MOVER 2022 patients under MAR conditional on measured pre-prediction variables,calibration_slope,0.883517,0.678876,1.18053,1/99 truncated expanded IPW,1000
+hybrid AIPW/IPW performance among all baseline-eligible MOVER 2022 patients under MAR conditional on measured pre-prediction variables,auroc,0.674023,0.631856,0.714376,1/99 truncated expanded IPW,1000
+hybrid AIPW/IPW performance among all baseline-eligible MOVER 2022 patients under MAR conditional on measured pre-prediction variables,auprc,0.240502,0.19917,0.289111,1/99 truncated expanded IPW,1000
+hybrid AIPW/IPW performance among all baseline-eligible MOVER 2022 patients under MAR conditional on measured pre-prediction variables,brier,0.093803,0.084714,0.10382,AIPW,1000
+hybrid AIPW/IPW performance among all baseline-eligible MOVER 2022 patients under MAR conditional on measured pre-prediction variables,brier_skill_score,0.05503,0.021047,0.084871,AIPW,1000
+hybrid AIPW/IPW performance among all baseline-eligible MOVER 2022 patients under MAR conditional on measured pre-prediction variables,grouped_absolute_calibration_error_10q,0.016674,0.012053,0.034956,1/99 truncated expanded IPW,1000
+1/99 truncated-weight approximation to logistic recalibration parameters among all baseline-eligible MOVER 2021 patients under MAR conditional on measured pre-prediction variables,update_alpha,0.208339,-0.231193,0.628428,1/99 truncated expanded-IPW update score equation,1000
+1/99 truncated-weight approximation to logistic recalibration parameters among all baseline-eligible MOVER 2021 patients under MAR conditional on measured pre-prediction variables,update_beta,0.892132,0.716336,1.06404,1/99 truncated expanded-IPW update score equation,1000
+threshold workload among all eligible MOVER 2022 patients at 5%,alerts,2306,1972.9,2509.05,exact all-eligible predictions,1000
+threshold workload among all eligible MOVER 2022 patients at 5%,alerts_per_1000,892.069632,763.210832,970.618956,exact all-eligible predictions,1000
+threshold workload among all eligible MOVER 2022 patients at 5%,true_positives_per_1000,108.640354,93.070724,120.442288,plug-in ratio or total derived from AIPW components,1000
+threshold workload among all eligible MOVER 2022 patients at 5%,false_positives_per_1000,783.429279,660.330086,860.128473,plug-in ratio or total derived from AIPW components,1000
+threshold workload among all eligible MOVER 2022 patients at 5%,sensitivity,0.972138,0.88943,0.999349,plug-in ratio or total derived from AIPW components,1000
+threshold workload among all eligible MOVER 2022 patients at 5%,positive_predictive_value,0.121785,0.105659,0.139716,plug-in ratio or total derived from AIPW components,1000
+threshold workload among all eligible MOVER 2022 patients at 5%,false_positives_per_true_positive,7.211218,6.157365,8.464423,plug-in ratio or total derived from AIPW components,1000
+threshold workload among all eligible MOVER 2022 patients at 5%,absolute_net_benefit,0.067407,0.052734,0.079611,plug-in ratio or total derived from AIPW components,1000
+threshold workload among all eligible MOVER 2022 patients at 5%,treat_all_net_benefit,0.065004,0.051576,0.07929,plug-in ratio or total derived from AIPW components,1000
+threshold workload among all eligible MOVER 2022 patients at 5%,incremental_net_benefit_vs_better_default,0.002403,-0.002701,0.00456,plug-in ratio or total derived from AIPW components,1000
+threshold workload among all eligible MOVER 2022 patients at 10%,alerts,977,757.975,1250,exact all-eligible predictions,1000
+threshold workload among all eligible MOVER 2022 patients at 10%,alerts_per_1000,377.94971,293.220503,483.558994,exact all-eligible predictions,1000
+threshold workload among all eligible MOVER 2022 patients at 10%,true_positives_per_1000,68.386402,53.341835,83.747745,plug-in ratio or total derived from AIPW components,1000
+threshold workload among all eligible MOVER 2022 patients at 10%,false_positives_per_1000,309.563308,235.031136,405.818412,plug-in ratio or total derived from AIPW components,1000
+threshold workload among all eligible MOVER 2022 patients at 10%,sensitivity,0.611937,0.49843,0.716804,plug-in ratio or total derived from AIPW components,1000
+threshold workload among all eligible MOVER 2022 patients at 10%,positive_predictive_value,0.18094,0.149263,0.214792,plug-in ratio or total derived from AIPW components,1000
+threshold workload among all eligible MOVER 2022 patients at 10%,false_positives_per_true_positive,4.526679,3.655661,5.699592,plug-in ratio or total derived from AIPW components,1000
+threshold workload among all eligible MOVER 2022 patients at 10%,absolute_net_benefit,0.03399,0.022185,0.045294,plug-in ratio or total derived from AIPW components,1000
+threshold workload among all eligible MOVER 2022 patients at 10%,treat_all_net_benefit,0.01306,-0.001114,0.02814,plug-in ratio or total derived from AIPW components,1000
+threshold workload among all eligible MOVER 2022 patients at 10%,incremental_net_benefit_vs_better_default,0.02093,0.010608,0.029877,plug-in ratio or total derived from AIPW components,1000
+threshold workload among all eligible MOVER 2022 patients at 20%,alerts,226,165,303,exact all-eligible predictions,1000
+threshold workload among all eligible MOVER 2022 patients at 20%,alerts_per_1000,87.427466,63.829787,117.2147,exact all-eligible predictions,1000
+threshold workload among all eligible MOVER 2022 patients at 20%,true_positives_per_1000,26.839105,19.605598,35.363707,plug-in ratio or total derived from AIPW components,1000
+threshold workload among all eligible MOVER 2022 patients at 20%,false_positives_per_1000,60.588361,40.977599,85.402753,plug-in ratio or total derived from AIPW components,1000
+threshold workload among all eligible MOVER 2022 patients at 20%,sensitivity,0.240162,0.177214,0.31174,plug-in ratio or total derived from AIPW components,1000
+threshold workload among all eligible MOVER 2022 patients at 20%,positive_predictive_value,0.306987,0.239625,0.387711,plug-in ratio or total derived from AIPW components,1000
+threshold workload among all eligible MOVER 2022 patients at 20%,false_positives_per_true_positive,2.257466,1.579244,3.173194,plug-in ratio or total derived from AIPW components,1000
+threshold workload among all eligible MOVER 2022 patients at 20%,absolute_net_benefit,0.011692,0.004762,0.019027,plug-in ratio or total derived from AIPW components,1000
+threshold workload among all eligible MOVER 2022 patients at 20%,treat_all_net_benefit,-0.110307,-0.126254,-0.093343,plug-in ratio or total derived from AIPW components,1000
+threshold workload among all eligible MOVER 2022 patients at 20%,incremental_net_benefit_vs_better_default,0.011692,0.004762,0.019027,plug-in ratio or total derived from AIPW components,1000

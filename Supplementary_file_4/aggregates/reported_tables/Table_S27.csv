@@ -1,0 +1,13 @@
+Measure,Original file order,Minimum tied value,Maximum tied value
+"INSPIRE source patients, n",33394,33394,33394
+"MOVER 2021 update patients, n",2800,2800,2800
+"MOVER 2022 target patients, n",2585,2585,NR
+"INSPIRE observed AKI events, n",1680,1680,NR
+"MOVER 2022 outcome-observed patients, n",2031,2031,2031
+"MOVER 2022 observed AKI events, n",259,259,259
+Target O/E,1.0137,1.0134,1.0148
+Target calibration slope,0.8835,0.8889,0.8808
+Target AUROC,0.6740,0.6755,0.6738
+Target Brier score,0.09380,0.09374,0.09388
+"10% threshold alerts, n",977,977,NR
+"10% threshold alerts, % of target patients",37.79,37.79,NR

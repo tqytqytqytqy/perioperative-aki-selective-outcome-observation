@@ -1,0 +1,13 @@
+{
+  "removed_top_level_keys": [
+    "raw_data",
+    "event_nodes",
+    "readiness",
+    "author_verification",
+    "release_status"
+  ],
+  "reason": "Unused historical metadata / author governance / private path configuration; not statistical settings used by the retained code.",
+  "raw_path_replacement": "Explicit authorized CLI input paths",
+  "numerical_settings_changed": false,
+  "clinical_readiness_threshold_implemented": false
+}

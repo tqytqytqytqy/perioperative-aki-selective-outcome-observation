@@ -1,0 +1,10 @@
+Table S8. Canonical estimators and odds-multiplier-1 outcome-regression references,,,,,,,,,,
+,,,,,,,,,,
+,,,,,,,,,,
+Stage,Reference,k,Source events,Update events,Alpha,Beta,Target O/E,Slope,AUROC,10% alerts
+source,Canonical MAR reference,NA,1973.6,317.2,0.208,0.892,1.014,0.884,0.674,977
+source,"OR-completion reference, k=1",1,2039.8,317.2,0.288,0.939,1.012,0.879,0.671,953
+update,Canonical MAR reference,NA,1973.6,317.2,0.208,0.892,1.014,0.884,0.674,977
+update,"OR-completion reference, k=1",1,1973.6,320,0.131,0.849,0.992,0.928,0.674,1057
+target,Canonical MAR reference,NA,1973.6,317.2,0.208,0.892,1.014,0.884,0.674,977
+target,"OR-completion reference, k=1",1,1973.6,317.2,0.208,0.892,1.029,0.871,0.668,977

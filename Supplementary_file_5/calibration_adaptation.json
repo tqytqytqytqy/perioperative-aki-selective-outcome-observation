@@ -1,0 +1,11 @@
+{
+  "source": "supplementary_diagnostics/calibration_diagnostic.py",
+  "source_sha256": "0d6e26c6cebe160ff454d6ebcc592dbc14281994ceab2cd89850a71e5974bd98",
+  "changes": [
+    "parameterized roots",
+    "cohort checks use supplied model specification",
+    "removed private snapshots and replicate-level CSV export",
+    "calculation statements retained; AST formatted for review",
+    "plot uses aggregate CSV instead of individual predictions"
+  ]
+}

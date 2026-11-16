@@ -1,0 +1,10 @@
+metric,contrast,estimate,ci_lower,ci_upper,observed_n,replicates,prediction_policy
+event_rate,original,0.1275233874938454,0.11176760216642048,0.14229443623830626,2031,1000,fixed revised primary model and original predictor values
+event_rate,coarsened,0.1654357459379616,0.1482028557360906,0.1811915312653865,2031,1000,fixed revised primary model and original predictor values
+event_rate,difference,0.037912358444116195,0.026095519448547516,0.04974150664697194,2031,1000,fixed revised primary model and original predictor values
+oe_ratio,original,1.0746678139838834,0.9475699908723226,1.1954284885046684,2031,1000,fixed revised primary model and original predictor values
+oe_ratio,coarsened,1.3941636505736867,1.2507262758682327,1.5291121479070537,2031,1000,fixed revised primary model and original predictor values
+oe_ratio,difference,0.3194958365898033,0.21790983036786435,0.41861402523345875,2031,1000,fixed revised primary model and original predictor values
+auroc,original,0.6567835571785912,0.6206343425034683,0.6929659268784317,2031,1000,fixed revised primary model and original predictor values
+auroc,coarsened,0.6231510745891277,0.5910848842811077,0.6577397720539311,2031,1000,fixed revised primary model and original predictor values
+auroc,difference,-0.0336324825894635,-0.06105184254006624,-0.00333507042175959,2031,1000,fixed revised primary model and original predictor values

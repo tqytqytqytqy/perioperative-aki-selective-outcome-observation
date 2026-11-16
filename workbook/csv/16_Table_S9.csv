@@ -1,0 +1,10 @@
+Table S9. Source and update strategy comparators propagated to MOVER 2022,,,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+Strategy,Primary,Alpha,Beta,O/E,Slope,AUROC,AUPRC,Brier,10-q grouped error
+observed-outcome source model + unupdated source-only comparator,No,0,1,1.444,0.828,0.673,0.24,0.095,0.034
+observed-outcome source model + complete-case recalibration,No,0.253,0.902,0.965,0.918,0.673,0.24,0.094,0.013
+observed-outcome source model + 1/99 truncated-IPW recalibration,No,0.3,0.947,1.012,0.875,0.673,0.24,0.094,0.012
+1/99 truncated-IPW source model + unupdated source-only comparator,Yes,0,1,1.488,0.788,0.674,0.241,0.095,0.036
+1/99 truncated-IPW source model + complete-case recalibration,No,0.152,0.845,0.968,0.933,0.674,0.241,0.094,0.016
+1/99 truncated-IPW source model + 1/99 truncated-IPW recalibration,Yes,0.208,0.892,1.014,0.884,0.674,0.241,0.094,0.017

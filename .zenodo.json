@@ -1,7 +1,7 @@
 {
-  "title": "Outcome ascertainment and laboratory representation in perioperative acute kidney injury model transport: a multidatabase study",
+  "title": "Selective creatinine testing and laboratory representation in perioperative acute kidney injury prediction: identity-consistent reanalysis code and aggregate results",
   "upload_type": "software",
-  "description": "Journal-neutral reproducibility release for a multidatabase study of outcome ascertainment and laboratory representation across perioperative AKI model development, local recalibration, and post-exploration temporal evaluation. Version v3.4.0 retains the corrected v3.3.0 analysis and adds a post hoc raw-record diagnostic of creatinine testing timing, frequency, and follow-up coverage in INSPIRE and MOVER, with Tables S28-S31, a consolidated workbook, current figures, and portable code. In MOVER 2022, 2033/2587 patients had any postoperative creatinine record and 1290/2587 had records in both early and late windows; these are coverage indicators rather than a count of missed AKI events. Original AKI labels, models, primary estimates, and bootstrap results were frozen for this diagnostic. The release contains code, aggregate outputs, model metadata, documentation and figures, without raw or row-level patient data, individual predictions, serialized models, manuscripts or confidential peer-review material. The four-variable model is a research probe; clinical implementation and patient benefit have not been established. Code is MIT-licensed and original content is CC BY 4.0. Source-dataset access conditions continue to apply.",
+  "description": "Author-approved research-software release v4.0.0 for R2_IDQC_20261113. Contains portable analysis and testing-time code, independent grouped-calibration code, synthetic tests, provenance, disclosure-controlled aggregate CSVs, and the unchanged 44-sheet results workbook. Supersedes v3.4.0 for the current identity-consistent reanalysis; historical versions remain available. Prepared-R2 numerical consistency and synthetic raw-route validation are documented; full real raw-to-R2 equivalence and a fresh real 1000-replicate full-chain bootstrap were not established by the distribution validation. No raw or row-level patient data, individual predictions, serialized models, bootstrap replicates, manuscripts or confidential reviewer material are distributed. Original code is MIT-licensed; original documentation and permitted aggregate content are CC BY 4.0. Provider data-access conditions remain applicable. This is research software, not an accepted journal publication or a clinically validated deployment.",
   "creators": [
     {
       "name": "Teng, Qingyu",
@@ -39,8 +39,8 @@
       "orcid": "0009-0006-5460-3845"
     }
   ],
-  "version": "v3.4.0",
-  "publication_date": "2026-10-07",
+  "version": "v4.0.0",
+  "publication_date": "2026-11-16",
   "access_right": "open",
   "license": "mit",
   "keywords": [
@@ -57,12 +57,12 @@
   ],
   "related_identifiers": [
     {
-      "identifier": "https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation/tree/v3.4.0",
+      "identifier": "https://github.com/tqytqytqytqy/perioperative-aki-selective-outcome-observation/tree/v4.0.0",
       "relation": "isSupplementTo",
       "scheme": "url"
     },
     {
-      "identifier": "10.5281/zenodo.23157606",
+      "identifier": "10.5281/zenodo.23204344",
       "relation": "isNewVersionOf",
       "scheme": "doi"
     }
